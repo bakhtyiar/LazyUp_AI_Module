@@ -4,7 +4,6 @@ import signal
 from datetime import datetime
 import keyboard  # Убедитесь, что эта библиотека установлена
 import mouse  # Убедитесь, что эта библиотека установлена
-import pprint
 
 # Mouse buttons map
 mouse_buttons_map = {
@@ -70,7 +69,7 @@ if __name__ == "__main__":
 
     signal.signal(signal.SIGINT, signal_handler)
 
-    # keyboard.hook(on_key_event)  # Слушаем события клавиатуры
+    keyboard.hook(on_key_event)  # Слушаем события клавиатуры
     mouse.hook(on_mouse_event)  # Слушаем события мыши
-    # keyboard.wait()  # Ожидаем завершения
+    keyboard.wait()  # Ожидаем завершения
     mouse.wait()  # Ожидаем завершения
