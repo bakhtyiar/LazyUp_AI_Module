@@ -1,9 +1,18 @@
-from pprint import pprint
-
 import psutil
 import json
 import argparse
-import pprint
+from datetime import datetime
+import threading
+import signal
+import sys
+
+def set_interval(func, sec):
+    def func_wrapper():
+        set_interval(func, sec)
+        func()
+    t = threading.Timer(sec, func_wrapper)
+    t.start()
+    return t
 
 def save_processes_to_file(filename):
     processes = []
@@ -11,7 +20,6 @@ def save_processes_to_file(filename):
         if hasattr(p,'info'):
             try:
                 # Получаем нагрузку на CPU
-                pprint.pprint(vars(p))
                 p.cpu_percent(interval=0)  # Для получения текущего значения в будущем
                 processes.append((p.info['name'], p.info['pid'], p.cpu_percent(interval=0)))
             except (psutil.NoSuchProcess, psutil.AccessDenied):
@@ -22,20 +30,28 @@ def save_processes_to_file(filename):
 
     # Формируем массив с названиями процессов и нагрузкой на систему
     # result = [f"{name} (нагрузка: {cpu}% )" for name, pid, cpu in sorted_processes]
-    result = []
+    result = {
+        'timestamp': datetime.now().isoformat(),
+        'processes': []
+    }
     for name, pid, cpu in sorted_processes:
         if name.endswith(".exe"):
             clean_process_name = name[:-4]  # Убираем последние 4 символа ".exe"
         else:
             clean_process_name = filename
         if not clean_process_name in result and not clean_process_name.endswith(".json"): # Не добавляем повторы и (json файлы?)
-            result.append(clean_process_name)
+            result.processes.append(clean_process_name)
 
     # Записываем массив названий процессов в указанный файл
     with open(filename, 'w', encoding='utf-8') as json_file:
         json.dump(result, json_file, ensure_ascii=False, indent=4)
 
     print(f"Названия процессов с нагрузкой успешно записаны в {filename}.")
+
+def signal_handler(sig, frame):
+    loggingInterval.cancel()
+    print("Прерывание процесса. Сохранение данных и выход.")
+    sys.exit(0)
 
 if __name__ == "__main__":
     # Создаем парсер аргументов командной строки
@@ -45,4 +61,7 @@ if __name__ == "__main__":
 
     # Получаем аргументы
     args = parser.parse_args()
-    save_processes_to_file(args.filename)
+    # save_processes_to_file(args.filename)
+    loggingInterval = set_interval(save_processes_to_file(args.filename), 5)
+    signal.signal(signal.SIGINT, signal_handler)
+
