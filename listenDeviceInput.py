@@ -7,19 +7,19 @@ import mouse  # Убедитесь, что эта библиотека уста�
 
 # Mouse buttons map
 mouse_buttons_map = {
-    'left': 1,
-    'right': 2,
-    'middle': 3,
-    'wheel': 4,
-    'x': 5,
-    'x2': 6,
-    'up': 7,
-    'down': 8,
-    'double': 9,
-    'vertical': 10,
-    'horizontal': 11,
-    'deltaPlus': 12,
-    'deltaMinus': 13,
+    'left': 151,
+    'right': 152,
+    'middle': 153,
+    'wheel': 154,
+    'x': 155,
+    'x2': 156,
+    'up': 157,
+    'down': 158,
+    'double': 159,
+    'vertical': 160,
+    'horizontal': 161,
+    'deltaPlus': 162,
+    'deltaMinus': 163,
 }
 
 logs = []
@@ -39,6 +39,7 @@ def log_event(button_key, is_working_mode):
 def on_key_event(event):
     global is_working_mode
     try:
+        print(event.name, event.scan_code)
         log_event(event.scan_code, is_working_mode)
     except:
         print("Pressed button out from processing range")
@@ -48,8 +49,7 @@ def on_mouse_event(event):
     global is_working_mode
     try:
         if isinstance(event, mouse.ButtonEvent) and event.button in mouse_buttons_map:
-            print(event.button)
-            print(mouse_buttons_map[event.button])
+            print(event.button, mouse_buttons_map[event.button])
             log_event(mouse_buttons_map[event.button], is_working_mode)
         elif isinstance(event, mouse.WheelEvent) and event.delta is not None:
             if event.delta > 0:
