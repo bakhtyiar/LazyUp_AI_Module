@@ -20,13 +20,13 @@ def generate_data_item():
     kindOfRecord = random.randint(1, 3)
     if (kindOfRecord == 1):
         is_working_mode = True
-        button_key = random.randint(1, 10)
+        button_key = random.randint(1, 50)
     elif (kindOfRecord == 1):
         is_working_mode = random.choice([True, False])
-        button_key = random.randint(5, 15)
+        button_key = random.randint(30, 60)
     else:
         is_working_mode = False
-        button_key = random.randint(10, 20)
+        button_key = random.randint(50, 80)
     return {
         'timestamp': timestamp,
         'buttonKey': button_key,
