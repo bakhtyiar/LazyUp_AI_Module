@@ -20,12 +20,15 @@ def set_interval(func, sec):
 
 def save_processes_to_file(logs_folder_name, is_working_mode):
     processes = []
+    processesSeen = set()  # Use a set to track seen (name, pid) tuples.
     for p in psutil.process_iter(attrs=['name', 'pid', 'cpu_percent']):
         if hasattr(p,'info'):
             try:
                 # Получаем нагрузку на CPU
                 p.cpu_percent(interval=0)  # Для получения текущего значения в будущем
-                processes.append((p.info['name'], p.info['pid'], p.cpu_percent(interval=0)))
+                if p.info['name'] not in processesSeen:
+                    processesSeen.add(p.info['name'])  # Mark this process as seen
+                    processes.append((p.info['name'], p.info['pid'], p.cpu_percent(interval=0)))
             except (psutil.NoSuchProcess, psutil.AccessDenied):
                 continue
 
