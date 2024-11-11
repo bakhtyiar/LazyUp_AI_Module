@@ -1,5 +1,6 @@
 import json
 import random
+import os
 import datetime
 
 def generateTimestamp():
@@ -15,16 +16,15 @@ def generateTimestamp():
     return random_time.isoformat()
 
 
-def generate_data_item():
+def generate_data_item(mode):
     timestamp = generateTimestamp()
-    kindOfRecord = random.randint(1, 3)
-    if (kindOfRecord == 1):
+    if mode == 1:
         is_working_mode = True
         button_key = random.randint(1, 50)
-    elif (kindOfRecord == 2):
+    elif mode == 2:
         is_working_mode = random.choice([True, False])
         button_key = random.randint(30, 60)
-    else:
+    elif mode == 3:
         is_working_mode = False
         button_key = random.randint(50, 80)
     return {
@@ -34,15 +34,36 @@ def generate_data_item():
     }
 
 def generate_device_logs(num_items):
+    mode = random.randint(1, 3)
     return {
-        'deviceLogs': [generate_data_item() for _ in range(num_items)]
+        'deviceLogs': [generate_data_item(mode) for _ in range(num_items)]
     }
 
-def save_to_json(filename, data):
-    with open(filename, 'w') as json_file:
-        json.dump(data, json_file, indent=4)
+currentDateTimeStamp = datetime.datetime.now() - datetime.timedelta(hours=0, minutes=0, seconds=5)
 
 if __name__ == "__main__":
-    num_items = 1000  # Укажите количество записей, которые нужно сгенерировать
-    logs = generate_device_logs(num_items)
-    save_to_json('device_logs.json', logs)
+    num_items_key_inputs = 1000  # Укажите количество нажатий клавиш, которые нужно сгенерировать
+    num_sessions = 100  # Укажите количество сессий записей, которые нужно сгенерировать
+    # Генерация и запись файлов
+    for i in range(num_sessions):
+        logs = generate_device_logs(num_items_key_inputs)
+
+        file_name = currentDateTimeStamp.strftime("%Y-%m-%d_%H-%M-%S") + ".json"
+        currentDateTimeStamp = currentDateTimeStamp - datetime.timedelta(hours=1, minutes=0, seconds=0)
+
+        # Убедимся, что имена файлов уникальны
+        while os.path.exists(file_name):
+            currentDateTimeStamp = currentDateTimeStamp - datetime.timedelta(hours=1, minutes=0, seconds=0)
+            file_name = currentDateTimeStamp.strftime("%Y-%m-%d_%H-%M-%S") + ".json"
+            # file_name = datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".json"
+
+        logs_folder_name = "device_input_logs"
+
+        # Формируем имя файла в папке "logs_folder"
+        logs_file_name = os.path.join(logs_folder_name, f"{file_name}")
+
+        # Убеждаемся, что папка существует
+        os.makedirs(logs_folder_name, exist_ok=True)
+
+        with open(logs_file_name, 'w') as json_file:
+            json.dump(logs, json_file, ensure_ascii=False, indent=4)
