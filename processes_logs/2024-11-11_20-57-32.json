@@ -1,0 +1,33 @@
+{
+    "is_working_mode": true,
+    "timestamp": "2024-11-11T20:57:32.859243",
+    "processes": [
+        "steam",
+        "excel",
+        "word",
+        "telegram",
+        "whatsapp",
+        "SearchIndexer",
+        "crashpad_handler",
+        "dllhost",
+        "SDXHelper",
+        "AggregatorHost",
+        "NisSrv",
+        "SgrmBroker",
+        "SearchProtocolHost",
+        "RuntimeBroker",
+        "msedge",
+        "msedgewebview2",
+        "SecurityHealthSystray",
+        "SecurityHealthService",
+        "ServiceHub.Helper",
+        "PhoneExperienceHost",
+        "CCXProcess",
+        "ps64ldr",
+        "CTMsgHostEdge",
+        "TextInputHost",
+        "SearchFilterHost",
+        "CompPkgSrv",
+        "SystemSettings"
+    ]
+}
