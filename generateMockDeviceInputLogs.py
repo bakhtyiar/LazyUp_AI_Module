@@ -21,7 +21,7 @@ def generate_data_item():
     if (kindOfRecord == 1):
         is_working_mode = True
         button_key = random.randint(1, 50)
-    elif (kindOfRecord == 1):
+    elif (kindOfRecord == 2):
         is_working_mode = random.choice([True, False])
         button_key = random.randint(30, 60)
     else:
