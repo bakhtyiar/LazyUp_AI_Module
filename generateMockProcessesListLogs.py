@@ -66,7 +66,7 @@ for i in range(100):
     logs_folder_name = "processes_logs"
 
     # Формируем имя файла в папке "logs_folder"
-    logs_file_name = os.path.join(logs_folder_name, f"{file_name}.json")
+    logs_file_name = os.path.join(logs_folder_name, f"{file_name}")
 
     # Убеждаемся, что папка существует
     os.makedirs(logs_folder_name, exist_ok=True)
