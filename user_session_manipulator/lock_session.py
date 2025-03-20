@@ -29,4 +29,4 @@ def keep_locked(lock_duration_minutes):
     print("Время блокировки истекло. Скрипт завершает работу.")
 
 # Запускаем блокировку на 1 минуту
-keep_locked(1)
+# keep_locked(1)
