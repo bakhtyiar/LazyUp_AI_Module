@@ -2,13 +2,16 @@ import tkinter as tk
 from tkinter import ttk
 import subprocess
 import sys
+import os
+
+module_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Функция для запуска/остановки скрипта
 def toggle_recording():
     global recording_process
     if recording_process is None:
         # Запуск скрипта listenProcessesList.py
-        recording_process = subprocess.Popen([sys.executable, "..\process_names\listenProcessesList.py", current_arg])
+        recording_process = subprocess.Popen([sys.executable, module_dir + "..\process_names\listenProcessesList.py", current_arg])
         record_button.config(text="Остановить запись", style="TButton")
         status_label.config(text="Запись запущена", foreground="green")
     else:
@@ -38,7 +41,7 @@ def update_script_arg():
     global recording_process, current_arg
     if recording_process is not None:
         recording_process.terminate()
-        recording_process = subprocess.Popen([sys.executable, "..\process_names\listenProcessesList.py", current_arg])
+        recording_process = subprocess.Popen([sys.executable, module_dir + "..\process_names\listenProcessesList.py", current_arg])
 
 # Инициализация главного окна
 root = tk.Tk()

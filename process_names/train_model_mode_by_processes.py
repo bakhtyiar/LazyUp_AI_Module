@@ -1,16 +1,17 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from keras.preprocessing.text import Tokenizer
-from keras.preprocessing.sequence import pad_sequences
+from keras_preprocessing.sequence import pad_sequences
 from keras.models import Sequential, load_model
 from keras.layers import Dense, Embedding, LSTM
-from sklearn.metrics import classification_report
 import json
 import os
-import process_name_tokenizer
+import process_name_tokenizing.process_name_tokens_manager as process_name_tokenizing
+
+module_dir = os.path.dirname(os.path.abspath(__file__))
 
 log_data = []
-log_directory = './processes_logs'
+log_directory = module_dir + './processes_logs'
 
 # Загрузка данных
 for filename in os.listdir(log_directory):
@@ -36,15 +37,8 @@ df = pd.DataFrame(data)
 # Подготовка
 max_length = 64  # Максимальная длина последовательности
 
-try:
-    tokenizer = process_name_tokenizer.load_tokenizer(process_name_tokenizer.tokens_dict_filename)
-except FileNotFoundError:
-    tokenizer = Tokenizer()
-    tokenizer.fit_on_texts(df['processes'])
-    process_name_tokenizer.save_tokenizer(tokenizer, process_name_tokenizer.tokens_dict_filename)
+tokenizer = process_name_tokenizing.process_tokenization(df['processes'])
 
-tokenizer = Tokenizer()
-tokenizer.fit_on_texts(df['processes'])
 X = tokenizer.texts_to_sequences(df['processes'])
 X = pad_sequences(X, maxlen=max_length)
 y = pd.get_dummies(df['is_working_mode']).values  # one-hot encoding
@@ -55,7 +49,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 # Модель
 model = None
 try:
-    model = load_model('./predict_processes.h5')
+    model = load_model(module_dir + './predict_processes.h5')
 except OSError:
     print("Saved model not found")
 if not model:
@@ -69,7 +63,7 @@ if not model:
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     # Обучение
     model.fit(X_train, y_train, epochs=10, batch_size=32)
-    model.save('./predict_processes.h5')
+    model.save(module_dir + './predict_processes.h5')
 
 # Оценка
 test_loss, test_accuracy = model.evaluate(X_test, y_test)

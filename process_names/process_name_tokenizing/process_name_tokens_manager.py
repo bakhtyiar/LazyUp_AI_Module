@@ -48,7 +48,7 @@ def process_tokenization(texts: [str], filename='tokens_dictionary.json'):
     # Обновляем токенизатор новыми текстами
     update_tokenizer(tokenizer, texts, filename)
     # Выводим текущий словарь токенов
-    print("Словарь токенов:", tokenizer.word_index)
+    # print("Словарь токенов:", tokenizer.word_index)
     return tokenizer
 
 def text_to_sequences(texts: [str], tokenizer: Tokenizer, filename='sequenced_texts.json'):

@@ -6,8 +6,10 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 import joblib
 
-directory_path = './device_input_logs'  # Путь к директории с JSON-файлами
-model_path = './predict_device_input.h5'  # Путь к модели
+module_dir = os.path.dirname(os.path.abspath(__file__))
+
+directory_path = module_dir + './device_input_logs'  # Путь к директории с JSON-файлами
+model_path = module_dir + './predict_device_input.h5'  # Путь к модели
 
 # Считываем все логи
 all_logs = []

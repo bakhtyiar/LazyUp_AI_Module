@@ -9,6 +9,7 @@ import os
 import time
 
 is_working_mode = True
+module_dir = os.path.dirname(os.path.abspath(__file__))
 
 def set_interval(func, sec):
     def func_wrapper():
@@ -78,7 +79,7 @@ if __name__ == "__main__":
     parser.add_argument('--working-mode', type=str, default='false',
                         choices=['true', 'false', '1', '0', 'yes', 'no'],
                         help='Run in working mode (true/1/yes) or not (false/0/no).')
-    parser.add_argument('--dir-to-log', type=str, default='.\processes_logs',
+    parser.add_argument('--dir-to-log', type=str, default=module_dir + '.\processes_logs',
                         help='Имя выходного файла (по умолчанию processes_logs.json)')
     parser.add_argument('--log-interval-sec', type=str, default='5',
                         help='Как часто производить запись')
