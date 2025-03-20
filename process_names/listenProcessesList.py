@@ -18,16 +18,16 @@ def set_interval(func, sec):
     t.start()
     return t
 
-def save_processes_to_file(logs_folder_name, is_working_mode):
+def save_processes_to_file(dir_to_logs, is_working_mode_target_value):
     processes = []
-    processesSeen = set()  # Use a set to track seen (name, pid) tuples.
+    processes_seen = set()  # Use a set to track seen (name, pid) tuples.
     for p in psutil.process_iter(attrs=['name', 'pid', 'cpu_percent']):
         if hasattr(p,'info'):
             try:
                 # Получаем нагрузку на CPU
                 p.cpu_percent(interval=0)  # Для получения текущего значения в будущем
-                if p.info['name'] not in processesSeen:
-                    processesSeen.add(p.info['name'])  # Mark this process as seen
+                if p.info['name'] not in processes_seen:
+                    processes_seen.add(p.info['name'])  # Mark this process as seen
                     processes.append((p.info['name'], p.info['pid'], p.cpu_percent(interval=0)))
             except (psutil.NoSuchProcess, psutil.AccessDenied):
                 continue
@@ -39,7 +39,7 @@ def save_processes_to_file(logs_folder_name, is_working_mode):
     # result = [f"{name} (нагрузка: {cpu}% )" for name, pid, cpu in sorted_processes]
     timestamp = datetime.now().isoformat()
     result = {
-        'is_working_mode': is_working_mode,
+        'is_working_mode': is_working_mode_target_value,
         'timestamp': timestamp,
         'processes': []
     }
@@ -53,10 +53,10 @@ def save_processes_to_file(logs_folder_name, is_working_mode):
 
     # Формируем имя файла в папке "logs_folder"
     clean_timestamp = time.strftime("%Y-%m-%d_%H-%M-%S") # Убраны неправильные символы для названия файла в windows
-    logs_file_name = os.path.join(logs_folder_name, f"{clean_timestamp}.json")
+    logs_file_name = os.path.join(dir_to_logs, f"{clean_timestamp}.json")
 
     # Убеждаемся, что папка существует
-    os.makedirs(logs_folder_name, exist_ok=True)
+    os.makedirs(dir_to_logs, exist_ok=True)
 
     # Записываем массив названий процессов в указанный файл
     print(logs_file_name)
@@ -64,7 +64,7 @@ def save_processes_to_file(logs_folder_name, is_working_mode):
         # Записываем объект `result` в файл в формате JSON
         json.dump(result, json_file, ensure_ascii=False, indent=4)
 
-    print(f"Названия процессов с нагрузкой успешно записаны в {logs_folder_name}.")
+    print(f"Названия процессов с нагрузкой успешно записаны в {dir_to_logs}.")
 
 def signal_handler(sig, frame):
     loggingInterval.cancel()
@@ -73,17 +73,20 @@ def signal_handler(sig, frame):
 
 if __name__ == "__main__":
     # Создаем парсер аргументов командной строки
-    parser = argparse.ArgumentParser(description='Записывает названия запущенных процессов в файл JSON.')
-    if len(sys.argv) > 1:
-        is_working_mode = sys.argv[1].lower() in ['true', '1', 'yes']
-    # parser.add_argument('logs_folder_name', nargs='?', default='processes_logs',
-    #                     help='Имя выходного файла (по умолчанию processes_logs.json)')
-    logs_folder_name = "processes_logs"
-
-    # Получаем аргументы
+    parser = argparse.ArgumentParser(description='Записывает названия запущенных процессов в файлы JSON.')
+    # Add an argument for the working mode
+    parser.add_argument('--working-mode', type=str, default='false',
+                        choices=['true', 'false', '1', '0', 'yes', 'no'],
+                        help='Run in working mode (true/1/yes) or not (false/0/no).')
+    parser.add_argument('--dir-to-log', type=str, default='.\processes_logs',
+                        help='Имя выходного файла (по умолчанию processes_logs.json)')
+    parser.add_argument('--log-interval-sec', type=str, default='5',
+                        help='Как часто производить запись')
+    # Parse the arguments
     args = parser.parse_args()
-    # save_processes_to_file(args.logs_folder_name)
-    # loggingInterval = set_interval(lambda: save_processes_to_file(args.logs_folder_name), 5)
-    loggingInterval = set_interval(lambda: save_processes_to_file(logs_folder_name, is_working_mode), 5)
+    is_working_mode = args.working_mode.lower() in ['true', '1', 'yes']
+    logs_folder_name = args.dir_to_log
+    time_interval = int(args.log_interval_sec)
+    loggingInterval = set_interval(lambda: save_processes_to_file(logs_folder_name, is_working_mode), time_interval)
     signal.signal(signal.SIGINT, signal_handler)
 
