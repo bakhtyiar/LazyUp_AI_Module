@@ -4,8 +4,10 @@ import json
 import os
 import subprocess
 
+module_dir = os.path.dirname(os.path.abspath(__file__))
+
 def update_config(minutes):
-    config_path = 'config.json'
+    config_path = module_dir + '/../config.json'
     config = {'lock_duration': minutes}
     with open(config_path, 'w') as file:
         json.dump(config, file, indent=4)
@@ -33,12 +35,19 @@ def start_lock():
             minutes = int(minutes_entry.get())
             update_config(minutes)
             import user_session_manipulator.lock_session as lock_session
-            lock_session.keep_locked()
+            with open(module_dir + '/../config.json', 'r') as file:
+                config = json.load(file)
+            lock_duration = config.get('lock_duration') or minutes_entry.get()
             minutes_entry.config(state='disabled')
             lock_button.config(state='disabled')
-            messagebox.showinfo("Успех", "Блокировка запущена!")
+            lock_session.keep_locked(lock_duration)
         except ImportError:
             messagebox.showerror("Ошибка", "Модуль lock_session не найден!")
+        finally:
+            minutes_entry.config(state='enabled')
+            lock_button.config(state='enabled')
+            messagebox.showinfo("", "Блокировка завершена!")
+    return
 
 def start_monitoring():
     try:
@@ -62,7 +71,7 @@ main_frame = ttk.Frame(root)
 main_frame.pack(padx=20, pady=20, fill='both', expand=True)
 
 # Поле ввода минут
-minutes_label = ttk.Label(main_frame, text="Минуты:")
+minutes_label = ttk.Label(main_frame, text="Длительность блокировки (минуты):")
 minutes_label.pack(pady=(0,5))
 
 minutes_entry = ttk.Entry(main_frame, width=10)
