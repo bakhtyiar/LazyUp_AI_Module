@@ -48,11 +48,21 @@ def start_lock():
     return
 
 def start_monitoring():
+    global monitoring_process
     try:
-        subprocess.Popen(['python', module_dir + '/../process.py'])
+        monitoring_process = subprocess.Popen(['python', module_dir + '/../process.py'])
+        monitor_button.config(text="Остановить мониторинг прокрастинации", command=stop_monitoring)
         messagebox.showinfo("Успех", "Мониторинг прокрастинации запущен!")
     except FileNotFoundError:
         messagebox.showerror("Ошибка", "Файл process.py не найден!")
+
+def stop_monitoring():
+    global monitoring_process
+    if monitoring_process:
+        monitoring_process.terminate()
+        monitoring_process = None
+        monitor_button.config(text="Запустить мониторинг прокрастинации", command=start_monitoring)
+        messagebox.showinfo("Успех", "Мониторинг прокрастинации остановлен!")
 
 root = tk.Tk()
 root.title("Управление блокировкой и мониторингом")
@@ -85,7 +95,8 @@ monitor_button.pack(pady=(0,15))
 lock_button = ttk.Button(main_frame, text="Запустить блокировку", command=start_lock)
 lock_button.pack(pady=(0,5))
 
-# Кнопка запуска мониторинга
+# Кнопка запуска/остановки мониторинга
+monitoring_process = None
 monitor_button = ttk.Button(main_frame, text="Запустить мониторинг прокрастинации", command=start_monitoring)
 monitor_button.pack(pady=(0,5))
 
