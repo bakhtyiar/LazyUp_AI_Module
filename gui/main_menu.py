@@ -32,8 +32,6 @@ def validate_minutes():
 def start_lock():
     if validate_minutes():
         try:
-            minutes = int(minutes_entry.get())
-            update_config(minutes)
             import user_session_manipulator.lock_session as lock_session
             with open(module_dir + '/../config.json', 'r') as file:
                 config = json.load(file)
@@ -51,14 +49,14 @@ def start_lock():
 
 def start_monitoring():
     try:
-        subprocess.Popen(['python', 'process.py'])
+        subprocess.Popen(['python', module_dir + '/../process.py'])
         messagebox.showinfo("Успех", "Мониторинг прокрастинации запущен!")
     except FileNotFoundError:
         messagebox.showerror("Ошибка", "Файл process.py не найден!")
 
 root = tk.Tk()
 root.title("Управление блокировкой и мониторингом")
-root.geometry("350x220")  # Увеличим высоту окна для лучшего размещения элементов
+root.geometry("350x270")  # Увеличим высоту окна для лучшего размещения элементов
 root.resizable(True, True)
 
 style = ttk.Style()
@@ -75,9 +73,13 @@ minutes_label = ttk.Label(main_frame, text="Длительность блоки�
 minutes_label.pack(pady=(0,5))
 
 minutes_entry = ttk.Entry(main_frame, width=10)
-minutes_entry.pack(pady=(0,15))
+minutes_entry.pack(pady=(0,5))
 minutes_entry.insert(0, "1")  # Начальное значение (минимум 1)
 minutes_entry.bind("<FocusOut>", lambda event: validate_minutes())
+
+# Кнопка запуска мониторинга
+monitor_button = ttk.Button(main_frame, text="Сохранить", command=lambda: update_config(int(minutes_entry.get())))
+monitor_button.pack(pady=(0,15))
 
 # Кнопка запуска блокировки
 lock_button = ttk.Button(main_frame, text="Запустить блокировку", command=start_lock)
