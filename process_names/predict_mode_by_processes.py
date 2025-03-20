@@ -1,45 +1,21 @@
 import pandas as pd
-from sklearn.model_selection import train_test_split
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import Sequential, load_model
-from tensorflow.keras.layers import Dense, Embedding, LSTM
-from sklearn.metrics import classification_report
 import json
 import os
-import process_name_tokenizer
+import process_name_tokenizing.process_name_tokens_manager as pn_token_manager
 
-def predict_by_process_names(df, sequence_max_len=64, tokenizer_file=process_name_tokenizer.tokens_dict_filename):
+def predict_by_process_names(df: pd.DataFrame, sequence_max_len=64, tokenizer_file=pn_token_manager.tokens_dict_filename):
     max_length = sequence_max_len  # Максимальная длина последовательности
-
-    try:
-        tokenizer = process_name_tokenizer.load_tokenizer(tokenizer_file)
-    except FileNotFoundError:
-        tokenizer = Tokenizer()
-        tokenizer.fit_on_texts(df['processes'])
-        process_name_tokenizer.save_tokenizer(tokenizer, tokenizer_file)
-
-    tokenizer = Tokenizer()
-    tokenizer.fit_on_texts(df['processes'])
-
-    # Функция для фильтрации названий неизвестных процессов
-    def filter_unknown_processes(processes):
-        return [process for process in processes if process in tokenizer.word_index]
-
-    # Применяем фильтрацию к колонке 'processes'
-    df['processes'] = df['processes'].apply(filter_unknown_processes)
-
+    # Загрузить токенайзер и обновить его
+    tokenizer = pn_token_manager.process_tokenization(df['processes'])
+    # Выносим данные для предсказания
     X = tokenizer.texts_to_sequences(df['processes'])
     X = pad_sequences(X, maxlen=max_length)
     # y = pd.get_dummies(df['is_working_mode']).values  # one-hot encoding
-
     # Модель
-    model = None
-    try:
-        model = load_model('./predict_processes.h5')
-    except OSError:
-        print("Saved model not found")
-
+    model = load_model('./predict_processes.h5')
     return model.predict(X)
 
 def load_dataframe_process_names():
