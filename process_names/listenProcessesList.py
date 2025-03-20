@@ -85,5 +85,5 @@ if __name__ == "__main__":
     # save_processes_to_file(args.logs_folder_name)
     # loggingInterval = set_interval(lambda: save_processes_to_file(args.logs_folder_name), 5)
     loggingInterval = set_interval(lambda: save_processes_to_file(logs_folder_name, is_working_mode), 5)
-signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGINT, signal_handler)
 
