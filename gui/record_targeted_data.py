@@ -10,8 +10,9 @@ module_dir = os.path.dirname(os.path.abspath(__file__))
 def toggle_recording():
     global recording_process
     if recording_process is None:
-        # Запуск скрипта listenProcessesList.py
+        # Запуск скрипта listenProcessesList.py и listenDeviceInput.py
         recording_process = subprocess.Popen([sys.executable, module_dir + "..\process_names\listenProcessesList.py", current_arg])
+        recording_process = subprocess.Popen([sys.executable, module_dir + "..\device_input\listenDeviceInput.py", current_arg])
         record_button.config(text="Остановить запись", style="TButton")
         status_label.config(text="Запись запущена", foreground="green")
     else:
@@ -42,6 +43,7 @@ def update_script_arg():
     if recording_process is not None:
         recording_process.terminate()
         recording_process = subprocess.Popen([sys.executable, module_dir + "..\process_names\listenProcessesList.py", current_arg])
+        recording_process = subprocess.Popen([sys.executable, module_dir + "..\device_input\listenDeviceInput.py", current_arg])
 
 # Инициализация главного окна
 root = tk.Tk()

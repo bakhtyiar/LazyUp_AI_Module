@@ -52,7 +52,7 @@ if not model:
     # model.save(model_path)
     joblib.dump(model, model_path)
 
-# Оценка модели
-predictions = model.predict(X_test)
-print(classification_report(y_test, predictions))
-
+if __name__ == "__main__":
+    # Оценка модели
+    predictions = model.predict(X_test)
+    print(classification_report(y_test, predictions))
