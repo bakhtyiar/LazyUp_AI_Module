@@ -69,6 +69,19 @@ class ThresholdClassifier:
     def __init__(self):
         self.thresholds = None
 
+    def fit(self, X, y):
+        """Подбор порогов на обучающих данных"""
+        # Здесь должна быть реализация подбора порогов
+        # Для примера используем фиксированные значения
+        self.thresholds = {
+            'min_count': 3,
+            'mean_time_thresh': 1000,
+            'median_time_thresh': 800,
+            'freq_low_thresh': 0.7,
+            'key_range_thresh': 10
+        }
+        return self
+
     def predict(self, X):
         """Предсказание для новых данных"""
         predictions = []
@@ -78,20 +91,7 @@ class ThresholdClassifier:
             predictions.append(pred)
         return np.array(predictions)
 
-# def train_thresholds(train_data: List[Dict]) -> Dict[str, tuple]:
-#     """
-#     Подбирает оптимальные пороговые значения на обучающей выборке.
-#     Упрощенная реализация - в реальности нужно использовать более сложные методы.
-#     """
-#     # Здесь должна быть реализация подбора порогов
-#     # Для примера возвращаем заранее заданные значения
-#     return {
-#         'min_count': 3,
-#         'mean_time_thresh': 1000,
-#         'median_time_thresh': 800,
-#         'freq_low_thresh': 0.7,
-#         'key_range_thresh': 10
-#     }
+
 
 # Пример использования
 if __name__ == "__main__":
