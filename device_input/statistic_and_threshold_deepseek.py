@@ -3,13 +3,14 @@ from typing import List, Dict, Union
 from device_log_loader import load_device_logs
 
 
-def extract_features(data: Dict[str, Union[int, List[Dict[str, int]]]]) -> Dict[str, float]:
+def extract_features(data: List[Dict[str, int]]) -> Dict[str, float]:
     """
     Извлекает статистические признаки из входных данных для последующей классификации.
-    
+
     Args:
-        data: Входные данные в формате {'mode': int, 'list': [{'buttonKey': int, 'dateTime': int}, ...]}
-    
+        data: Входные данные в формате:
+            [{'buttonKey': int, 'dateTime': int}, ...]
+
     Returns:
         Словарь с вычисленными признаками:
         - count: количество записей
@@ -19,7 +20,7 @@ def extract_features(data: Dict[str, Union[int, List[Dict[str, int]]]]) -> Dict[
         - max_key: максимальное значение buttonKey
         - freq_low: доля нажатий с buttonKey < 5
     """
-    events = data['list']
+    events = data
     timestamps = sorted([e['dateTime'] for e in events])
     button_keys = [e['buttonKey'] for e in events]
 
@@ -85,19 +86,18 @@ class ThresholdClassifier:
     def predict(self, X):
         """Предсказание для новых данных"""
         predictions = []
-        for sample in X:
-            features = extract_features({'list': sample})
-            pred = classify_by_thresholds(features)
-            predictions.append(pred)
+        features = extract_features(X)
+        pred = classify_by_thresholds(features)
+        predictions.append(pred)
         return np.array(predictions)
-
-
 
 # Пример использования
 if __name__ == "__main__":
     # Пример входных данных
-    test_data = load_device_logs(1000, True)
-    # Извлекаем признаки
-    features = extract_features(test_data)
-    # Классифицируем
-    predicted_mode = classify_by_thresholds(features)
+    test_data = load_device_logs(100)
+    for batch in test_data:
+        # Извлекаем признаки
+        features = extract_features(batch['list'])
+        # Классифицируем
+        predicted_mode = classify_by_thresholds(features)
+        print(batch['mode'], predicted_mode)
