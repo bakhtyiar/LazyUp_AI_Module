@@ -65,7 +65,18 @@ def classify_by_thresholds(features: Dict[str, float]) -> int:
     # По умолчанию возвращаем 0
     return 0
 
+class ThresholdClassifier:
+    def __init__(self):
+        self.thresholds = None
 
+    def predict(self, X):
+        """Предсказание для новых данных"""
+        predictions = []
+        for sample in X:
+            features = extract_features({'list': sample})
+            pred = classify_by_thresholds(features)
+            predictions.append(pred)
+        return np.array(predictions)
 
 # def train_thresholds(train_data: List[Dict]) -> Dict[str, tuple]:
 #     """
@@ -86,12 +97,7 @@ def classify_by_thresholds(features: Dict[str, float]) -> int:
 if __name__ == "__main__":
     # Пример входных данных
     test_data = load_device_logs(1000, True)
-
     # Извлекаем признаки
     features = extract_features(test_data)
-    # print("Извлеченные признаки:", features)
-
     # Классифицируем
     predicted_mode = classify_by_thresholds(features)
-    # print(f"Предсказанный mode: {predicted_mode}")
-    # print(f"Истинный mode: {test_data['mode']}")
