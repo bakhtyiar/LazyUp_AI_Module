@@ -1,5 +1,5 @@
 import numpy as np
-from typing import List, Dict, Union
+from typing import List, Dict
 from device_log_loader import load_device_logs
 
 
@@ -85,19 +85,15 @@ class ThresholdClassifier:
 
     def predict(self, X):
         """Предсказание для новых данных"""
-        predictions = []
-        features = extract_features(X)
-        pred = classify_by_thresholds(features)
-        predictions.append(pred)
-        return np.array(predictions)
+        return classify_by_thresholds(extract_features(X))
 
 # Пример использования
 if __name__ == "__main__":
     # Пример входных данных
     test_data = load_device_logs(100)
-    for batch in test_data:
+    for item in test_data:
         # Извлекаем признаки
-        features = extract_features(batch['list'])
+        features = extract_features(test_data)
         # Классифицируем
         predicted_mode = classify_by_thresholds(features)
-        print(batch['mode'], predicted_mode)
+        print(item['mode'], predicted_mode)
