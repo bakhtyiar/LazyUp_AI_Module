@@ -1,9 +1,11 @@
+import time
+import tracemalloc
+
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
-from datetime import datetime
+from sklearn.model_selection import train_test_split
 
 from device_input.device_log_loader import load_device_logs
 
@@ -87,6 +89,9 @@ if __name__ == "__main__":
     # Разделение на train/test
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
+    # Измерение использования памяти до обучения
+    tracemalloc.start()
+    start_train = time.time()
     # Обучение модели
     model = RandomForestClassifier(
         n_estimators=100,
@@ -95,10 +100,25 @@ if __name__ == "__main__":
         class_weight='balanced'  # Для несбалансированных данных
     )
     model.fit(X_train, y_train)
+    end_train = time.time()
+    training_time = end_train - start_train
+    # Измерение памяти после обучения
+    current, peak = tracemalloc.get_traced_memory()
+    max_ram_usage = peak / (1024 ** 2)  # в MB
+    tracemalloc.stop()
+
+    # Предсказание на тестовых данных с замером времени
+
+    y_pred = []
 
     # Оценка качества
-    y_pred = model.predict(X_test)
+    start_inf = time.time()
+    y_pred = model.predict(X_test)  # вызывать predict для отдельных строк
+    end_inf = time.time()
+    inference_time = end_inf - start_inf
     print(classification_report(y_test, y_pred))
+    print(f"Max RAM Usage: {max_ram_usage:.2f} MB")
+    print(f"Inference time: {inference_time:.4f} s")
 
     # # Пример предсказания для новых данных
     # new_data = {
