@@ -19,42 +19,41 @@ from device_input.evaluator_of_classifiers import evaluate, print_evaluation
 def extract_features(data):
     features = []
 
-    for item in data:
-        list_events = item['list']
-        num_events = len(list_events)
-        button_counts = {}
-        time_diffs = []
+    list_events = data['list']
+    num_events = len(list_events)
+    button_counts = {}
+    time_diffs = []
 
-        # Извлечение временных меток и кнопок
-        timestamps = [e['dateTime'] for e in list_events]
-        buttons = [e['buttonKey'] for e in list_events]
+    # Извлечение временных меток и кнопок
+    timestamps = [e['dateTime'] for e in list_events]
+    buttons = [e['buttonKey'] for e in list_events]
 
-        # Частотные признаки
-        for btn in buttons:
-            button_counts[btn] = button_counts.get(btn, 0) + 1
+    # Частотные признаки
+    for btn in buttons:
+        button_counts[btn] = button_counts.get(btn, 0) + 1
 
-        # Временные признаки
-        if len(timestamps) > 1:
-            time_diff = [(timestamps[i - 1] - timestamps[i])
-                         for i in range(1, len(timestamps))]
-            time_diffs = time_diff
-        else:
-            time_diffs = [0]
+    # Временные признаки
+    if len(timestamps) > 1:
+        time_diff = [(timestamps[i - 1] - timestamps[i])
+                     for i in range(1, len(timestamps))]
+        time_diffs = time_diff
+    else:
+        time_diffs = [0]
 
-        # Формирование вектора признаков
-        feature_vector = {
-            'num_events': num_events,
-            'time_mean': np.mean(time_diffs),
-            'time_var': np.var(time_diffs),
-            'btn5_ratio': button_counts.get(5, 0) / num_events,
-            'btn1_count': button_counts.get(1, 0),
-            'btn2_count': button_counts.get(2, 0),
-            'time_pattern': 1 if any(np.array(time_diffs) < 5) else 0
-        }
+    # Формирование вектора признаков
+    feature_vector = {
+        'num_events': num_events,
+        'time_mean': np.mean(time_diffs),
+        'time_var': np.var(time_diffs),
+        'btn5_ratio': button_counts.get(5, 0) / num_events,
+        'btn1_count': button_counts.get(1, 0),
+        'btn2_count': button_counts.get(2, 0),
+        'time_pattern': 1 if any(np.array(time_diffs) < 5) else 0
+    }
 
-        features.append((feature_vector, item['mode']))
+    features.append((feature_vector, data['mode']))
 
-    return pd.DataFrame([f[0] for f in features]), pd.Series([f[1] for f in features])
+    return features
 
 
 # Измерение нагрузки на систему
@@ -149,9 +148,37 @@ def main():
 
 
 def evaluateClassifier():
+    # Load raw data
     data = load_device_logs(1000)
-    metrics = evaluate(LogistricRegressionClassifier, data)
+
+    # Extract features from raw data
+    X = [extract_features(sample['list']) for sample in data]
+    # X = pd.DataFrame([f[0] for f in X]), pd.Series([f[1] for f in X])
+    y = [sample['mode'] for sample in data]
+
+    # Convert features to numerical format
+    X_numeric = []
+    for features in X:
+        X_numeric.append([
+            features['num_events'],
+            features['time_mean'],
+            features['time_var'],
+            features['btn5_ratio'],
+            features['btn1_count'],
+            features['btn2_count'],
+            features['time_pattern'],
+        ])
+
+    data_numeric = []
+    for i in range(len(data)):
+        data_numeric.append({
+            'list': X_numeric[i],
+            'mode': y[i]
+        })
+    # Now evaluate with properly formatted data
+    metrics = evaluate(LogistricRegressionClassifier, data_numeric)
     print_evaluation(metrics)
 
 if __name__ == "__main__":
+    evaluateClassifier()
     main()
