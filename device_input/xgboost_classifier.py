@@ -12,7 +12,6 @@ from device_input.device_log_loader import load_device_logs
 # Функция для извлечения признаков из сырых данных
 def extract_features(data):
     """Преобразует сырые данные в DataFrame с признаками"""
-
     features = {
         'count': len(data),  # Общее количество нажатий
         'unique_buttons': len(set(d['buttonKey'] for d in data)),  # Уникальные кнопки
@@ -24,17 +23,14 @@ def extract_features(data):
         button = d['buttonKey']
         button_counts[button] = button_counts.get(button, 0) + 1
 
-    # Нормализованные частоты нажатий
-    for button, count in button_counts.items():
-        features[f'button_{button}_freq'] = count / features['count']
-
-    # Временные признаки
-    timestamps = [datetime.fromisoformat(d['dateTime']) for d in data]
+    # Временные характеристики
+    timestamps = [d['dateTime'] for d in data]  # Use timestamps directly
     timestamps.sort()
-    time_diffs = [(timestamps[i + 1] - timestamps[i]).total_seconds()
-                  for i in range(len(timestamps) - 1)]
 
-    if time_diffs:
+    if len(timestamps) > 1:
+        time_diffs = [timestamps[i + 1] - timestamps[i]
+                      for i in range(len(timestamps) - 1)]
+
         features.update({
             'time_mean': np.mean(time_diffs),
             'time_std': np.std(time_diffs),
@@ -42,12 +38,19 @@ def extract_features(data):
             'time_min': min(time_diffs),
             'time_median': np.median(time_diffs)
         })
-
-    # Паттерны активности
-    features['rapid_clicks'] = sum(1 for diff in time_diffs if diff < 2)  # Быстрые нажатия
+        features['rapid_clicks'] = sum(1 for diff in time_diffs if diff < 2)
+    else:
+        # Default values when not enough timestamps
+        features.update({
+            'time_mean': 0,
+            'time_std': 0,
+            'time_max': 0,
+            'time_min': 0,
+            'time_median': 0,
+            'rapid_clicks': 0
+        })
 
     return pd.DataFrame([features])
-
 
 # Подготовка датасета
 def prepare_dataset(json_data):
