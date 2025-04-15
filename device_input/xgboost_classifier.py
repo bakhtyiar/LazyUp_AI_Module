@@ -1,10 +1,11 @@
+import time
+import tracemalloc
+
 import numpy as np
 import pandas as pd
-from xgboost import XGBClassifier
+from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, f1_score
-from sklearn.preprocessing import LabelEncoder
-from datetime import datetime
+from xgboost import XGBClassifier
 
 from device_input.device_log_loader import load_device_logs
 
@@ -52,6 +53,7 @@ def extract_features(data):
 
     return pd.DataFrame([features])
 
+
 # Подготовка датасета
 def prepare_dataset(json_data):
     """Преобразует массив JSON объектов в обучающий датасет"""
@@ -71,13 +73,8 @@ def prepare_dataset(json_data):
 
 
 # Обучение модели
-def train_xgboost_model(X, y):
+def train_xgboost_model(X_train, y_train):
     """Обучает классификатор XGBoost"""
-
-    # Разделение на обучающую и тестовую выборки
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42)
-
     # Инициализация модели
     model = XGBClassifier(
         n_estimators=100,
@@ -88,15 +85,8 @@ def train_xgboost_model(X, y):
         random_state=42,
         eval_metric='logloss'
     )
-
     # Обучение
     model.fit(X_train, y_train)
-
-    # Оценка
-    y_pred = model.predict(X_test)
-    print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
-    print(f"F1 Score: {f1_score(y_test, y_pred):.4f}")
-
     return model
 
 
@@ -109,5 +99,29 @@ if __name__ == "__main__":
     X, y = prepare_dataset(sample_data)
     print("Извлеченные признаки:\n", X.head())
 
+    # Разделение на обучающую и тестовую выборки
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42)
+
+    # Измерение использования памяти до
+    tracemalloc.start()
+    start_train = time.time()
+
     # Обучение модели
-    model = train_xgboost_model(X, y)
+    model = train_xgboost_model(X_train, y_train)
+    end_train = time.time()
+    training_time = end_train - start_train
+
+    # Измерение памяти после обучения
+    current, peak = tracemalloc.get_traced_memory()
+    max_ram_usage = peak / (1024 ** 2)  # в MB
+    tracemalloc.stop()
+
+    # Оценка
+    start_inf = time.time()
+    y_pred = model.predict(X_test)
+    end_inf = time.time()
+    inference_time = end_inf - start_inf
+    print(classification_report(y_test, y_pred))
+    print(f"Max RAM Usage: {max_ram_usage:.2f} MB")
+    print(f"Inference time: {inference_time:.4f} s")
