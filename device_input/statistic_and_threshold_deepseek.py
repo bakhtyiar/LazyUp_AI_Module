@@ -1,5 +1,7 @@
 import numpy as np
 from typing import List, Dict
+
+from device_input.evaluator_of_classifiers import print_evaluation, evaluate
 from device_log_loader import load_device_logs
 
 
@@ -86,6 +88,11 @@ class ThresholdClassifier:
     def predict(self, X):
         """Предсказание для новых данных"""
         return classify_by_thresholds(extract_features(X))
+
+def evaluateClassifier():
+    data = load_device_logs(1000)
+    metrics = evaluate(ThresholdClassifier, data)
+    print_evaluation(metrics)
 
 # Пример использования
 if __name__ == "__main__":
