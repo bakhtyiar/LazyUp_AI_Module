@@ -1,0 +1,14 @@
+C:\Users\bakhtiyar\.conda\envs\myenv\python.exe C:\Users\bakhtiyar\Projects\LazyUp_AI_Module\device_input\random_forest_deepseek.py
+              precision    recall  f1-score   support
+
+           0       0.86      1.00      0.92        18
+           1       1.00      0.75      0.86        12
+
+    accuracy                           0.90        30
+   macro avg       0.93      0.88      0.89        30
+weighted avg       0.91      0.90      0.90        30
+
+Max RAM Usage: 0.21 MB
+Inference time: 0.0040 s
+
+Process finished with exit code 0
