@@ -13,6 +13,7 @@ import sys
 
 from device_input.device_log_loader import load_device_logs
 
+
 # Функция извлечения признаков
 def extract_features(data):
     features = []
@@ -82,6 +83,31 @@ def measure_performance(model, X_test, y_test):
     return metrics
 
 
+class LogistricRegressionClassifier:
+    def __init__(self, penalty='l2', C=0.1, solver='lbfgs', class_weight='balanced', max_iter=1000):
+        self.classifier = LogisticRegression(
+            penalty=penalty,
+            C=C,
+            solver=solver,
+            class_weight=class_weight,
+            max_iter=max_iter
+        )
+        self.scaler = StandardScaler()
+
+    def fit(self, X, y):
+        # Стандартизация данных
+        X_scaled = self.scaler.fit_transform(X)
+        # Обучение модели
+        self.classifier.fit(X_scaled, y)
+        return self
+
+    def predict(self, X):
+        # Стандартизация данных
+        X_scaled = self.scaler.transform(X)
+        # Предсказание
+        return self.classifier.predict(X_scaled)
+
+
 # Основной пайплайн
 def main():
     # Генерация и преобразование данных
@@ -93,25 +119,14 @@ def main():
         X, y, test_size=0.2, stratify=y, random_state=42
     )
 
-    # Стандартизация данных
-    scaler = StandardScaler()
-    X_train_scaled = scaler.fit_transform(X_train)
-    X_test_scaled = scaler.transform(X_test)
-
-    # Обучение модели с замером времени
+    # Создание и обучение модели
     start_train = time.time()
-    model = LogisticRegression(
-        penalty='l2',
-        C=0.1,
-        solver='lbfgs',
-        class_weight='balanced',
-        max_iter=1000
-    )
-    model.fit(X_train_scaled, y_train)
+    model = LogistricRegressionClassifier()
+    model.fit(X_train, y_train)
     train_time = time.time() - start_train
 
     # Оценка производительности
-    metrics = measure_performance(model, X_test_scaled, y_test)
+    metrics = measure_performance(model, X_test, y_test)
     metrics['train_time_sec'] = train_time
 
     # Вывод результатов
@@ -122,19 +137,11 @@ def main():
     # Анализ важности признаков
     feature_importance = pd.DataFrame({
         'feature': X.columns,
-        'coefficient': model.coef_[0]
+        'coefficient': model.classifier.coef_[0]
     }).sort_values('coefficient', key=abs, ascending=False)
 
     print("\nВажность признаков:")
     print(feature_importance)
-
-class LogistricRegressionClassifier:
-    def __init__(self):
-
-    def fit(self, X, y):
-
-    def predict(self, X):
-
 
 if __name__ == "__main__":
     main()
