@@ -7,7 +7,6 @@ import os
 import tracemalloc
 from sklearn.model_selection import train_test_split
 from device_input.device_log_loader import load_device_logs
-from device_input.statistic_and_threshold_deepseek import ThresholdClassifier
 
 class ClassifierMetrics:
     def __init__(self):
@@ -118,9 +117,3 @@ def print_evaluation(metrics):
     print(f"Avg Inference Time: {metrics['avg_inference_time']:.6f} sec/sample")
     print(f"Max RAM Usage: {metrics['max_ram_usage']:.2f} MB")
     print(f"GPU Usage: {metrics['gpu_usage'] or 'Not measured'}")
-
-# Пример использования
-if __name__ == "__main__":
-    data = load_device_logs(1000)
-    metrics = evaluate(ThresholdClassifier, data)
-    print_evaluation(metrics)
