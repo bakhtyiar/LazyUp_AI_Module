@@ -35,7 +35,7 @@ def extract_features(data):
 
         # Временные признаки
         if len(timestamps) > 1:
-            time_diff = [(timestamps[i - 1] - timestamps[i]).total_seconds()
+            time_diff = [(timestamps[i - 1] - timestamps[i])
                          for i in range(1, len(timestamps))]
             time_diffs = time_diff
         else:
@@ -96,7 +96,10 @@ class LogistricRegressionClassifier:
         self.scaler = StandardScaler()
 
     def fit(self, X, y):
-        # Стандартизация данных
+        # Преобразование списка словарей в DataFrame
+        if isinstance(X, list):
+            X = pd.DataFrame(X)
+        # Масштабирование признаков
         X_scaled = self.scaler.fit_transform(X)
         # Обучение модели
         self.classifier.fit(X_scaled, y)
@@ -143,6 +146,7 @@ def main():
 
     print("\nВажность признаков:")
     print(feature_importance)
+
 
 def evaluateClassifier():
     data = load_device_logs(1000)
