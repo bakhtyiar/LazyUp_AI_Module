@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 import sys
 
 from device_input.device_log_loader import load_device_logs
+from device_input.evaluator_of_classifiers import evaluate, print_evaluation
 
 
 # Функция извлечения признаков
@@ -142,6 +143,11 @@ def main():
 
     print("\nВажность признаков:")
     print(feature_importance)
+
+def evaluateClassifier():
+    data = load_device_logs(1000)
+    metrics = evaluate(LogistricRegressionClassifier, data)
+    print_evaluation(metrics)
 
 if __name__ == "__main__":
     main()
