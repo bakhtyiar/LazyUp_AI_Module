@@ -1,9 +1,7 @@
 import numpy as np
 from typing import List, Dict
-
-from device_input.evaluator_of_classifiers import print_evaluation, evaluate
-from device_log_loader import load_device_logs
-
+from device_input.device_log_loader import load_device_logs
+from device_input.evaluator_of_classifiers import evaluate, print_evaluation
 
 def extract_features(data: List[Dict[str, int]]) -> Dict[str, float]:
     """
@@ -94,13 +92,6 @@ def evaluateClassifier():
     metrics = evaluate(ThresholdClassifier, data)
     print_evaluation(metrics)
 
-# Пример использования
 if __name__ == "__main__":
-    # Пример входных данных
-    test_data = load_device_logs(100)
-    for item in test_data:
-        # Извлекаем признаки
-        features = extract_features(test_data)
-        # Классифицируем
-        predicted_mode = classify_by_thresholds(features)
-        print(item['mode'], predicted_mode)
+    # Run evaluation
+    evaluateClassifier()
