@@ -6,6 +6,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
+from tensorflow.python.data.util.nest import flatten
 from torch_geometric.data import Data, DataLoader
 from torch_geometric.nn import GCNConv, global_mean_pool
 
@@ -71,7 +72,7 @@ def prepare_graph_data(sequences, labels):
 
 # Пример использования
 if __name__ == "__main__":
-    sample_data = load_device_logs(1000)
+    sample_data = load_device_logs(10)
 
     # Подготовка данных
     X = [item['list'] for item in sample_data]
@@ -92,7 +93,7 @@ if __name__ == "__main__":
     tracemalloc.start()
     start_train = time.time()
     # Обучение
-    for epoch in range(100):
+    for epoch in range(10):
         model.train()
         total_loss = 0
         for data in train_loader:
@@ -120,7 +121,24 @@ if __name__ == "__main__":
     # Измерение памяти после обучения
     current, peak = tracemalloc.get_traced_memory()
     max_ram_usage = peak / (1024 ** 2)  # в MB
+    y_pred = []
+    inference_time = 0
     tracemalloc.stop()
+    with torch.no_grad():
+        start_inf = time.time()
+        for data in test_loader:
+            data = data.to(device)
+            pred = (model(data.x, data.edge_index, data.batch) > 0.5).float()
+            y_pred.extend(pred.cpu().numpy())
+        end_inf = time.time()
+        inference_time = end_inf - start_inf
+
+    y_test = (list(data.y) for data in test_loader)
+    y_test = [
+    x
+    for xs in y_test
+    for x in xs
+    ]
     print(classification_report(y_test, y_pred))
     print(f"Max RAM Usage: {max_ram_usage:.2f} MB")
     print(f"Inference time: {inference_time:.4f} s")
