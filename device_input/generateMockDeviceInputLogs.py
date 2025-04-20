@@ -29,13 +29,13 @@ def generate_data_item(mode, base_time, index, total):
     if mode == 1:
         is_working_mode = True
         # Квадратичная зависимость + синусоидальные колебания
-        button_key = int(25 * (1 + math.sin(5 * time_pos)) + 10 * time_pos ** 2 + random.randint(-3, 3)
-        elif (mode == 2):
+        button_key = int(25 * (1 + math.sin(5 * time_pos)) + 10 * time_pos ** 2 + random.randint(-3, 3))
+    elif mode == 2:
         is_working_mode = random.choice([True, False])
         # Экспоненциальная зависимость с шумом
         exp_factor = math.exp(2 * time_pos) - 1
         button_key = int(30 + 15 * math.sin(3 * time_pos) + 10 * exp_factor + random.randint(-5, 5))
-        elif mode == 3:
+    elif mode == 3:
         is_working_mode = False
         # Логарифмическая зависимость с переключениями
         log_factor = math.log1p(5 * time_pos)
