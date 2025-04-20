@@ -1,0 +1,5004 @@
+{
+    "deviceLogs": [
+        {
+            "timestamp": "2025-04-14T18:13:21.544333",
+            "buttonKey": 56,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:15.544333",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:08.544333",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:23.544333",
+            "buttonKey": 34,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:48.544333",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:36.544333",
+            "buttonKey": 44,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:25.544333",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:18:36.544333",
+            "buttonKey": 55,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:37.544333",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:21.544333",
+            "buttonKey": 54,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:26:36.544333",
+            "buttonKey": 32,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:10.544333",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:22.544333",
+            "buttonKey": 35,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:18.544333",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:30:17.544333",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:01.544333",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:31.544333",
+            "buttonKey": 45,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:07.544333",
+            "buttonKey": 46,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:40.544333",
+            "buttonKey": 46,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:20.544333",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:17:18.544333",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:46.544333",
+            "buttonKey": 47,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:40.544333",
+            "buttonKey": 56,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:24.544333",
+            "buttonKey": 56,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:37.544333",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:03.544333",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:33.544333",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:48.544333",
+            "buttonKey": 31,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:51.544333",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:55.544333",
+            "buttonKey": 39,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:18:44.544333",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:27:01.544333",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:54.544333",
+            "buttonKey": 41,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:47.544333",
+            "buttonKey": 33,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:38.544333",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:41.544333",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:07:35.544333",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:00.544333",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:45.544333",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:21:08.544333",
+            "buttonKey": 36,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:30:38.544333",
+            "buttonKey": 57,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:10.544333",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:41.544333",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:55.544333",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:00.544333",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:43.544333",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:10:03.544333",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:13.544333",
+            "buttonKey": 33,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:20.544333",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:51.544333",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:24.544333",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:30.544333",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:31:15.544333",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:26:22.544333",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:19.544333",
+            "buttonKey": 34,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:54.544333",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:26.544333",
+            "buttonKey": 51,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:19.544333",
+            "buttonKey": 33,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:37:11.544333",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:50.544333",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:40.544333",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:23.544333",
+            "buttonKey": 32,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:44.544333",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:52.544333",
+            "buttonKey": 46,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:03.544333",
+            "buttonKey": 41,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:22:21.544333",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:54.544333",
+            "buttonKey": 32,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:42.544333",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:01.544333",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:23:33.544333",
+            "buttonKey": 30,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:33:03.544333",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:25.544333",
+            "buttonKey": 55,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:56.544333",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:54.544333",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:36.544333",
+            "buttonKey": 39,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:36:47.544333",
+            "buttonKey": 54,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:18:39.544333",
+            "buttonKey": 31,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:17:53.544333",
+            "buttonKey": 56,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:15.544333",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:50.544333",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:33:03.544333",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:22.544333",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:37:03.544333",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:31.544333",
+            "buttonKey": 36,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:29.544333",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:45.544333",
+            "buttonKey": 51,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:10:19.544333",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:26:10.544333",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:31.544333",
+            "buttonKey": 30,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:21.544333",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:00.544333",
+            "buttonKey": 36,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:33.544333",
+            "buttonKey": 44,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:30.544333",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:27:22.544333",
+            "buttonKey": 41,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:06.544333",
+            "buttonKey": 35,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:30:23.544333",
+            "buttonKey": 35,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:08.544333",
+            "buttonKey": 39,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:33.544333",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:13.544333",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:07.544333",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:05.544333",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:42.545334",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:43.545334",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:47.545334",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:33.545334",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:23:33.545334",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:37:16.545334",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:25.545334",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:41.545334",
+            "buttonKey": 57,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:34:31.545334",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:18:15.545334",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:51.545334",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:53.545334",
+            "buttonKey": 44,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:59.545334",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:22:49.545334",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:18:03.545334",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:18:49.545334",
+            "buttonKey": 48,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:00.545334",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:03.545334",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:36.545334",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:31:56.545334",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:48.545334",
+            "buttonKey": 49,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:40.545334",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:48.545334",
+            "buttonKey": 45,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:53.545334",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:26.545334",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:19.545334",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:43.545334",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:33:50.545334",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:13.545334",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:45.545334",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:17.545334",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:33.545334",
+            "buttonKey": 57,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:54.545334",
+            "buttonKey": 49,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:02.545334",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:31:08.545334",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:33.545334",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:13.545334",
+            "buttonKey": 31,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:54.545334",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:24.545334",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:32.545334",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:51.545334",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:05.545334",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:10:01.545334",
+            "buttonKey": 38,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:09.545334",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:35.545334",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:30:37.545334",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:38.545334",
+            "buttonKey": 41,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:52.545334",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:00.545334",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:30:18.545334",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:37.545334",
+            "buttonKey": 36,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:28.545334",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:30.545334",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:46.545334",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:23.545334",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:34.545334",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:15.545334",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:09.545334",
+            "buttonKey": 48,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:59.545334",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:33:01.545334",
+            "buttonKey": 41,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:47.545334",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:54.545334",
+            "buttonKey": 44,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:13.545334",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:18.545334",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:07.545334",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:10:24.545334",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:45.545334",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:20.545334",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:15.545334",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:22.545334",
+            "buttonKey": 35,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:56.545334",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:56.545334",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:21.545334",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:52.545334",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:10.545334",
+            "buttonKey": 45,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:26:31.545334",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:01.545334",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:38.545334",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:58.545334",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:28.545334",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:33:00.545334",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:21:08.545334",
+            "buttonKey": 36,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:18:48.545334",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:07:44.545334",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:26:05.545334",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:06.545334",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:30:52.545334",
+            "buttonKey": 36,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:49.545334",
+            "buttonKey": 30,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:45.545334",
+            "buttonKey": 56,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:33.545334",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:45.545334",
+            "buttonKey": 39,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:54.545334",
+            "buttonKey": 46,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:29:42.545334",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:26:59.545334",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:05.545334",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:30:20.545334",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:46.545334",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:09.545334",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:18:38.545334",
+            "buttonKey": 57,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:49.545334",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:52.545334",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:18.545334",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:33:43.545334",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:30:05.545334",
+            "buttonKey": 51,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:56.545334",
+            "buttonKey": 38,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:21.545334",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:23:44.545334",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:09.545334",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:47.545334",
+            "buttonKey": 44,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:20.545334",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:45.545334",
+            "buttonKey": 44,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:48.545334",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:46.545334",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:58.545334",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:07:34.545334",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:45.545334",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:33:16.545334",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:21.545334",
+            "buttonKey": 32,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:17.545334",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:29.545334",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:58.545334",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:11.545334",
+            "buttonKey": 39,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:18.545334",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:11.545334",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:22:29.545334",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:21:42.545334",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:27:42.545334",
+            "buttonKey": 39,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:43.545334",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:10.545334",
+            "buttonKey": 46,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:56.545334",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:30.545334",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:40.545334",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:15.545334",
+            "buttonKey": 51,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:35.545334",
+            "buttonKey": 55,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:07.545334",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:06.545334",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:05.545334",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:12.545334",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:11.545334",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:06.545334",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:03.545334",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:50.545334",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:50.545334",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:49.545334",
+            "buttonKey": 33,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:45.545334",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:19.545334",
+            "buttonKey": 45,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:53.545334",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:17:48.545334",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:31:12.545334",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:43.545334",
+            "buttonKey": 34,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:18.545334",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:22:45.545334",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:51.545334",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:15.545334",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:53.545334",
+            "buttonKey": 54,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:42.545334",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:32.545334",
+            "buttonKey": 56,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:48.545334",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:07.545334",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:44.545334",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:33:55.545334",
+            "buttonKey": 31,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:40.545334",
+            "buttonKey": 35,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:44.545334",
+            "buttonKey": 38,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:16.545334",
+            "buttonKey": 49,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:12.545334",
+            "buttonKey": 45,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:41.545334",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:11.545334",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:54.545334",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:34:56.545334",
+            "buttonKey": 36,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:55.545334",
+            "buttonKey": 41,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:48.545334",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:26.545334",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:54.545334",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:05.545334",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:02.545334",
+            "buttonKey": 46,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:38.545334",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:25.545334",
+            "buttonKey": 33,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:38.545334",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:15:27.545334",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:18.545334",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:02.545334",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:01.545334",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:59.545334",
+            "buttonKey": 32,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:20.545334",
+            "buttonKey": 39,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:05.545334",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:36.545334",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:40.545334",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:21.545334",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:37.545334",
+            "buttonKey": 46,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:37:08.545334",
+            "buttonKey": 35,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:36:50.545334",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:47.545334",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:00.545334",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:42.545334",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:45.545334",
+            "buttonKey": 44,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:01.545334",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:34:04.545334",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:21:32.545334",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:12.545334",
+            "buttonKey": 48,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:11.545334",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:26.545334",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:30.545334",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:14.545334",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:27.545334",
+            "buttonKey": 48,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:55.545334",
+            "buttonKey": 51,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:19.545334",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:14.545334",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:58.545334",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:53.545334",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:12.545334",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:17:40.545334",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:06.545334",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:19.545334",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:30.545334",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:54.545334",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:37.545334",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:17.545334",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:07:41.545334",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:16.545334",
+            "buttonKey": 39,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:02.545334",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:51.545334",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:32:01.545334",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:21.545334",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:57.545334",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:25.545334",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:01.545334",
+            "buttonKey": 36,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:18.545334",
+            "buttonKey": 57,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:34:30.546331",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:10.546331",
+            "buttonKey": 31,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:57.546331",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:31:52.546331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:17.546331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:48.546331",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:30:31.546331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:31:54.546331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:30:37.546331",
+            "buttonKey": 57,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:49.546331",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:47.546331",
+            "buttonKey": 39,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:30:46.546331",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:50.546331",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:35.546331",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:09.546331",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:15:12.546331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:28.546331",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:30:29.546331",
+            "buttonKey": 35,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:35.546331",
+            "buttonKey": 49,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:09.546331",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:23.546331",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:56.546331",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:37:11.546331",
+            "buttonKey": 44,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:49.546331",
+            "buttonKey": 33,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:15.546331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:25.546331",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:34.546331",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:08.546331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:05.546331",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:29.546331",
+            "buttonKey": 45,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:17:12.546331",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:35.546331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:53.546331",
+            "buttonKey": 56,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:00.546331",
+            "buttonKey": 33,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:44.546331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:31:45.546331",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:24.546331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:47.546331",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:27:30.546331",
+            "buttonKey": 55,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:00.546331",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:27:37.546331",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:21.546331",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:36.546331",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:39.546331",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:07.546331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:33.546331",
+            "buttonKey": 57,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:25.546331",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:48.546331",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:48.546331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:33:01.546331",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:27:22.546331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:52.546331",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:18:39.546331",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:41.546331",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:32.546331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:54.546331",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:53.546331",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:18.546331",
+            "buttonKey": 32,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:29.546331",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:28.546331",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:34.546331",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:43.546331",
+            "buttonKey": 46,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:07.546331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:43.546331",
+            "buttonKey": 38,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:29:25.546331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:27.546331",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:26.546331",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:18:08.546331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:11.546331",
+            "buttonKey": 38,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:59.546331",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:44.546331",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:22:12.546331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:49.546331",
+            "buttonKey": 41,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:03.546331",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:22.546331",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:34:35.546331",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:21.546331",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:14.546331",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:38.546331",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:05.546331",
+            "buttonKey": 45,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:31.546331",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:37.546331",
+            "buttonKey": 55,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:58.546331",
+            "buttonKey": 56,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:28.546331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:50.546331",
+            "buttonKey": 51,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:15.546331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:13.546331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:50.546331",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:36:56.546331",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:55.546331",
+            "buttonKey": 35,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:49.546331",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:13.546331",
+            "buttonKey": 36,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:54.546331",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:49.546331",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:10:18.546331",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:48.546331",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:25.546331",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:01.546331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:20.546331",
+            "buttonKey": 55,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:26.546331",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:37.546331",
+            "buttonKey": 36,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:25.546331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:57.546331",
+            "buttonKey": 34,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:07.546331",
+            "buttonKey": 45,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:49.546331",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:41.546331",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:56.546331",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:57.546331",
+            "buttonKey": 57,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:02.546331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:30.546331",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:01.546331",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:33:01.546331",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:13.546331",
+            "buttonKey": 39,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:25.546331",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:29:06.546331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:17:57.546331",
+            "buttonKey": 30,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:15:55.546331",
+            "buttonKey": 36,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:34:11.546331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:48.546331",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:18:17.546331",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:20.546331",
+            "buttonKey": 35,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:32:05.546331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:21:52.546331",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:57.546331",
+            "buttonKey": 36,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:23:17.546331",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:07:34.546331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:30:16.546331",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:26.546331",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:13.546331",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:34.546331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:22.546331",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:18.546331",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:22.546331",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:06.546331",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:37.546331",
+            "buttonKey": 36,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:01.546331",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:41.546331",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:06.546331",
+            "buttonKey": 31,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:31.546331",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:57.546331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:34.546331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:31.546331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:26:49.546331",
+            "buttonKey": 39,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:07.546331",
+            "buttonKey": 38,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:11.546331",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:34.546331",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:34.546331",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:17.546331",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:22:54.546331",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:32:01.546331",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:18.546331",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:32.546331",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:23.546331",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:21.546331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:20.546331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:25.546331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:27:08.546331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:40.546331",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:55.546331",
+            "buttonKey": 30,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:19.546331",
+            "buttonKey": 32,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:00.546331",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:37.546331",
+            "buttonKey": 46,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:42.546331",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:30.546331",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:25.546331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:54.546331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:18:07.546331",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:30.546331",
+            "buttonKey": 54,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:30.546331",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:47.546331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:17.546331",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:34.546331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:36:49.546331",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:35.546331",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:55.546331",
+            "buttonKey": 57,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:33.546331",
+            "buttonKey": 47,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:59.546331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:16.546331",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:18:41.546331",
+            "buttonKey": 51,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:18:49.546331",
+            "buttonKey": 57,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:44.546331",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:40.546331",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:22.546331",
+            "buttonKey": 45,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:15:43.546331",
+            "buttonKey": 31,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:23.546331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:16.546331",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:35.546331",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:38.546331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:48.546331",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:27:57.546331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:15.546331",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:27:27.546331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:33.546331",
+            "buttonKey": 49,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:38.546331",
+            "buttonKey": 32,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:05.546331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:34:02.546331",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:37.546331",
+            "buttonKey": 30,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:33:45.546331",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:02.546331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:12.546331",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:32:59.546331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:55.546331",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:48.546331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:29:40.546331",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:23.546331",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:16.546331",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:11.546331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:18:07.546331",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:13.546331",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:38.546331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:34:33.546331",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:27.546331",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:13.546331",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:07:33.546331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:25.546331",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:35.546331",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:36.546331",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:14.546331",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:01.546331",
+            "buttonKey": 57,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:53.546331",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:03.546331",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:25.546331",
+            "buttonKey": 55,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:18.546331",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:41.546331",
+            "buttonKey": 41,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:15:05.546331",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:26.546331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:30:05.546331",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:04.546331",
+            "buttonKey": 48,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:43.547331",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:56.547331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:37:09.547331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:28.547331",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:05.547331",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:39.547331",
+            "buttonKey": 49,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:29:38.547331",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:33.547331",
+            "buttonKey": 55,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:39.547331",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:37.547331",
+            "buttonKey": 31,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:50.547331",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:10.547331",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:09.547331",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:25.547331",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:24.547331",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:30.547331",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:35.547331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:34:14.547331",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:33.547331",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:21.547331",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:54.547331",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:56.547331",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:18:09.547331",
+            "buttonKey": 30,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:10.547331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:05.547331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:33:52.547331",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:21.547331",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:23.547331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:39.547331",
+            "buttonKey": 36,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:10.547331",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:36:43.547331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:46.547331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:18:20.547331",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:10:07.547331",
+            "buttonKey": 54,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:09.547331",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:27:51.547331",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:23.547331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:37:15.547331",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:32:57.547331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:29.547331",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:28.547331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:14.547331",
+            "buttonKey": 47,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:55.547331",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:22:37.547331",
+            "buttonKey": 35,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:15.547331",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:04.547331",
+            "buttonKey": 31,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:14.547331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:34.547331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:07.547331",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:36.547331",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:35.547331",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:54.547331",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:35.547331",
+            "buttonKey": 47,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:42.547331",
+            "buttonKey": 47,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:35.547331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:22:03.547331",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:18:44.547331",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:29:12.547331",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:21:00.547331",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:44.547331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:36.547331",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:43.547331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:07.547331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:33:04.547331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:48.547331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:04.547331",
+            "buttonKey": 38,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:32:38.547331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:37:16.547331",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:15:18.547331",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:31.547331",
+            "buttonKey": 30,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:47.547331",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:15:42.547331",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:33:04.547331",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:14.547331",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:06.547331",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:23.547331",
+            "buttonKey": 38,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:57.547331",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:38.547331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:10.547331",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:17.547331",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:09.547331",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:10.547331",
+            "buttonKey": 47,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:42.547331",
+            "buttonKey": 31,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:13.547331",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:18.547331",
+            "buttonKey": 41,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:15:16.547331",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:08.547331",
+            "buttonKey": 34,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:29:15.547331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:19.547331",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:13.547331",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:25.547331",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:40.547331",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:36:59.547331",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:58.547331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:31.547331",
+            "buttonKey": 54,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:03.547331",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:36.547331",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:36:51.547331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:40.547331",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:53.547331",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:58.547331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:50.547331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:20.547331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:09.547331",
+            "buttonKey": 55,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:40.547331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:09.547331",
+            "buttonKey": 44,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:20.547331",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:37.547331",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:18.547331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:31:34.547331",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:17:08.547331",
+            "buttonKey": 47,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:34:01.547331",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:30:03.547331",
+            "buttonKey": 35,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:32.547331",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:18.547331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:02.547331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:33:27.547331",
+            "buttonKey": 48,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:32.547331",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:08.547331",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:32.547331",
+            "buttonKey": 41,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:00.547331",
+            "buttonKey": 31,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:15:02.547331",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:32:08.547331",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:15:02.547331",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:04.547331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:39.547331",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:52.547331",
+            "buttonKey": 41,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:53.547331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:21:08.547331",
+            "buttonKey": 56,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:17:36.547331",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:00.547331",
+            "buttonKey": 32,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:19.547331",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:10:52.547331",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:10:14.547331",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:45.547331",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:18.547331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:27.547331",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:51.547331",
+            "buttonKey": 34,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:33:31.547331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:05.547331",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:28.547331",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:33.547331",
+            "buttonKey": 36,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:37.547331",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:22:14.547331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:08.547331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:59.547331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:22:22.547331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:32.547331",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:56.547331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:22:45.547331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:31.547331",
+            "buttonKey": 57,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:42.547331",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:07:43.547331",
+            "buttonKey": 33,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:08.547331",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:27:47.547331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:25.547331",
+            "buttonKey": 36,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:46.547331",
+            "buttonKey": 33,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:17:16.547331",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:53.547331",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:42.547331",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:32:07.547331",
+            "buttonKey": 48,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:20.547331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:17:25.547331",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:17.547331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:51.547331",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:27.547331",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:15:59.547331",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:07:38.547331",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:02.547331",
+            "buttonKey": 49,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:49.547331",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:12.547331",
+            "buttonKey": 30,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:46.547331",
+            "buttonKey": 48,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:31.547331",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:18:10.547331",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:32:06.547331",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:41.547331",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:32.547331",
+            "buttonKey": 47,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:38.547331",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:25.547331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:32:53.547331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:04.547331",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:09.547331",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:37.547331",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:15:38.547331",
+            "buttonKey": 30,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:53.547331",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:37.547331",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:30:41.547331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:33:21.547331",
+            "buttonKey": 36,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:18:44.547331",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:50.547331",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:38.547331",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:27:37.547331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:43.547331",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:19.547331",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:26:30.547331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:30:06.547331",
+            "buttonKey": 47,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:20.547331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:43.547331",
+            "buttonKey": 49,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:14.547331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:54.547331",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:38.547331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:47.547331",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:29:10.547331",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:44.547331",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:00.547331",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:21:20.547331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:51.547331",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:00.547331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:15:34.547331",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:20:39.547331",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:16.547331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:24.547331",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:59.547331",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:38.547331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:18:31.547331",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:18:20.547331",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:04.547331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:38.547331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:17:07.547331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:18.547331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:30:26.547331",
+            "buttonKey": 33,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:01.547331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:55.547331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:07:32.547331",
+            "buttonKey": 30,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:16.547331",
+            "buttonKey": 34,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:33:00.547331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:50.548331",
+            "buttonKey": 32,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:10:11.548331",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:08.548331",
+            "buttonKey": 31,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:32.548331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:58.548331",
+            "buttonKey": 36,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:25.548331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:27.548331",
+            "buttonKey": 33,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:43.548331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:30.548331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:48.548331",
+            "buttonKey": 30,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:40.548331",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:34:21.548331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:02.548331",
+            "buttonKey": 36,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:46.548331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:27.548331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:27:03.548331",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:24:25.548331",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:55.548331",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:47.548331",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:30:26.548331",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:13.548331",
+            "buttonKey": 47,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:24.548331",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:36:23.548331",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:04.548331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:34.548331",
+            "buttonKey": 54,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:40.548331",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:31:13.548331",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:20.548331",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:22:27.548331",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:37.548331",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:42.548331",
+            "buttonKey": 49,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:43.548331",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:42.548331",
+            "buttonKey": 31,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:33:07.548331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:31.548331",
+            "buttonKey": 46,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:09.548331",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:55.548331",
+            "buttonKey": 56,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:29.548331",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:37.548331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:25.548331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:47.548331",
+            "buttonKey": 39,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:32.548331",
+            "buttonKey": 48,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:31:20.548331",
+            "buttonKey": 36,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:15.548331",
+            "buttonKey": 47,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:17.548331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:08.548331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:17:58.548331",
+            "buttonKey": 54,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:21:40.548331",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:55.548331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:31:37.548331",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:50.548331",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:54.548331",
+            "buttonKey": 46,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:36:07.548331",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:22.548331",
+            "buttonKey": 32,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:47.548331",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:48.548331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:20.548331",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:02.548331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:41.548331",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:54.548331",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:39.548331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:10:36.548331",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:29:30.548331",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:25.548331",
+            "buttonKey": 54,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:00.548331",
+            "buttonKey": 51,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:52.548331",
+            "buttonKey": 51,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:12.548331",
+            "buttonKey": 37,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:53.548331",
+            "buttonKey": 51,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:14:06.548331",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:56.548331",
+            "buttonKey": 32,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:32.548331",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:08.548331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:22.548331",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:33.548331",
+            "buttonKey": 32,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:19:55.548331",
+            "buttonKey": 36,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:44.548331",
+            "buttonKey": 41,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:15.548331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:29:20.548331",
+            "buttonKey": 55,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:34.548331",
+            "buttonKey": 59,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:15.548331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:23:57.548331",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:29.548331",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:23:00.548331",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:26:29.548331",
+            "buttonKey": 36,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:23:56.548331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:31.548331",
+            "buttonKey": 35,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:03.548331",
+            "buttonKey": 36,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:47.548331",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:37.548331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:38.548331",
+            "buttonKey": 38,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:53.548331",
+            "buttonKey": 44,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:32:43.548331",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:45.548331",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:07:35.548331",
+            "buttonKey": 34,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:13.548331",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:30:10.548331",
+            "buttonKey": 53,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:33:41.548331",
+            "buttonKey": 36,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:53.548331",
+            "buttonKey": 48,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:33:34.548331",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:51.548331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:07.548331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:17.548331",
+            "buttonKey": 55,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:00.548331",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:07:43.548331",
+            "buttonKey": 31,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:17:23.548331",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:07:26.548331",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:36:04.548331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:28:28.548331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:23:40.548331",
+            "buttonKey": 33,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:26.548331",
+            "buttonKey": 34,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:36:15.548331",
+            "buttonKey": 46,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:36:04.548331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:51.548331",
+            "buttonKey": 51,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:31:24.548331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:32:49.548331",
+            "buttonKey": 54,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:08.548331",
+            "buttonKey": 57,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:36:59.548331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:25.548331",
+            "buttonKey": 30,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:02.548331",
+            "buttonKey": 36,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:30:01.548331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:52.548331",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:51.548331",
+            "buttonKey": 51,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:28:26.548331",
+            "buttonKey": 40,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:29:59.548331",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:34:43.548331",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:15:40.548331",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:31:53.548331",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:02.548331",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:13:38.548331",
+            "buttonKey": 48,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:12.548331",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:50.548331",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:26:34.548331",
+            "buttonKey": 32,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:17:22.548331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:21.548331",
+            "buttonKey": 48,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:26.548331",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:02.548331",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:22:41.548331",
+            "buttonKey": 54,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:32.548331",
+            "buttonKey": 45,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:29:48.548331",
+            "buttonKey": 45,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:33:32.548331",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:00.548331",
+            "buttonKey": 52,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:49.548331",
+            "buttonKey": 48,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:50.548331",
+            "buttonKey": 45,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:16:05.548331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:33:05.548331",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:31.548331",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:36:10.548331",
+            "buttonKey": 36,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:34:23.548331",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:10:45.548331",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:31:41.548331",
+            "buttonKey": 57,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:40.548331",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:25:23.548331",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:26.548331",
+            "buttonKey": 49,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:37:11.548331",
+            "buttonKey": 47,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:38.548331",
+            "buttonKey": 39,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:16.548331",
+            "buttonKey": 30,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:12:28.548331",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:08:25.548331",
+            "buttonKey": 49,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:18:38.548331",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:10:45.548331",
+            "buttonKey": 41,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:03.548331",
+            "buttonKey": 40,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:38.548331",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:50.548331",
+            "buttonKey": 38,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:27.548331",
+            "buttonKey": 45,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:26:47.548331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:03.548331",
+            "buttonKey": 35,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:54.548331",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:06.548331",
+            "buttonKey": 55,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:57.548331",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:34:11.548331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:18:03.548331",
+            "buttonKey": 44,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:50.548331",
+            "buttonKey": 44,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:20:13.548331",
+            "buttonKey": 50,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:04.548331",
+            "buttonKey": 45,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:10:27.548331",
+            "buttonKey": 51,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:09:43.548331",
+            "buttonKey": 37,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:08.548331",
+            "buttonKey": 53,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:29:18.548331",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:10.548331",
+            "buttonKey": 33,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:11:44.548331",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:13.548331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:35:32.548331",
+            "buttonKey": 54,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:16:05.548331",
+            "buttonKey": 43,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:14:51.548331",
+            "buttonKey": 42,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:23:45.548331",
+            "buttonKey": 32,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:24:56.548331",
+            "buttonKey": 50,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:14.548331",
+            "buttonKey": 41,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:21.548331",
+            "buttonKey": 46,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:18:51.548331",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:12:46.548331",
+            "buttonKey": 49,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:21:58.548331",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:30:08.548331",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:28.548331",
+            "buttonKey": 47,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:26:36.548331",
+            "buttonKey": 43,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:23:42.548331",
+            "buttonKey": 56,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:27:25.548331",
+            "buttonKey": 59,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:34:35.548331",
+            "buttonKey": 42,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:03.548331",
+            "buttonKey": 52,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:15:30.548331",
+            "buttonKey": 47,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:13:27.548331",
+            "buttonKey": 56,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:32:48.548331",
+            "buttonKey": 60,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:33:07.548331",
+            "buttonKey": 48,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:32:23.548331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:35.548331",
+            "buttonKey": 35,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:25:58.548331",
+            "buttonKey": 49,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:19:40.548331",
+            "buttonKey": 57,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:12.548331",
+            "buttonKey": 31,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:07:47.548331",
+            "buttonKey": 56,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:18:12.548331",
+            "buttonKey": 58,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:07:27.548331",
+            "buttonKey": 60,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:35:00.548331",
+            "buttonKey": 30,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:21:51.548331",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:45.548331",
+            "buttonKey": 39,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:30:33.548331",
+            "buttonKey": 58,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:08:21.548331",
+            "buttonKey": 44,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:17:48.548331",
+            "buttonKey": 34,
+            "isWorkingMode": true
+        },
+        {
+            "timestamp": "2025-04-14T18:09:57.548331",
+            "buttonKey": 38,
+            "isWorkingMode": false
+        },
+        {
+            "timestamp": "2025-04-14T18:11:30.548331",
+            "buttonKey": 46,
+            "isWorkingMode": false
+        }
+    ]
+}

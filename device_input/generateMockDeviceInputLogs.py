@@ -68,7 +68,7 @@ currentDateTimeStamp = datetime.datetime.now() - datetime.timedelta(hours=0, min
 
 if __name__ == "__main__":
     num_items_key_inputs = 1000  # Количество нажатий клавиш
-    num_sessions = 100  # Количество сессий
+    num_sessions = 1000  # Количество сессий
 
     # Генерация и запись файлов
     for i in range(num_sessions):
