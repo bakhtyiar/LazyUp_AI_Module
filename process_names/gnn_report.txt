@@ -1,0 +1,11 @@
+              precision    recall  f1-score   support
+
+       False       0.83      1.00      0.91        20
+        True       1.00      0.60      0.75        10
+
+    accuracy                           0.87        30
+   macro avg       0.92      0.80      0.83        30
+weighted avg       0.89      0.87      0.86        30
+
+Max RAM Usage: 0.16 MB
+Inference time: 0.0040 s
