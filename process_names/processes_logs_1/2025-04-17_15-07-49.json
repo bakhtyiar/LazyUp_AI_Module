@@ -1,0 +1,32 @@
+{
+    "is_working_mode": true,
+    "timestamp": "2025-04-17T15:07:49.769920",
+    "processes": [
+        "discord",
+        "excel",
+        "word",
+        "telegram",
+        "SearchIndexer",
+        "crashpad_handler",
+        "dllhost",
+        "SDXHelper",
+        "AggregatorHost",
+        "NisSrv",
+        "SgrmBroker",
+        "SearchProtocolHost",
+        "RuntimeBroker",
+        "msedge",
+        "msedgewebview2",
+        "SecurityHealthSystray",
+        "SecurityHealthService",
+        "ServiceHub.Helper",
+        "PhoneExperienceHost",
+        "CCXProcess",
+        "ps64ldr",
+        "CTMsgHostEdge",
+        "TextInputHost",
+        "SearchFilterHost",
+        "CompPkgSrv",
+        "SystemSettings"
+    ]
+}

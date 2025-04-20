@@ -1,0 +1,31 @@
+{
+    "is_working_mode": false,
+    "timestamp": "2025-04-17T15:10:09.769920",
+    "processes": [
+        "origin",
+        "discord",
+        "whatsapp",
+        "SearchIndexer",
+        "crashpad_handler",
+        "dllhost",
+        "SDXHelper",
+        "AggregatorHost",
+        "NisSrv",
+        "SgrmBroker",
+        "SearchProtocolHost",
+        "RuntimeBroker",
+        "msedge",
+        "msedgewebview2",
+        "SecurityHealthSystray",
+        "SecurityHealthService",
+        "ServiceHub.Helper",
+        "PhoneExperienceHost",
+        "CCXProcess",
+        "ps64ldr",
+        "CTMsgHostEdge",
+        "TextInputHost",
+        "SearchFilterHost",
+        "CompPkgSrv",
+        "SystemSettings"
+    ]
+}
