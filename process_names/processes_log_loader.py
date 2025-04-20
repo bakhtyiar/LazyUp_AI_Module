@@ -1,6 +1,7 @@
 import json
 import os
 from typing import List, Dict, Any
+from datetime import datetime
 
 
 def load_processes_logs(max_files: int = 100, directory: str = "./processes_logs") -> List[Dict[str, Any]]:
@@ -36,6 +37,17 @@ def load_processes_logs(max_files: int = 100, directory: str = "./processes_logs
                     # Заменяем 'is_working_mode' на 'mode', если ключ существует
                     if "is_working_mode" in data:
                         data["mode"] = data.pop("is_working_mode")
+
+                    timestamp_str = data.get("timestamp")
+                    if timestamp_str is not None:
+                        try:
+                            dt = datetime.fromisoformat(timestamp_str)
+                            timestamp_ms = int(dt.timestamp() * 1000)
+                            data["timestamp"] = timestamp_ms
+
+                        except (ValueError, TypeError):
+                            continue
+
 
                     logs_data.append(data)
             except json.JSONDecodeError:
