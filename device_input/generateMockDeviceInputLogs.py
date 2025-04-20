@@ -2,67 +2,88 @@ import json
 import random
 import os
 import datetime
-
-def generateTimestamp():
-    # Получаем текущее время
-    now = datetime.datetime.now()
-    # Получаем время 30 минут назад
-    thirty_minutes_ago = now - datetime.timedelta(minutes=30)
-    # Генерируем случайное количество секунд в пределах 30 минут
-    random_seconds = random.randint(0, 1800)  # от 0 до 1800 секунд
-    # Вычисляем случайное время
-    random_time = thirty_minutes_ago + datetime.timedelta(seconds=random_seconds)
-    # Выводим результат в формате ISO
-    return random_time.isoformat()
+import math
 
 
-def generate_data_item(mode):
-    timestamp = generateTimestamp()
+def generateTimestamp(base_time, index, total):
+    """Генерация временных меток с нелинейным распределением"""
+    # Нормализованная позиция в последовательности (0..1)
+    pos = index / total
+
+    # Применяем нелинейную функцию (синусоида + квадратичная)
+    nonlinear_factor = 0.5 * math.sin(4 * math.pi * pos) + 0.5 * pos ** 2
+
+    # Генерируем смещение в пределах 30 минут с нелинейным распределением
+    max_seconds = 1800  # 30 минут
+    offset_seconds = int(nonlinear_factor * max_seconds)
+
+    return (base_time + datetime.timedelta(seconds=offset_seconds)).isoformat()
+
+
+def generate_data_item(mode, base_time, index, total):
+    timestamp = generateTimestamp(base_time, index, total)
+
+    # Нормализованное время (0..1) для нелинейных зависимостей
+    time_pos = index / total
+
     if mode == 1:
         is_working_mode = True
-        button_key = random.randint(1, 50)
-    elif mode == 2:
+        # Квадратичная зависимость + синусоидальные колебания
+        button_key = int(25 * (1 + math.sin(5 * time_pos)) + 10 * time_pos ** 2 + random.randint(-3, 3)
+        elif (mode == 2):
         is_working_mode = random.choice([True, False])
-        button_key = random.randint(30, 60)
-    elif mode == 3:
+        # Экспоненциальная зависимость с шумом
+        exp_factor = math.exp(2 * time_pos) - 1
+        button_key = int(30 + 15 * math.sin(3 * time_pos) + 10 * exp_factor + random.randint(-5, 5))
+        elif mode == 3:
         is_working_mode = False
-        button_key = random.randint(50, 80)
+        # Логарифмическая зависимость с переключениями
+        log_factor = math.log1p(5 * time_pos)
+        button_key = int(50 + 15 * math.sin(8 * time_pos) + 10 * log_factor + random.randint(-7, 7))
+
+        # Ограничим значения в разумных пределах
+        button_key = max(1, min(80, button_key))
+
     return {
         'timestamp': timestamp,
         'buttonKey': button_key,
         'isWorkingMode': is_working_mode
     }
 
+
 def generate_device_logs(num_items):
     mode = random.randint(1, 3)
+    base_time = datetime.datetime.now() - datetime.timedelta(minutes=30)
+
+    # Сортируем элементы по времени после генерации
+    items = [generate_data_item(mode, base_time, i, num_items) for i in range(num_items)]
+    items.sort(key=lambda x: x['timestamp'])  # Сортировка по времени
+
     return {
-        'deviceLogs': [generate_data_item(mode) for _ in range(num_items)]
+        'deviceLogs': items
     }
+
 
 currentDateTimeStamp = datetime.datetime.now() - datetime.timedelta(hours=0, minutes=0, seconds=5)
 
 if __name__ == "__main__":
-    num_items_key_inputs = 1000  # Укажите количество нажатий клавиш, которые нужно сгенерировать
-    num_sessions = 100  # Укажите количество сессий записей, которые нужно сгенерировать
+    num_items_key_inputs = 1000  # Количество нажатий клавиш
+    num_sessions = 100  # Количество сессий
+
     # Генерация и запись файлов
     for i in range(num_sessions):
         logs = generate_device_logs(num_items_key_inputs)
 
         file_name = currentDateTimeStamp.strftime("%Y-%m-%d_%H-%M-%S") + ".json"
-        currentDateTimeStamp = currentDateTimeStamp - datetime.timedelta(hours=1, minutes=0, seconds=0)
+        currentDateTimeStamp = currentDateTimeStamp - datetime.timedelta(hours=1)
 
-        # Убедимся, что имена файлов уникальны
         while os.path.exists(file_name):
-            currentDateTimeStamp = currentDateTimeStamp - datetime.timedelta(hours=1, minutes=0, seconds=0)
+            currentDateTimeStamp = currentDateTimeStamp - datetime.timedelta(hours=1)
             file_name = currentDateTimeStamp.strftime("%Y-%m-%d_%H-%M-%S") + ".json"
-            # file_name = datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".json"
 
         logs_folder_name = "device_input_logs"
+        logs_file_name = os.path.join(logs_folder_name, file_name)
 
-        # Формируем имя файла в папке "logs_folder"
-        logs_file_name = os.path.join(logs_folder_name, f"{file_name}")
-
-        # Убеждаемся, что папка существует
         os.makedirs(logs_folder_name, exist_ok=True)
 
         with open(logs_file_name, 'w') as json_file:
