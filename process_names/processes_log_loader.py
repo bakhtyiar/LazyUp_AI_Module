@@ -5,10 +5,10 @@ from typing import List, Dict, Any
 
 def load_processes_logs(max_files: int = 100, directory: str = "./processes_logs") -> List[Dict[str, Any]]:
     """
-    Загружает данные из всех JSON-файлов в указанной директории.
+    Загружает данные из всех JSON-файлов в указанной директории,
+    заменяя ключ 'is_working_mode' на 'mode'.
 
     Args:
-        max_files: максимальное количество обработанных файлов
         directory (str): Путь к директории с лог-файлами. По умолчанию "./processes_logs".
 
     Returns:
@@ -32,12 +32,16 @@ def load_processes_logs(max_files: int = 100, directory: str = "./processes_logs
             try:
                 with open(file_path, 'r', encoding='utf-8') as file:
                     data = json.load(file)
+
+                    # Заменяем 'is_working_mode' на 'mode', если ключ существует
+                    if "is_working_mode" in data:
+                        data["mode"] = data.pop("is_working_mode")
+
                     logs_data.append(data)
             except json.JSONDecodeError:
                 print(f"Ошибка при чтении файла {filename}: файл не является валидным JSON")
             except Exception as e:
                 print(f"Ошибка при чтении файла {filename}: {str(e)}")
-        total_records += 1
 
     return logs_data
 
