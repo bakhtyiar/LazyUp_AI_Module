@@ -72,7 +72,7 @@ def prepare_graph_data(sequences, labels):
 
 # Пример использования
 if __name__ == "__main__":
-    sample_data = load_device_logs(10)
+    sample_data = load_device_logs(100)
 
     # Подготовка данных
     X = [item['list'] for item in sample_data]
@@ -93,7 +93,7 @@ if __name__ == "__main__":
     tracemalloc.start()
     start_train = time.time()
     # Обучение
-    for epoch in range(10):
+    for epoch in range(5):
         model.train()
         total_loss = 0
         for data in train_loader:
