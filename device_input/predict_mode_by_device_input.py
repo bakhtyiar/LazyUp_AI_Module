@@ -38,7 +38,7 @@ def predict(sample_data):
     return y_pred
 
 def save_y_pred_to_file(filename: str, arr: np.ndarray):
-    with open(filename or "y_pred.txt", 'a') as f:
+    with open(filename or "y_pred.txt", 'w') as f:
         np.savetxt(f, arr, fmt='%.4f')
 
 if __name__ == "__main__":
