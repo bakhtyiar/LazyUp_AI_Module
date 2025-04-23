@@ -1,70 +1,78 @@
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from keras.preprocessing.text import Tokenizer
-from keras_preprocessing.sequence import pad_sequences
-from keras.models import Sequential, load_model
-from keras.layers import Dense, Embedding, LSTM
-import json
 import os
-import process_name_tokenizing.process_name_tokens_manager as process_name_tokenizing
+import time
+import tracemalloc
+
+import joblib
+import pandas as pd
+from sklearn.compose import ColumnTransformer
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, accuracy_score
+from sklearn.model_selection import train_test_split
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+
+from process_names.processes_log_loader import load_processes_logs
 
 module_dir = os.path.dirname(os.path.abspath(__file__))
 
-log_data = []
 log_directory = module_dir + './processes_logs'
 
-# Загрузка данных
-for filename in os.listdir(log_directory):
-    if filename.endswith('.json'):  # Проверяем, что файл имеет расширение .json
-        file_path = os.path.join(log_directory, filename)  # Полный путь к файлу
-        try:
-            with open(file_path, 'r') as file:
-                data = json.load(file)  # Загружаем данные из JSON-файла
-                # Проверяем структуру JSON
-                if (
-                    isinstance(data, dict) and
-                    'is_working_mode' in data and
-                    'timestamp' in data and
-                    'processes' in data and
-                    isinstance(data['processes'], list)
-                ):
-                    log_data.append(data)  # Добавляем данные в список
-        except (json.JSONDecodeError, IOError) as e:
-            print(f"Ошибка при обработке файла {filename}: {e}")
-data = log_data
+# Пример данных
+data = load_processes_logs(1000)
+
+# Преобразуем в DataFrame
 df = pd.DataFrame(data)
 
-# Подготовка
-max_length = 64  # Максимальная длина последовательности
+# Преобразуем процессы в строку (для CountVectorizer)
+df["processes_str"] = df["processes"].apply(lambda x: " ".join(x))
 
-tokenizer = process_name_tokenizing.process_tokenization(df['processes'])
+# Разделяем на признаки (X) и целевую переменную (y)
+X = df[["timestamp", "processes_str"]]
+y = df["mode"]
 
-X = tokenizer.texts_to_sequences(df['processes'])
-X = pad_sequences(X, maxlen=max_length)
-y = pd.get_dummies(df['is_working_mode']).values  # one-hot encoding
+# Разделяем на обучающую и тестовую выборки
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Разделение на обучающую и тестовую выборки
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+# Создаём пайплайн для обработки данных:
+# - processes_str → CountVectorizer (бинарные признаки)
+# - timestamp → StandardScaler (нормализация)
+preprocessor = ColumnTransformer(
+    transformers=[
+        ("processes", CountVectorizer(binary=True), "processes_str"),
+        ("timestamp", StandardScaler(), ["timestamp"]),
+    ]
+)
 
-# Модель
-model = None
-try:
-    model = load_model(module_dir + './predict_processes.h5')
-except OSError:
-    print("Saved model not found")
-if not model:
-    model = Sequential()
-    amount_of_different_words = (len(tokenizer.word_index) + 1)
-    model.add(
-        Embedding(input_dim=amount_of_different_words, output_dim=amount_of_different_words, input_length=max_length))
-    model.add(LSTM(amount_of_different_words))
-    model.add(Dense(2, activation='softmax'))
-    # Компиляция
-    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-    # Обучение
-    model.fit(X_train, y_train, epochs=10, batch_size=32)
-    model.save(module_dir + './predict_processes.h5')
+# Объединяем предобработку и модель
+model = make_pipeline(
+    preprocessor,
+    LogisticRegression(random_state=42, solver="liblinear")
+)
 
-# Оценка
-test_loss, test_accuracy = model.evaluate(X_test, y_test)
-print(f'Test accuracy: {test_accuracy}')
+# Измерение использования памяти до обучения
+tracemalloc.start()
+start_train = time.time()
+
+# Обучаем модель
+model.fit(X_train, y_train)
+joblib.dump(model, module_dir + '/predict_processes.joblib')
+
+end_train = time.time()
+training_time = end_train - start_train
+# Измерение памяти после обучения
+current, peak = tracemalloc.get_traced_memory()
+max_ram_usage = peak / (1024 ** 2)  # в MB
+tracemalloc.stop()
+
+start_inf = time.time()
+# Предсказываем на тестовых данных
+y_pred = model.predict(X_test)
+end_inf = time.time()
+inference_time = end_inf - start_inf
+
+# Оценка модели
+print("Accuracy:", accuracy_score(y_test, y_pred))
+print("\nClassification Report:\n", classification_report(y_test, y_pred))
+print(f"Max RAM Usage: {max_ram_usage:.2f} MB")
+print(f"Inference time: {inference_time:.4f} s")
