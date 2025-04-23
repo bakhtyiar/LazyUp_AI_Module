@@ -63,7 +63,7 @@ def load_dataframe_process_names(amount_of_records=10):
     return df
 
 
-def predict():
+def predict_by_processes():
     df = load_dataframe_process_names(amount_of_records=1)
     return predict_by_process_names(df)
 
@@ -74,6 +74,6 @@ def save_y_pred_to_file(filename: str, arr: np.ndarray):
 
 
 if __name__ == "__main__":
-    ret = predict(sample_data=load_processes_logs(1000))
+    ret = predict_by_processes(sample_data=load_processes_logs(1000))
     print(ret)
     save_y_pred_to_file("y_pred.txt", ret)
