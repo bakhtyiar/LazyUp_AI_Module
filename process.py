@@ -12,9 +12,9 @@ def calculate_true_proportion(lst):
 
 def main():
     print('predict_device_input.predict()')
-    print(predict_device_input.predict())
+    print(predict_device_input.predict_by_device_input())
     process_names_prediction = predict_process.predict()[0][0]
-    device_input_prediction = calculate_true_proportion(predict_device_input.predict())
+    device_input_prediction = calculate_true_proportion(predict_device_input.predict_by_device_input())
     ret = process_names_prediction / 2 + device_input_prediction / 2
     return ret
 

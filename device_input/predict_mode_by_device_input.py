@@ -11,7 +11,7 @@ model_path = module_dir + './predict_device_input.h5'  # Путь к модел�
 
 model = joblib.load(model_path)
 
-def predict(sample_data):
+def predict_by_device_input(sample_data):
     """
     Args:
         список словарей с данными из каждого файла:
@@ -34,7 +34,7 @@ def predict(sample_data):
     # Подготовка данных
     X, y = prepare_dataset(sample_data)
 
-    y_pred = model.predict(X)
+    y_pred = model.predict_by_device_input(X)
     return y_pred
 
 def save_y_pred_to_file(filename: str, arr: np.ndarray):
@@ -42,6 +42,6 @@ def save_y_pred_to_file(filename: str, arr: np.ndarray):
         np.savetxt(f, arr, fmt='%.4f')
 
 if __name__ == "__main__":
-    ret = predict(sample_data=load_device_logs(1000))
+    ret = predict_by_device_input(sample_data=load_device_logs(1000))
     print(ret)
     save_y_pred_to_file("y_pred.txt", ret)
