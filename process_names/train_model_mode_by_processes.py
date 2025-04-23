@@ -57,7 +57,7 @@ start_train = time.time()
 
 # Обучаем модель
 model.fit(X_train, y_train)
-joblib.dump(model, module_dir + '/predict_processes.joblib')
+joblib.dump(model, os.path.join(module_dir, 'predict_processes.joblib'))
 
 end_train = time.time()
 training_time = end_train - start_train

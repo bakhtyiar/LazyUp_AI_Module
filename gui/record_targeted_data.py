@@ -43,8 +43,8 @@ def update_script_arg():
     global recording_process, current_arg
     if recording_process is not None:
         recording_process.terminate()
-        recording_process = subprocess.Popen([sys.executable, module_dir + "/process_names/listenProcessesList.py", current_arg])
-        recording_process = subprocess.Popen([sys.executable, module_dir + "/device_input/listenDeviceInput.py", current_arg])
+        recording_process = subprocess.Popen([sys.executable, os.path.join(module_dir, "process_names", "listenProcessesList.py"), current_arg])
+        recording_process = subprocess.Popen([sys.executable, os.path.join(module_dir, "device_input", "listenDeviceInput.py"), current_arg])
 
 # Инициализация главного окна
 root = tk.Tk()

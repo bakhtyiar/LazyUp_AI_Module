@@ -80,7 +80,7 @@ if __name__ == "__main__":
     parser.add_argument('--working-mode', type=str, default='false',
                         choices=['true', 'false', '1', '0', 'yes', 'no'],
                         help='Run in working mode (true/1/yes) or not (false/0/no).')
-    parser.add_argument('--dir-to-log', type=str, default=module_dir + '.\processes_logs',
+    parser.add_argument('--dir-to-log', type=str, default=os.path.join(module_dir, 'processes_logs'),
                         help='Имя выходного файла (по умолчанию processes_logs.json)')
     parser.add_argument('--log-interval-sec', type=str, default='5',
                         help='Как часто производить запись')
