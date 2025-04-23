@@ -3,13 +3,14 @@ import os
 import joblib
 import numpy as np
 import pandas as pd
+from pathlib import Path
 
 from process_names.processes_log_loader import load_processes_logs
 
-module_dir = os.path.dirname(os.path.abspath(__file__))
+module_dir = Path(__file__).resolve().parent
 
-directory_path = module_dir + './processes_logs'  # Путь к директории с JSON-файлами
-model_path = module_dir + './predict_processes.joblib'  # Путь к модели
+directory_path = os.path.join(module_dir, 'processes_logs')  # Путь к директории с JSON-файлами
+model_path = os.path.join(module_dir, 'predict_processes.joblib')  # Путь к модели
 
 model = joblib.load(model_path)
 
@@ -52,5 +53,4 @@ def save_y_pred_to_file(filename: str, arr: np.ndarray):
 
 if __name__ == "__main__":
     ret = predict_by_processes(sample_data=load_processes_logs(1000))
-    print(ret)
     save_y_pred_to_file("y_pred.txt", ret)

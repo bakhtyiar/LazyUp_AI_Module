@@ -3,16 +3,17 @@ from tkinter import ttk
 import subprocess
 import sys
 import os
+from pathlib import Path
 
-module_dir = os.path.dirname(os.path.abspath(__file__))
+module_dir = Path(__file__).resolve().parent
 
 # Функция для запуска/остановки скрипта
 def toggle_recording():
     global recording_process
     if recording_process is None:
         # Запуск скрипта listenProcessesList.py и listenDeviceInput.py
-        recording_process = subprocess.Popen([sys.executable, module_dir + "/../process_names/listenProcessesList.py", current_arg])
-        recording_process = subprocess.Popen([sys.executable, module_dir + "/../device_input/listenDeviceInput.py", current_arg])
+        recording_process = subprocess.Popen([sys.executable, os.path.join(module_dir.parent, "process_names/listenProcessesList.py"), current_arg])
+        recording_process = subprocess.Popen([sys.executable, os.path.join(module_dir.parent, "device_input/listenDeviceInput.py"), current_arg])
         record_button.config(text="Остановить запись", style="TButton")
         status_label.config(text="Запись запущена", foreground="green")
     else:

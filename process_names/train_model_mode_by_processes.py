@@ -11,12 +11,13 @@ from sklearn.metrics import classification_report, accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
+from pathlib import Path
 
 from process_names.processes_log_loader import load_processes_logs
 
-module_dir = os.path.dirname(os.path.abspath(__file__))
+module_dir = Path(__file__).resolve().parent
 
-log_directory = module_dir + './processes_logs'
+log_directory = os.path.join(module_dir, 'processes_logs')
 
 # Пример данных
 data = load_processes_logs(1000)

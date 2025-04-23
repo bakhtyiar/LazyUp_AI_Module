@@ -1,6 +1,9 @@
 import os
 import json
 from datetime import datetime
+from pathlib import Path
+
+module_dir = Path(__file__).resolve().parent
 
 def load_device_logs(max_files: int) -> list:
     """
@@ -24,7 +27,7 @@ def load_device_logs(max_files: int) -> list:
         ]
     """
     log_files = []
-    logs_dir = "./device_input_logs/"
+    logs_dir = os.path.join(module_dir, 'device_input_logs')
 
     # Собираем все файлы логов из директории
     try:

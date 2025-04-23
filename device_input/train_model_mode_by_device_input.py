@@ -9,12 +9,13 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
 
+from pathlib import Path
 from device_input.device_log_loader import load_device_logs
 
-module_dir = os.path.dirname(os.path.abspath(__file__))
+module_dir = Path(__file__).resolve().parent
 
-directory_path = module_dir + './device_input_logs'  # Путь к директории с JSON-файлами
-model_path = module_dir + './predict_device_input.h5'  # Путь к модели
+directory_path = os.path.join(module_dir, 'device_input_logs')  # Путь к директории с JSON-файлами
+model_path = os.path.join(module_dir, 'predict_device_input.h5')  # Путь к модели
 
 
 def extract_features(data):

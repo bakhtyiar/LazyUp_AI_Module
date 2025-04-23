@@ -7,9 +7,10 @@ import signal
 import sys
 import os
 import time
+from pathlib import Path
 
 is_working_mode = True
-module_dir = os.path.dirname(os.path.abspath(__file__))
+module_dir = Path(__file__).resolve().parent
 
 def set_interval(func, sec):
     def func_wrapper():

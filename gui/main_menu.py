@@ -1,13 +1,14 @@
+from pathlib import Path
 import tkinter as tk
 from tkinter import ttk, messagebox
 import json
 import os
 import subprocess
 
-module_dir = os.path.dirname(os.path.abspath(__file__))
+module_dir = Path(__file__).resolve().parent
 
 def update_config(minutes):
-    config_path = module_dir + '/../config.json'
+    config_path = os.path.join(module_dir.parent, 'config.json')
     config = {'lock_duration': minutes}
     with open(config_path, 'w') as file:
         json.dump(config, file, indent=4)
@@ -33,7 +34,7 @@ def start_lock():
     if validate_minutes():
         try:
             import user_session_manipulator.lock_session as lock_session
-            with open(module_dir + '/../config.json', 'r') as file:
+            with open(os.path.join(module_dir.parent, 'config.json'), 'r') as file:
                 config = json.load(file)
             lock_duration = config.get('lock_duration') or minutes_entry.get()
             minutes_entry.config(state='disabled')
@@ -50,7 +51,7 @@ def start_lock():
 def start_monitoring():
     global monitoring_process
     try:
-        monitoring_process = subprocess.Popen(['python', module_dir + '/../process.py'])
+        monitoring_process = subprocess.Popen(['python', os.path.join(module_dir.parent, 'process.py')])
         monitor_button.config(text="Остановить мониторинг прокрастинации", command=stop_monitoring)
         messagebox.showinfo("Успех", "Мониторинг прокрастинации запущен!")
     except FileNotFoundError:

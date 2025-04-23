@@ -2,15 +2,17 @@ import json
 import os
 from typing import List, Dict, Any
 from datetime import datetime
+from pathlib import Path
 
+module_dir = Path(__file__).resolve().parent
 
-def load_processes_logs(max_files: int = 100, directory: str = "./processes_logs") -> List[Dict[str, Any]]:
+def load_processes_logs(max_files: int = 100, directory: str = os.path.join(module_dir, 'processes_logs')) -> List[Dict[str, Any]]:
     """
     Загружает данные из всех JSON-файлов в указанной директории,
     заменяя ключ 'is_working_mode' на 'mode'.
 
     Args:
-        directory (str): Путь к директории с лог-файлами. По умолчанию "./processes_logs".
+        directory (str): Путь к директории с лог-файлами. По умолчанию "processes_logs".
 
     Returns:
         List[Dict[str, Any]]: Список словарей с данными из лог-файлов.

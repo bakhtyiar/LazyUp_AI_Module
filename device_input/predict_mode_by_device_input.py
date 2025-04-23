@@ -3,11 +3,12 @@ import joblib
 import numpy as np
 from device_input.device_log_loader import load_device_logs
 from device_input.train_model_mode_by_device_input import prepare_dataset
+from pathlib import Path
 
-module_dir = os.path.dirname(os.path.abspath(__file__))
+module_dir = Path(__file__).resolve().parent
 
-directory_path = module_dir + './device_input_logs'  # Путь к директории с JSON-файлами
-model_path = module_dir + './predict_device_input.h5'  # Путь к модели
+directory_path = os.path.join(module_dir, 'device_input_logs')  # Путь к директории с JSON-файлами
+model_path = os.path.join(module_dir, 'predict_device_input.h5')  # Путь к модели
 
 model = joblib.load(model_path)
 
@@ -45,5 +46,4 @@ def save_y_pred_to_file(filename: str, arr: np.ndarray):
 
 if __name__ == "__main__":
     ret = predict_by_device_input(sample_data=load_device_logs(1000))
-    print(ret)
     save_y_pred_to_file("y_pred.txt", ret)
