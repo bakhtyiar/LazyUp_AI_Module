@@ -14,7 +14,7 @@ model_path = module_dir + './predict_processes.joblib'  # Путь к модел
 model = joblib.load(model_path)
 
 
-def predict_by_processes(sample_data):
+def predict_by_processes(sample_data: list = None):
     """
         Args:
             список словарей с данными из каждого файла:
@@ -33,6 +33,9 @@ def predict_by_processes(sample_data):
             ndarray с предсказаниями
             Array<0|1>
         """
+    if sample_data is None:
+        sample_data = load_processes_logs(10000)
+
     df = pd.DataFrame(sample_data)
     # Преобразуем процессы в строку (для CountVectorizer)
     df["processes_str"] = df["processes"].apply(lambda x: " ".join(x))

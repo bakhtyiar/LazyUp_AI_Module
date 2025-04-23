@@ -11,7 +11,7 @@ model_path = module_dir + './predict_device_input.h5'  # Путь к модел�
 
 model = joblib.load(model_path)
 
-def predict_by_device_input(sample_data):
+def predict_by_device_input(sample_data: list = None):
     """
     Args:
         список словарей с данными из каждого файла:
@@ -30,11 +30,13 @@ def predict_by_device_input(sample_data):
         ndarray с предсказаниями
         Array<0|1>
     """
+    if sample_data is None:
+        sample_data = load_device_logs(10000)
 
     # Подготовка данных
     X, y = prepare_dataset(sample_data)
 
-    y_pred = model.predict_by_device_input(X)
+    y_pred = model.predict(X)
     return y_pred
 
 def save_y_pred_to_file(filename: str, arr: np.ndarray):
