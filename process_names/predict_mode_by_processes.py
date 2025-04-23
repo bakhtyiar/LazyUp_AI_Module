@@ -1,14 +1,25 @@
-import pandas as pd
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.models import Sequential, load_model
+import numpy as np
 import json
 import os
-# import process_name_tokenizing.process_name_tokens_manager as pn_token_manager
+import joblib
+
+import numpy as np
+import pandas as pd
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+
+from process_names.processes_log_loader import load_processes_logs
 from .process_name_tokenizing import process_name_tokens_manager as pn_token_manager
 
 module_dir = os.path.dirname(os.path.abspath(__file__))
 
-def predict_by_process_names(df: pd.DataFrame, sequence_max_len=64, tokenizer_file=pn_token_manager.tokens_dict_filename):
+directory_path = module_dir + './processes_logs'  # Путь к директории с JSON-файлами
+model_path = module_dir + './predict_processes.joblib'  # Путь к модели
+
+model = joblib.load(model_path)
+
+def predict_by_process_names(df: pd.DataFrame, sequence_max_len=64,
+                             tokenizer_file=pn_token_manager.tokens_dict_filename):
     max_length = sequence_max_len  # Максимальная длина последовательности
     # Загрузить токенайзер и обновить его
     tokenizer = pn_token_manager.process_tokenization(df['processes'])
@@ -20,6 +31,7 @@ def predict_by_process_names(df: pd.DataFrame, sequence_max_len=64, tokenizer_fi
     model = load_model(module_dir + './predict_processes.h5')
     ret = model.predict(X)
     return ret
+
 
 def load_dataframe_process_names(amount_of_records=10):
     log_data = []
@@ -36,11 +48,11 @@ def load_dataframe_process_names(amount_of_records=10):
                     data = json.load(file)  # Загружаем данные из JSON-файла
                     # Проверяем структуру JSON
                     if (
-                        isinstance(data, dict) and 
-                        'is_working_mode' in data and 
-                        'timestamp' in data and 
-                        'processes' in data and 
-                        isinstance(data['processes'], list)
+                            isinstance(data, dict) and
+                            'is_working_mode' in data and
+                            'timestamp' in data and
+                            'processes' in data and
+                            isinstance(data['processes'], list)
                     ):
                         log_data.append(data)  # Добавляем данные в список
             except (json.JSONDecodeError, IOError) as e:
@@ -50,10 +62,18 @@ def load_dataframe_process_names(amount_of_records=10):
     df = pd.DataFrame(data)
     return df
 
+
 def predict():
     df = load_dataframe_process_names(amount_of_records=1)
     return predict_by_process_names(df)
 
+
+def save_y_pred_to_file(filename: str, arr: np.ndarray):
+    with open(filename or "y_pred.txt", 'w') as f:
+        np.savetxt(f, arr, fmt='%.4f')
+
+
 if __name__ == "__main__":
-    ret = predict()
-    json.dumps(ret)
+    ret = predict(sample_data=load_processes_logs(1000))
+    print(ret)
+    save_y_pred_to_file("y_pred.txt", ret)
