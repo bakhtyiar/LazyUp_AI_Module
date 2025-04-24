@@ -50,7 +50,7 @@ def log_event(button_key, is_working_mode):
     }
     logs.append(log_entry)
     with open(current_log_file, 'w', encoding='utf-8') as f:
-        json.dump(logs, f, indent=4)
+        json.dump({"deviceLogs": logs}, f, indent=4)
 
 def on_key_event(event):
     global is_working_mode
