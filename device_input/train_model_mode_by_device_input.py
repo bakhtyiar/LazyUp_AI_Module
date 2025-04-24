@@ -87,26 +87,17 @@ def prepare_dataset(json_data):
     return feature_df, np.array(y)
 
 
-def load_existing_model():
-    """Загружает существующую модель, если она есть"""
-    if os.path.exists(model_path):
-        return joblib.load(model_path)
-    return None
-
-
-def train_model(data, existing_model=None):
-    """Обучает или дообучает модель на новых данных"""
+def train_model(data, retrain=False):
     # Подготовка данных
     X, y = prepare_dataset(data)
     
     # Разделение на train/test
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-    
+
     # Использование существующей модели или создание новой
-    if existing_model is not None:
-        model = existing_model
+    if retrain and os.path.exists(model_path):
+        model = joblib.load(model_path)
         # Дообучение на новых данных
-        model.fit(X_train, y_train)
     else:
         # Создание новой модели
         model = RandomForestClassifier(
@@ -115,7 +106,7 @@ def train_model(data, existing_model=None):
             random_state=42,
             class_weight='balanced'
         )
-        model.fit(X_train, y_train)
+    model.fit(X_train, y_train)
     
     # Оценка качества
     y_pred = model.predict(X_test)
@@ -127,9 +118,6 @@ def train_model(data, existing_model=None):
 
 # Пример использования
 if __name__ == "__main__":
-    # Загрузка существующей модели
-    existing_model = load_existing_model()
-    
     # Загрузка новых данных
     new_data = load_device_logs(1000)
     
@@ -138,7 +126,7 @@ if __name__ == "__main__":
     start_train = time.time()
     
     # Обучение или дообучение модели
-    model = train_model(new_data, existing_model)
+    model = train_model(new_data)
     
     end_train = time.time()
     training_time = end_train - start_train
