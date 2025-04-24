@@ -1,9 +1,11 @@
 import json
 import sys
 import signal
+import os
 from datetime import datetime
 import keyboard  # Убедитесь, что эта библиотека установлена
 import mouse  # Убедитесь, что эта библиотека установлена
+from pathlib import Path
 
 # Mouse buttons map
 mouse_buttons_map = {
@@ -24,16 +26,30 @@ mouse_buttons_map = {
 
 logs = []
 is_working_mode = True
+current_log_file = None
+module_dir = Path(__file__).resolve().parent
+directory_path = os.path.join(module_dir, 'device_input_logs')  # Путь к директории с JSON-файлами
+
+def get_log_filename():
+    return datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".json"
+
+def init_log_file():
+    global current_log_file, logs
+    if not os.path.exists(directory_path):
+        os.makedirs(directory_path)
+    current_log_file = os.path.join(directory_path, get_log_filename())
+    logs = []  # Очищаем логи при создании нового файла
 
 def log_event(button_key, is_working_mode):
-    timestamp = datetime.now().isoformat()  # Берем текущее время
+    global current_log_file, logs
+    timestamp = datetime.now().isoformat()
     log_entry = {
         "timestamp": timestamp,
         "buttonKey": button_key,
         "isWorkingMode": is_working_mode
     }
     logs.append(log_entry)
-    with open('device_logs.json', 'w', encoding='utf-8') as f:
+    with open(current_log_file, 'w', encoding='utf-8') as f:
         json.dump(logs, f, indent=4)
 
 def on_key_event(event):
@@ -43,7 +59,6 @@ def on_key_event(event):
         log_event(event.scan_code, is_working_mode)
     except:
         print("Pressed button out from processing range")
-        
 
 def on_mouse_event(event):
     global is_working_mode
@@ -68,6 +83,7 @@ if __name__ == "__main__":
         is_working_mode = sys.argv[1].lower() in ['true', '1', 'yes']
 
     signal.signal(signal.SIGINT, signal_handler)
+    init_log_file()  # Инициализируем файл логов при старте
 
     keyboard.hook(on_key_event)  # Слушаем события клавиатуры
     mouse.hook(on_mouse_event)  # Слушаем события мыши
