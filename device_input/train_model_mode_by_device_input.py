@@ -87,45 +87,69 @@ def prepare_dataset(json_data):
     return feature_df, np.array(y)
 
 
-# Пример использования
-if __name__ == "__main__":
-    sample_data = load_device_logs(1000)
+def load_existing_model():
+    """Загружает существующую модель, если она есть"""
+    if os.path.exists(model_path):
+        return joblib.load(model_path)
+    return None
 
+
+def train_model(data, existing_model=None):
+    """Обучает или дообучает модель на новых данных"""
     # Подготовка данных
-    X, y = prepare_dataset(sample_data)
-
+    X, y = prepare_dataset(data)
+    
     # Разделение на train/test
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+    
+    # Использование существующей модели или создание новой
+    if existing_model is not None:
+        model = existing_model
+        # Дообучение на новых данных
+        model.fit(X_train, y_train)
+    else:
+        # Создание новой модели
+        model = RandomForestClassifier(
+            n_estimators=100,
+            max_depth=10,
+            random_state=42,
+            class_weight='balanced'
+        )
+        model.fit(X_train, y_train)
+    
+    # Оценка качества
+    y_pred = model.predict(X_test)
+    print("Отчет о классификации:")
+    print(classification_report(y_test, y_pred))
+    
+    return model
 
-    # Измерение использования памяти до обучения
+
+# Пример использования
+if __name__ == "__main__":
+    # Загрузка существующей модели
+    existing_model = load_existing_model()
+    
+    # Загрузка новых данных
+    new_data = load_device_logs(1000)
+    
+    # Измерение использования памяти
     tracemalloc.start()
     start_train = time.time()
-    # Обучение модели
-    model = RandomForestClassifier(
-        n_estimators=100,
-        max_depth=10,
-        random_state=42,
-        class_weight='balanced'  # Для несбалансированных данных
-    )
-    model.fit(X_train, y_train)
+    
+    # Обучение или дообучение модели
+    model = train_model(new_data, existing_model)
+    
     end_train = time.time()
     training_time = end_train - start_train
-    # Измерение памяти после обучения
+    
+    # Измерение памяти
     current, peak = tracemalloc.get_traced_memory()
     max_ram_usage = peak / (1024 ** 2)  # в MB
     tracemalloc.stop()
-
-    # Предсказание на тестовых данных с замером времени
-
-    y_pred = []
-
-    # Оценка качества
-    start_inf = time.time()
-    y_pred = model.predict(X_test)  # вызывать predict для отдельных строк
-    end_inf = time.time()
-    inference_time = end_inf - start_inf
-    print(classification_report(y_test, y_pred))
-    print(f"Max RAM Usage: {max_ram_usage:.2f} MB")
-    print(f"Inference time: {inference_time:.4f} s")
-    # model.save(model_path)
+    
+    print(f"Время обучения: {training_time:.4f} с")
+    print(f"Максимальное использование RAM: {max_ram_usage:.2f} MB")
+    
+    # Сохранение обновленной модели
     joblib.dump(model, model_path)
