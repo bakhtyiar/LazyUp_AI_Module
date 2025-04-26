@@ -10,7 +10,7 @@ def calculate_true_proportion(lst):
     # Возвращаем долю True
     return true_count / total_count if total_count > 0 else 0
 
-def main():
+def compute_status():
     print('predict_device_input.predict()')
     print(predict_device_input.predict_by_device_input())
     process_names_prediction = predict_process.predict_by_processes()
@@ -22,5 +22,10 @@ def main():
     ret = process_names_prediction / 2 + device_input_prediction / 2
     return ret
 
+def process(lock_period: int):
+    status = compute_status()
+    if status > 0.5:
+        lock_session.keep_locked(lock_period)
+
 if __name__ == "__main__":
-    main()
+    compute_status()
