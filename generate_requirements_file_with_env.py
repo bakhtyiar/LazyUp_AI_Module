@@ -7,7 +7,7 @@ def generate_requirements(project_path=".", output_file="requirements.txt"):
         requirements_file = os.path.join(project_path, output_file)
 
         # Запускаем pip freeze и записываем вывод в файл
-        with open(output_file, "w") as f:
+        with open(requirements_file, "w") as f:
             subprocess.run(["pip", "freeze"], stdout=f, check=True)
 
         print(f"Файл {output_file} успешно создан!")
