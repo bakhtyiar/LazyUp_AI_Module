@@ -22,7 +22,7 @@ if (!(Test-CommandExists choco)) {
 
 # Install Python 3.10.13 if not installed
 if (!(Test-CommandExists python)) {
-    Write-Host "Installing Python 3.10.13..." -ForegroundColor Yellow
+    Write-Host "Installing Python 3.11..." -ForegroundColor Yellow
     choco install python --version=3.11 -y
     refreshenv
 }
