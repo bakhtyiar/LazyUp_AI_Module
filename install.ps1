@@ -27,30 +27,6 @@ if (!(Test-CommandExists python)) {
     refreshenv
 }
 
-# Install Miniconda if not installed
-if (!(Test-CommandExists conda)) {
-    Write-Host "Installing Miniconda..." -ForegroundColor Yellow
-    choco install miniconda3 -y
-    refreshenv
-}
-
-# Initialize conda for PowerShell
-conda init powershell
-
-# Create and activate conda environment
-$envName = "myenv"
-Write-Host "Creating conda environment '$envName'..." -ForegroundColor Yellow
-
-# Remove existing environment if it exists
-conda env remove --name $envName -y
-
-# Create new environment with Python 3.10.11
-conda create -n $envName python=3.10.11 -y
-
-# Activate conda environment
-Write-Host "Activating conda environment..." -ForegroundColor Yellow
-conda activate $envName
-
 # Install pip requirements
 Write-Host "Installing pip requirements..." -ForegroundColor Yellow
 pip install --upgrade pip
@@ -64,13 +40,18 @@ if (Test-Path -Path "requirements.txt") {
     }
     catch {
         Write-Host "Error installing packages. Error: $_" -ForegroundColor Red
-        exit 1
+        Write-Host "Press any key to exit..."
+        $null = $host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown')
     }
 }
 else {
     Write-Host "requirements.txt not found in the current directory!" -ForegroundColor Red
-    exit 1
+    Write-Host "Press any key to exit..."
+    $null = $host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown')
 }
 
 Write-Host "Installation complete!" -ForegroundColor Green
 Write-Host "To activate the environment, run: conda activate $envName" -ForegroundColor Cyan
+
+Write-Host "Press any key to exit..."
+$null = $host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown')
