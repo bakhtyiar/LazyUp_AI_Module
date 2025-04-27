@@ -20,10 +20,10 @@ if (!(Test-CommandExists choco)) {
     refreshenv
 }
 
-# Install Python 3.10.13 if not installed
+# Install Python 3.10.11 if not installed
 if (!(Test-CommandExists python)) {
-    Write-Host "Installing Python 3.11..." -ForegroundColor Yellow
-    choco install python --version=3.11 -y
+    Write-Host "Installing Python 3.10.11..." -ForegroundColor Yellow
+    choco install python --version=3.10.11 -y
     refreshenv
 }
 
@@ -44,8 +44,8 @@ Write-Host "Creating conda environment '$envName'..." -ForegroundColor Yellow
 # Remove existing environment if it exists
 conda env remove --name $envName -y
 
-# Create new environment with Python 3.10.13
-conda create -n $envName python=3.10.13 -y
+# Create new environment with Python 3.10.11
+conda create -n $envName python=3.10.11 -y
 
 # Activate conda environment
 Write-Host "Activating conda environment..." -ForegroundColor Yellow
@@ -54,7 +54,23 @@ conda activate $envName
 # Install pip requirements
 Write-Host "Installing pip requirements..." -ForegroundColor Yellow
 pip install --upgrade pip
-pip install -r requirements.txt
+
+# Check if requirements.txt exists
+if (Test-Path -Path "requirements.txt") {
+    Write-Host "Installing packages from requirements.txt..." -ForegroundColor Yellow
+    try {
+        pip install -r requirements.txt
+        Write-Host "Successfully installed all packages from requirements.txt" -ForegroundColor Green
+    }
+    catch {
+        Write-Host "Error installing packages. Error: $_" -ForegroundColor Red
+        exit 1
+    }
+}
+else {
+    Write-Host "requirements.txt not found in the current directory!" -ForegroundColor Red
+    exit 1
+}
 
 Write-Host "Installation complete!" -ForegroundColor Green
 Write-Host "To activate the environment, run: conda activate $envName" -ForegroundColor Cyan
