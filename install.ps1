@@ -24,6 +24,16 @@ if (!(Test-CommandExists choco)) {
 if (!(Test-CommandExists python)) {
     Write-Host "Installing Python 3.10.11..." -ForegroundColor Yellow
     choco install python --version=3.10.11 -y
+    $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+    $env:Path += ";C:\Python310\Scripts\;C:\Python310\"
+    refreshenv
+}
+
+# Ensure pip is available
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+if (!(Test-CommandExists pip)) {
+    Write-Host "Installing pip..." -ForegroundColor Yellow
+    python -m ensurepip --default-pip
     refreshenv
 }
 
