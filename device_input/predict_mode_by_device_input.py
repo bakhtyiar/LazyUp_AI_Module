@@ -79,4 +79,4 @@ def predict_by_device_input(sample_data: list = None):
 
 
 if __name__ == "__main__":
-    ret = predict_by_device_input(sample_data=load_device_logs(5000))
+    ret = predict_by_device_input(sample_data=load_device_logs(1000))
