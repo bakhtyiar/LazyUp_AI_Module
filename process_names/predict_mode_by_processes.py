@@ -12,6 +12,7 @@ from process_names.processes_log_loader import load_processes_logs
 module_dir = Path(__file__).resolve().parent
 
 directory_path = os.path.join(module_dir, 'processes_logs')  # Путь к директории с JSON-файлами
+prediction_logs_path = os.path.join(module_dir, 'prediction_logs')  # Путь к директории с JSON-файлами
 model_path = os.path.join(module_dir, 'predict_processes.joblib')  # Путь к модели
 
 model = joblib.load(model_path)
@@ -59,8 +60,7 @@ def predict_by_processes(sample_data: list = None):
     y_pred = model.predict(X)
     
     # Create prediction_logs directory if it doesn't exist
-    prediction_logs_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'prediction_logs')
-    os.makedirs(prediction_logs_dir, exist_ok=True)
+    os.makedirs(prediction_logs_path, exist_ok=True)
     
     # Get timestamps for predictions
     timestamps = [datetime.datetime.fromtimestamp(ts / 1000) for ts in df["timestamp"]]
@@ -68,7 +68,7 @@ def predict_by_processes(sample_data: list = None):
     # Save predictions if we have sample data
     if sample_data and len(sample_data) > 0:
         first_datetime = timestamps[0]
-        filename = os.path.join(prediction_logs_dir, f'predictions_{first_datetime.strftime("%Y%m%d_%H%M%S")}.json')
+        filename = os.path.join(prediction_logs_path, f'predictions_{first_datetime.strftime("%Y%m%d_%H%M%S")}.json')
         save_predictions_to_json(filename, y_pred, timestamps)
     
     return y_pred
