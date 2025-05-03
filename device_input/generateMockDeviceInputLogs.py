@@ -1,8 +1,8 @@
 import json
-import random
-import os
-import datetime
 import math
+import os
+import random
+from datetime import datetime, timedelta
 
 
 def generateTimestamp(base_time, index, total, max_timespan_seconds=3600):
@@ -15,7 +15,7 @@ def generateTimestamp(base_time, index, total, max_timespan_seconds=3600):
 
     offset_seconds = int(nonlinear_factor * max_timespan_seconds)
 
-    return (base_time + datetime.timedelta(seconds=offset_seconds)).isoformat()
+    return (base_time + timedelta(seconds=offset_seconds)).isoformat()
 
 
 def generate_data_item(mode, base_time, index, total):
@@ -51,22 +51,24 @@ def generate_data_item(mode, base_time, index, total):
 
 def generate_device_logs(num_items, base_time):
     mode = random.randint(1, 3)
-    items = [generate_data_item(mode, base_time, i, num_items) for i in range(num_items)] # Генерируем события
-    items.sort(key=lambda x: x['timestamp']) # Сортируем элементы по времени после генерации
+    items = [generate_data_item(mode, base_time, i, num_items) for i in range(num_items)]  # Генерируем события
+    items.sort(key=lambda x: x['timestamp'])  # Сортируем элементы по времени после генерации
     return {
         'deviceLogs': items
     }
 
 
 if __name__ == "__main__":
-    num_sessions = 1000  # Количество сессий
-    
+    num_sessions = 80  # Количество сессий
+
     # Начинаем с текущего времени
-    currentDateTimeStamp = datetime.datetime.now()
-    
+    currentDateTimeStamp = datetime.now()
+
     # Распределяем сессии по времени
-    for i in range(num_sessions): # создаем сессии
-        currentDateTimeStamp = currentDateTimeStamp - datetime.timedelta(hours=1)
+    for i in range(num_sessions):  # создаем сессии
+        if i % 3 == 0:
+            currentDateTimeStamp = currentDateTimeStamp - timedelta(minutes=600)
+        currentDateTimeStamp = currentDateTimeStamp - timedelta(minutes=random.randint(100, 130))
         file_name = currentDateTimeStamp.strftime("%Y-%m-%d_%H-%M-%S") + ".json"
         logs_folder_name = "device_input_logs"
         logs_file_name = os.path.join(logs_folder_name, file_name)
@@ -77,4 +79,4 @@ if __name__ == "__main__":
             json.dump(logs, json_file, ensure_ascii=False, indent=4)
         # Случайный интервал между сессиями
         time_gap = random.randint(5, 30)
-        currentDateTimeStamp = currentDateTimeStamp - datetime.timedelta(minutes=time_gap)
+        currentDateTimeStamp = currentDateTimeStamp - timedelta(minutes=time_gap)
