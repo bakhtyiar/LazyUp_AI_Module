@@ -5,7 +5,7 @@ import datetime
 import math
 
 
-def generateTimestamp(base_time, index, total):
+def generateTimestamp(base_time, index, total, max_timespan_seconds=3600):
     """Генерация временных меток с нелинейным распределением"""
     # Нормализованная позиция в последовательности (0..1)
     pos = index / total
@@ -13,9 +13,7 @@ def generateTimestamp(base_time, index, total):
     # Применяем нелинейную функцию (синусоида + квадратичная)
     nonlinear_factor = 0.5 * math.sin(4 * math.pi * pos) + 0.5 * pos ** 2
 
-    # Генерируем смещение в пределах 30 минут с нелинейным распределением
-    max_seconds = 1800  # 30 минут
-    offset_seconds = int(nonlinear_factor * max_seconds)
+    offset_seconds = int(nonlinear_factor * max_timespan_seconds)
 
     return (base_time + datetime.timedelta(seconds=offset_seconds)).isoformat()
 
@@ -51,40 +49,32 @@ def generate_data_item(mode, base_time, index, total):
     }
 
 
-def generate_device_logs(num_items):
+def generate_device_logs(num_items, base_time):
     mode = random.randint(1, 3)
-    base_time = datetime.datetime.now() - datetime.timedelta(minutes=30)
-
-    # Сортируем элементы по времени после генерации
-    items = [generate_data_item(mode, base_time, i, num_items) for i in range(num_items)]
-    items.sort(key=lambda x: x['timestamp'])  # Сортировка по времени
-
+    items = [generate_data_item(mode, base_time, i, num_items) for i in range(num_items)] # Генерируем события
+    items.sort(key=lambda x: x['timestamp']) # Сортируем элементы по времени после генерации
     return {
         'deviceLogs': items
     }
 
 
-currentDateTimeStamp = datetime.datetime.now() - datetime.timedelta(hours=0, minutes=0, seconds=5)
-
 if __name__ == "__main__":
-    num_items_key_inputs = 1000  # Количество нажатий клавиш
     num_sessions = 1000  # Количество сессий
-
-    # Генерация и запись файлов
-    for i in range(num_sessions):
-        logs = generate_device_logs(num_items_key_inputs)
-
-        file_name = currentDateTimeStamp.strftime("%Y-%m-%d_%H-%M-%S") + ".json"
+    
+    # Начинаем с текущего времени
+    currentDateTimeStamp = datetime.datetime.now()
+    
+    # Распределяем сессии по времени
+    for i in range(num_sessions): # создаем сессии
         currentDateTimeStamp = currentDateTimeStamp - datetime.timedelta(hours=1)
-
-        while os.path.exists(file_name):
-            currentDateTimeStamp = currentDateTimeStamp - datetime.timedelta(hours=1)
-            file_name = currentDateTimeStamp.strftime("%Y-%m-%d_%H-%M-%S") + ".json"
-
+        file_name = currentDateTimeStamp.strftime("%Y-%m-%d_%H-%M-%S") + ".json"
         logs_folder_name = "device_input_logs"
         logs_file_name = os.path.join(logs_folder_name, file_name)
-
         os.makedirs(logs_folder_name, exist_ok=True)
-
+        num_items_key_inputs = random.randint(512, 4086)
+        logs = generate_device_logs(num_items_key_inputs, currentDateTimeStamp)
         with open(logs_file_name, 'w') as json_file:
             json.dump(logs, json_file, ensure_ascii=False, indent=4)
+        # Случайный интервал между сессиями
+        time_gap = random.randint(5, 30)
+        currentDateTimeStamp = currentDateTimeStamp - datetime.timedelta(minutes=time_gap)
