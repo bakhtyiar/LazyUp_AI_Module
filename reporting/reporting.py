@@ -6,8 +6,6 @@ from datetime import datetime
 import matplotlib
 matplotlib.use('TkAgg')  # Use TkAgg backend for interactive plots
 import matplotlib.pyplot as plt
-from matplotlib.widgets import Slider, Button
-import numpy as np
 
 def load_prediction_data(directory):
     """Load prediction data from JSON files in the given directory"""
