@@ -2,7 +2,7 @@ import os
 import json
 import glob
 from pathlib import Path
-from datetime import datetime, timedelta
+from datetime import datetime
 import matplotlib
 matplotlib.use('TkAgg')  # Use TkAgg backend for interactive plots
 import matplotlib.pyplot as plt
@@ -21,42 +21,6 @@ def load_prediction_data(directory):
     # Sort by timestamp
     data.sort(key=lambda x: x[0])
     return data
-
-def setup_plot_controls(fig, ax, timestamps, initial_window_hours=1):
-    """Setup zoom controls for the plot"""
-    # Add slider for time window adjustment
-    slider_ax = plt.axes([0.2, 0.02, 0.6, 0.03])
-    window_slider = Slider(
-        ax=slider_ax,
-        label='Time Window (hours)',
-        valmin=0.5,
-        valmax=24,
-        valinit=initial_window_hours,
-        valstep=0.5
-    )
-    
-    # Add reset zoom button
-    reset_ax = plt.axes([0.85, 0.02, 0.1, 0.03])
-    reset_button = Button(reset_ax, 'Reset Zoom')
-    
-    def update_window(val):
-        window_size = timedelta(hours=val)
-        if timestamps:
-            max_time = max(timestamps)
-            min_time = max_time - window_size
-            ax.set_xlim(min_time, max_time)
-            fig.canvas.draw_idle()
-    
-    def reset_zoom(event):
-        if timestamps:
-            ax.set_xlim(min(timestamps), max(timestamps))
-            window_slider.reset()
-            fig.canvas.draw_idle()
-    
-    window_slider.on_changed(update_window)
-    reset_button.on_clicked(reset_zoom)
-    
-    return window_slider, reset_button
 
 def create_process_predictions_plot():
     """Create interactive plot for process predictions"""
@@ -81,7 +45,6 @@ def create_process_predictions_plot():
     ax.legend()
     plt.xticks(rotation=45)
     
-    setup_plot_controls(fig, ax, timestamps)
     plt.show()
 
 def create_device_input_predictions_plot():
@@ -107,7 +70,6 @@ def create_device_input_predictions_plot():
     ax.legend()
     plt.xticks(rotation=45)
     
-    setup_plot_controls(fig, ax, timestamps)
     plt.show()
 
 def create_combined_predictions_plot():
@@ -145,8 +107,6 @@ def create_combined_predictions_plot():
     ax.legend()
     plt.xticks(rotation=45)
     
-    if all_timestamps:
-        setup_plot_controls(fig, ax, all_timestamps)
     plt.show()
 
 if __name__ == "__main__":
