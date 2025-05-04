@@ -5,12 +5,13 @@ from pathlib import Path
 
 module_dir = Path(__file__).resolve().parent
 
-def load_device_logs(max_files: int) -> list:
+def load_device_logs(max_files: int, max_units: int) -> list:
     """
     Загружает данные из файлов логов в папке device_input_logs.
     Каждый файл представлен отдельным словарем в возвращаемом списке.
 
     Args:
+        max_units: максимальное количество залогированных действий
         max_files: максимальное количество обработанных файлов
 
     Returns:
@@ -42,10 +43,14 @@ def load_device_logs(max_files: int) -> list:
     # Список для хранения данных из каждого файла
     file_logs = []
     total_records = 0
+    total_units = 0
 
     # Обрабатываем файлы в обратном порядке (от новых к старым)
     for filename in reversed(log_files):
         if total_records >= max_files:
+            break
+
+        if total_units >= max_units:
             break
 
         filepath = os.path.join(logs_dir, filename)
@@ -62,6 +67,9 @@ def load_device_logs(max_files: int) -> list:
                     button_key = entry.get("buttonKey")
                     mode = int(entry.get("isWorkingMode", False))
 
+                    if total_units >= max_units:
+                        break
+
                     if timestamp_str and button_key is not None:
                         try:
                             dt = datetime.fromisoformat(timestamp_str)
@@ -73,6 +81,7 @@ def load_device_logs(max_files: int) -> list:
                             }
 
                             file_data["list"].append(log_entry)
+                            total_units += 1
                         except (ValueError, TypeError):
                             continue
 
