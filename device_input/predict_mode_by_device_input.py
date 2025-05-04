@@ -50,7 +50,7 @@ def predict_by_device_input(sample_data: list = None):
         Array<0|1>
     """
     if sample_data is None:
-        sample_data = load_device_logs(10000)
+        sample_data = load_device_logs(max_units= 1000000)
 
     # Подготовка данных
     X, y = prepare_dataset(sample_data)
@@ -79,4 +79,4 @@ def predict_by_device_input(sample_data: list = None):
 
 
 if __name__ == "__main__":
-    ret = predict_by_device_input(sample_data=load_device_logs(1000))
+    ret = predict_by_device_input(sample_data=load_device_logs(max_units= 1000000))

@@ -5,7 +5,7 @@ from pathlib import Path
 
 module_dir = Path(__file__).resolve().parent
 
-def load_device_logs(max_files: int, max_units: int) -> list:
+def load_device_logs(max_files: int | None = None, max_units: int | None = None) -> list:
     """
     Загружает данные из файлов логов в папке device_input_logs.
     Каждый файл представлен отдельным словарем в возвращаемом списке.
@@ -47,10 +47,10 @@ def load_device_logs(max_files: int, max_units: int) -> list:
 
     # Обрабатываем файлы в обратном порядке (от новых к старым)
     for filename in reversed(log_files):
-        if total_records >= max_files:
+        if max_files is not None and total_records >= max_files:
             break
 
-        if total_units >= max_units:
+        if max_units is not None and total_units >= max_units:
             break
 
         filepath = os.path.join(logs_dir, filename)
@@ -67,7 +67,7 @@ def load_device_logs(max_files: int, max_units: int) -> list:
                     button_key = entry.get("buttonKey")
                     mode = int(entry.get("isWorkingMode", False))
 
-                    if total_units >= max_units:
+                    if max_units is not None and total_units >= max_units:
                         break
 
                     if timestamp_str and button_key is not None:
@@ -97,6 +97,6 @@ def load_device_logs(max_files: int, max_units: int) -> list:
     return file_logs
 
 if __name__ == "__main__":
-    data = load_device_logs(10)
+    data = load_device_logs(10, 10000)
     json_formatted_str = json.dumps(data, indent=2)
     print(json_formatted_str)

@@ -119,7 +119,7 @@ def train_model(data, retrain=False):
 # Пример использования
 if __name__ == "__main__":
     # Загрузка новых данных
-    new_data = load_device_logs(1000)
+    new_data = load_device_logs(max_units= 1000000)
     
     # Измерение использования памяти
     tracemalloc.start()
