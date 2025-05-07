@@ -9,15 +9,19 @@ from dotenv import load_dotenv
 
 class JsonFolderCrypto:
     def __init__(self, env_file='.env.local'):
+        # Получаем абсолютный путь к файлу .env.local
+        base_dir = Path(__file__).resolve().parent
+        env_path = base_dir / env_file
+        
         # Загружаем переменные окружения из файла
-        load_dotenv(env_file)
+        load_dotenv(env_path)
         
         # Получаем ключ и соль из переменных окружения
         self.encryption_key = os.getenv('ENCRYPTION_KEY')
         self.salt = os.getenv('ENCRYPTION_SALT')
         
         if not self.encryption_key or not self.salt:
-            raise ValueError("ENCRYPTION_KEY and ENCRYPTION_SALT must be set in .env.local")
+            raise ValueError(f"ENCRYPTION_KEY and ENCRYPTION_SALT must be set in {env_path}")
         
         # Преобразуем соль в байты
         salt_bytes = self.salt.encode()
