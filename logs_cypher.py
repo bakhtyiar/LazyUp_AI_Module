@@ -88,6 +88,26 @@ class JsonFolderCrypto:
             output_path = Path(output_folder) / file_path.name
             self.decrypt_file(file_path, output_path)
 
+    def is_file_encrypted(self, file_path):
+        """
+        Проверяет, является ли файл зашифрованным.
+
+        Args:
+            file_path: путь к файлу для проверки
+
+        Returns:
+            bool: True если файл зашифрован, False если нет
+        """
+        try:
+            with open(file_path, 'rb') as f:
+                encrypted_data = f.read()
+
+            # Пробуем дешифровать (без сохранения результата)
+            self.cipher.decrypt(encrypted_data)
+            return True
+        except Exception:
+            return False
+
     def is_encrypted_folder(self, folder_path, sample_size=3):
         """
         Проверяет, является ли папка зашифрованной.
