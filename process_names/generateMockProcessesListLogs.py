@@ -3,6 +3,8 @@ import os
 import random
 from collections import defaultdict
 from datetime import datetime, timedelta
+from pathlib import Path
+from logs_cypher import JsonFolderCrypto
 
 # Основные процессы с категориями
 mandatory_processes = {
@@ -192,6 +194,9 @@ currentDateTimeStamp = datetime.now() - timedelta(minutes=5)
 logs_folder_name = "processes_logs"
 os.makedirs(logs_folder_name, exist_ok=True)
 
+# Initialize encryption
+crypto = JsonFolderCrypto()
+
 for j in range(20):
     if j % 2 == 0:
         currentDateTimeStamp = currentDateTimeStamp - timedelta(minutes=600)
@@ -207,5 +212,10 @@ for j in range(20):
             currentDateTimeStamp = currentDateTimeStamp - timedelta(minutes=1)
             file_name = currentDateTimeStamp.strftime("%Y-%m-%d_%H-%M-%S") + ".json"
 
-        with open(os.path.join(logs_folder_name, file_name), 'w') as json_file:
+        file_path = os.path.join(logs_folder_name, file_name)
+        # First save the file normally
+        with open(file_path, 'w') as json_file:
             json.dump(data, json_file, ensure_ascii=False, indent=4)
+        
+        # Then encrypt it in place
+        crypto.encrypt_file(file_path)

@@ -3,6 +3,7 @@ import math
 import os
 import random
 from datetime import datetime, timedelta
+from logs_cypher import JsonFolderCrypto
 
 
 def generateTimestamp(base_time, index, total, max_timespan_seconds=3600):
@@ -59,6 +60,9 @@ def generate_device_logs(num_items, base_time):
 
 
 if __name__ == "__main__":
+    # Initialize encryption
+    crypto = JsonFolderCrypto()
+    
     num_sessions = 80  # Количество сессий
 
     # Начинаем с текущего времени
@@ -75,8 +79,14 @@ if __name__ == "__main__":
         os.makedirs(logs_folder_name, exist_ok=True)
         num_items_key_inputs = random.randint(512, 4086)
         logs = generate_device_logs(num_items_key_inputs, currentDateTimeStamp)
+        
+        # First save the file normally
         with open(logs_file_name, 'w') as json_file:
             json.dump(logs, json_file, ensure_ascii=False, indent=4)
+        
+        # Then encrypt it in place
+        crypto.encrypt_file(logs_file_name)
+        
         # Случайный интервал между сессиями
         time_gap = random.randint(5, 30)
         currentDateTimeStamp = currentDateTimeStamp - timedelta(minutes=time_gap)
