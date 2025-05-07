@@ -2,13 +2,15 @@ import os
 import json
 from datetime import datetime
 from pathlib import Path
+from logs_cypher import JsonFolderCrypto
 
 module_dir = Path(__file__).resolve().parent
+crypto = JsonFolderCrypto()
 
 def load_device_logs(max_files: int | None = None, max_units: int | None = None) -> list:
     """
     Загружает данные из файлов логов в папке device_input_logs.
-    Каждый файл представлен отдельным словарем в возвращаемом списке.
+    Поддерживает как зашифрованные, так и незашифрованные JSON файлы.
 
     Args:
         max_units: максимальное количество залогированных действий
@@ -55,40 +57,55 @@ def load_device_logs(max_files: int | None = None, max_units: int | None = None)
 
         filepath = os.path.join(logs_dir, filename)
         try:
-            with open(filepath, 'r') as f:
-                data = json.load(f)
-                file_data = {
-                    "mode": int(data.get("deviceLogs", [])[0].get("isWorkingMode", False)),
-                    "list": []
-                }
+            # Проверяем, зашифрован ли файл
+            is_encrypted = crypto.is_file_encrypted(filepath)
+            
+            if is_encrypted:
+                # Создаем временный файл для расшифрованных данных
+                temp_filepath = filepath + '.temp'
+                crypto.decrypt_file(filepath, temp_filepath)
+                
+                with open(temp_filepath, 'r') as f:
+                    data = json.load(f)
+                    
+                # Удаляем временный файл
+                os.remove(temp_filepath)
+            else:
+                with open(filepath, 'r') as f:
+                    data = json.load(f)
 
-                for entry in data.get("deviceLogs", []):
-                    timestamp_str = entry.get("timestamp")
-                    button_key = entry.get("buttonKey")
-                    mode = int(entry.get("isWorkingMode", False))
+            file_data = {
+                "mode": int(data.get("deviceLogs", [])[0].get("isWorkingMode", False)),
+                "list": []
+            }
 
-                    if max_units is not None and total_units >= max_units:
-                        break
+            for entry in data.get("deviceLogs", []):
+                timestamp_str = entry.get("timestamp")
+                button_key = entry.get("buttonKey")
+                mode = int(entry.get("isWorkingMode", False))
 
-                    if timestamp_str and button_key is not None:
-                        try:
-                            dt = datetime.fromisoformat(timestamp_str)
-                            timestamp_ms = int(dt.timestamp() * 1000)
+                if max_units is not None and total_units >= max_units:
+                    break
 
-                            log_entry = {
-                                "buttonKey": button_key,
-                                "dateTime": timestamp_ms
-                            }
+                if timestamp_str and button_key is not None:
+                    try:
+                        dt = datetime.fromisoformat(timestamp_str)
+                        timestamp_ms = int(dt.timestamp() * 1000)
 
-                            file_data["list"].append(log_entry)
-                            total_units += 1
-                        except (ValueError, TypeError):
-                            continue
+                        log_entry = {
+                            "buttonKey": button_key,
+                            "dateTime": timestamp_ms
+                        }
 
-                # Сортируем записи в файле по времени (от старых к новым)
-                file_data["list"].sort(key=lambda x: x["dateTime"])
-                file_logs.append(file_data)
-                total_records += 1
+                        file_data["list"].append(log_entry)
+                        total_units += 1
+                    except (ValueError, TypeError):
+                        continue
+
+            # Сортируем записи в файле по времени (от старых к новым)
+            file_data["list"].sort(key=lambda x: x["dateTime"])
+            file_logs.append(file_data)
+            total_records += 1
 
         except (json.JSONDecodeError, IOError) as e:
             print(f"Ошибка при чтении файла {filename}: {e}")
