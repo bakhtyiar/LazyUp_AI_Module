@@ -8,9 +8,11 @@ import sys
 import os
 import time
 from pathlib import Path
+from logs_cypher import JsonFolderCrypto
 
 is_working_mode = True
 module_dir = Path(__file__).resolve().parent
+crypto = JsonFolderCrypto()
 
 def set_interval(func, sec):
     def func_wrapper():
@@ -65,6 +67,8 @@ def save_processes_to_file(dir_to_logs, is_working_mode_target_value):
     with open(logs_file_name, 'w') as json_file:
         # Записываем объект `result` в файл в формате JSON
         json.dump(result, json_file, ensure_ascii=False, indent=4)
+    # Шифруем файл после записи
+    crypto.encrypt_file(json_file)
 
     print(f"Названия процессов с нагрузкой успешно записаны в {dir_to_logs}.")
 

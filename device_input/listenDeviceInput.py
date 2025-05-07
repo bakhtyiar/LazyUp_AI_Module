@@ -6,6 +6,7 @@ from datetime import datetime
 import keyboard  # Убедитесь, что эта библиотека установлена
 import mouse  # Убедитесь, что эта библиотека установлена
 from pathlib import Path
+from logs_cypher import JsonFolderCrypto
 
 # Mouse buttons map
 mouse_buttons_map = {
@@ -29,6 +30,7 @@ is_working_mode = True
 current_log_file = None
 module_dir = Path(__file__).resolve().parent
 directory_path = os.path.join(module_dir, 'device_input_logs')  # Путь к директории с JSON-файлами
+crypto = JsonFolderCrypto()
 
 def get_log_filename():
     return datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".json"
@@ -51,6 +53,8 @@ def log_event(button_key, is_working_mode):
     logs.append(log_entry)
     with open(current_log_file, 'w', encoding='utf-8') as f:
         json.dump({"deviceLogs": logs}, f, indent=4)
+    # Шифруем файл после записи
+    crypto.encrypt_file(current_log_file)
 
 def on_key_event(event):
     global is_working_mode
