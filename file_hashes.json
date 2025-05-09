@@ -1,10 +1,10 @@
 {
-    "device_input\\device_log_loader.py": "e654792eb518c77cd95f61ec4e1f413b55f466fe8461f22e5e5a1b52d2234c51",
+    "device_input\\device_log_loader.py": "090104b718d16768013c14afbdb30abb46e245d426cd471e7fca9542ddcce884",
     "device_input\\train_model_mode_by_device_input.py": "f2125e44f97161ad37431273886d84c8a83c34464458b714b40300be43942ad5",
     "device_input\\predict_mode_by_device_input.py": "bdc1daf311a0ff97cf8f99bf1253deda4fcd9c0427d894c8cb504317ce42cd36",
-    "device_input\\listenDeviceInput.py": "44ccbac7e504899f6f43f42053fc47f06663855efd3adf5a28b9d6fffdeae2ef",
+    "device_input\\listenDeviceInput.py": "970f5c924054cc18365f5ad393d8af17aafdbb7bbec7fe371dac218b85903f2b",
     "process_names\\train_model_mode_by_processes.py": "30dd1b6c550823e25ee2b8927fcd48f67614585e55de9bfa7bbf7a276b1ba09b",
-    "process_names\\processes_log_loader.py": "e45aa4c729b0fa4bdef5816ed8128ccc3d5969f3c3d72be91fb1ce7a50d69057",
+    "process_names\\processes_log_loader.py": "9f27768d9a72fbcc4d3b6c9459861c8a8456d117c859b609d4eaa5b6065f616e",
     "process_names\\predict_mode_by_processes.py": "410e91b4a688af7f36bfacad825b0ee16aea9b09f4191861392b6e8118aed18d",
-    "process_names\\listenProcessesList.py": "9f5e25c604661d83c7d61f7528b714c06811e505c947dc8ddcef72fa3002329f"
+    "process_names\\listenProcessesList.py": "195a92bd52e29c0b151929be5d0beffd04d1879528a45a4e5795da3467d67998"
 }

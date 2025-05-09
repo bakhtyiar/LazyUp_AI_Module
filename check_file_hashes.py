@@ -12,6 +12,7 @@
 import hashlib
 import os
 import json
+from datetime import datetime
 
 def calculate_file_hash(file_path, hash_algorithm='sha256'):
     """
@@ -85,15 +86,29 @@ if __name__ == "__main__":
         else:
             actual_hashes[file_path] = "Файл не найден"
 
-    # сравнение со saved хешами
+    # сравнение со saved хешами и логирование различий
+    differences = []
     for file_path, expected_hash in expected_hashes.items():
         if file_path not in actual_hashes:
             print(f"{file_path}: Файл не найден")
             continue
         if actual_hashes[file_path] != expected_hash:
             print(f"{file_path}: !!! Хеш не совпадает (expected: {expected_hash}, actual: {actual_hashes[file_path]})")
+            differences.append({
+                "filename": file_path,
+                "oldHash": expected_hash,
+                "newHash": actual_hashes[file_path]
+            })
         else:
             print(f"{file_path}: V")
+
+    # Логирование различий если они есть
+    if differences:
+        os.makedirs('./hashes_diff_logs', exist_ok=True)
+        current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+        log_file = f'./hashes_diff_logs/{current_time}.json'
+        with open(log_file, 'w', encoding='utf-8') as f:
+            json.dump({"differences": differences}, f, indent=4, ensure_ascii=False)
 
     # сохранение хешей
     with open('file_hashes.json', 'w') as f:
