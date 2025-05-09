@@ -6,7 +6,7 @@ from datetime import datetime
 import keyboard  # Убедитесь, что эта библиотека установлена
 import mouse  # Убедитесь, что эта библиотека установлена
 from pathlib import Path
-from logs_cypher import JsonFolderCrypto
+from files_cryptor import JsonFolderCrypto
 
 # Mouse buttons map
 mouse_buttons_map = {

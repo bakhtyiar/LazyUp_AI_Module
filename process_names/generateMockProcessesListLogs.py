@@ -4,7 +4,7 @@ import random
 from collections import defaultdict
 from datetime import datetime, timedelta
 from pathlib import Path
-from logs_cypher import JsonFolderCrypto
+from files_cryptor import JsonFolderCrypto
 
 # Основные процессы с категориями
 mandatory_processes = {

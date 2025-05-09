@@ -2,7 +2,7 @@ import os
 import json
 from datetime import datetime
 from pathlib import Path
-from logs_cypher import JsonFolderCrypto
+from files_cryptor import JsonFolderCrypto
 
 module_dir = Path(__file__).resolve().parent
 crypto = JsonFolderCrypto()
