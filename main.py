@@ -1,10 +1,48 @@
 import sys
+import os
 from process import process
 from repeat_with_interval import repeat_with_interval
 from user_session_manipulator.lock_session import keep_locked
 
+def show_agreement_file(filename):
+    try:
+        with open(filename, 'r', encoding='utf-8') as file:
+            content = file.read()
+            print("\n" + "="*80)
+            print(content)
+            print("="*80)
+            print("\nДля согласия введите Y , для отказа - любую другую клавишу")
+            response = input()
+            return response == "Y" or response == "y"
+    except FileNotFoundError:
+        print(f"Ошибка: Файл {filename} не найден")
+        return False
+
+def check_first_run():
+    flag_file = ".agreement_complete"
+    if not os.path.exists(flag_file):
+        print("Первый запуск приложения. Необходимо ознакомиться с документами...")
+        
+        # Show Privacy Policy
+        if not show_agreement_file("PRIVACY_POLICY_ru.md"):
+            print("Вы не приняли политику конфиденциальности. Приложение будет закрыто.")
+            sys.exit(1)
+            
+        # Show Instructions
+        if not show_agreement_file("README_instruction_ru.md"):
+            print("Вы не приняли инструкцию. Приложение будет закрыто.")
+            sys.exit(1)
+            
+        # Create flag file to mark successful agreement
+        with open(flag_file, 'w') as f:
+            f.write("1")
+        print("\nСпасибо за принятие условий! Запуск приложения...")
+
 def main():
     print("LazyUp AI Module - Interactive CLI")
+    
+    # Check for first run
+    check_first_run()
 
     while True:
         try:
