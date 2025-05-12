@@ -3,7 +3,7 @@ import math
 import os
 import random
 from datetime import datetime, timedelta
-from files_cryptor import JsonFolderCrypto
+from logs_cypher import JsonFolderCrypto
 
 
 def generateTimestamp(base_time, index, total, max_timespan_seconds=3600):

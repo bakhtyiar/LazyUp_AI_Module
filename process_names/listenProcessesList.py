@@ -8,7 +8,7 @@ import sys
 import os
 import time
 from pathlib import Path
-from files_cryptor import JsonFolderCrypto
+from logs_cypher import JsonFolderCrypto
 
 is_working_mode = True
 module_dir = Path(__file__).resolve().parent
