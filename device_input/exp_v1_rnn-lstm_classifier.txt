@@ -1,0 +1,180 @@
+C:\Users\bakhtiyar\.conda\envs\myenv\python.exe C:\Users\bakhtiyar\Projects\LazyUp_AI_Module\device_input\exp_v1_rnn-lstm_classifier.py
+[I 2025-05-24 20:02:24,477] A new study created in memory with name: no-name-10503516-77e1-4b6a-b6fd-7dc2afca0466
+2025-05-24 20:02:24.480835: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-05-24 20:02:24.481682: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+1/1 [==============================] - 2s 2s/step
+[I 2025-05-24 20:04:24,618] Trial 0 finished with value: 0.0 and parameters: {'batch_size': 32, 'epochs': 24, 'patience': 3, 'n_lstm_layers': 2, 'bidirectional': True, 'lstm_units_0': 222, 'lstm_units_1': 170, 'lstm_activation': 'relu', 'dropout_0': 0.0968792331865504, 'dropout_1': 0.415808883057005, 'n_dense_layers': 2, 'dense_units_0': 15, 'dense_activation': 'relu', 'learning_rate': 0.0021715086499730094}. Best is trial 0 with value: 0.0.
+1/1 [==============================] - 11s 11s/step
+[I 2025-05-24 20:13:06,158] Trial 1 finished with value: 0.0 and parameters: {'batch_size': 32, 'epochs': 40, 'patience': 4, 'n_lstm_layers': 3, 'bidirectional': True, 'lstm_units_0': 80, 'lstm_units_1': 59, 'lstm_units_2': 68, 'lstm_activation': 'tanh', 'dropout_0': 0.274861374554774, 'dropout_1': 0.19172731778764424, 'dropout_2': 0.4443927149107778, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 7.098413882390009e-05}. Best is trial 0 with value: 0.0.
+1/1 [==============================] - 1s 1s/step
+[I 2025-05-24 20:14:04,430] Trial 2 finished with value: 0.0 and parameters: {'batch_size': 64, 'epochs': 20, 'patience': 6, 'n_lstm_layers': 2, 'bidirectional': False, 'lstm_units_0': 231, 'lstm_units_1': 182, 'lstm_activation': 'relu', 'dropout_0': 0.060771125690927685, 'dropout_1': 0.25681461203250866, 'n_dense_layers': 2, 'dense_units_0': 126, 'dense_activation': 'tanh', 'learning_rate': 0.003036307778138028}. Best is trial 0 with value: 0.0.
+1/1 [==============================] - 1s 1s/step
+[I 2025-05-24 20:16:57,511] Trial 3 finished with value: 0.0 and parameters: {'batch_size': 128, 'epochs': 28, 'patience': 7, 'n_lstm_layers': 2, 'bidirectional': False, 'lstm_units_0': 253, 'lstm_units_1': 26, 'lstm_activation': 'relu', 'dropout_0': 0.44811754803221177, 'dropout_1': 0.34496424907070655, 'n_dense_layers': 2, 'dense_units_0': 120, 'dense_activation': 'relu', 'learning_rate': 6.105280573427414e-05}. Best is trial 0 with value: 0.0.
+1/1 [==============================] - 2s 2s/step
+WARNING:tensorflow:5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x000002420704EF80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[I 2025-05-24 20:18:23,541] Trial 4 finished with value: 0.5 and parameters: {'batch_size': 32, 'epochs': 36, 'patience': 7, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 177, 'lstm_activation': 'tanh', 'dropout_0': 0.017419371959924046, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.0010880311251247232}. Best is trial 4 with value: 0.5.
+1/1 [==============================] - 1s 750ms/step
+WARNING:tensorflow:6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x00000242079AC0D0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+[I 2025-05-24 20:20:58,792] Trial 5 finished with value: 0.5 and parameters: {'batch_size': 64, 'epochs': 42, 'patience': 5, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 241, 'lstm_activation': 'relu', 'dropout_0': 0.2788164260983924, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 2.8071502436051683e-05}. Best is trial 4 with value: 0.5.
+1/1 [==============================] - 3s 3s/step
+[I 2025-05-24 20:22:30,642] Trial 6 finished with value: 0.5 and parameters: {'batch_size': 32, 'epochs': 33, 'patience': 6, 'n_lstm_layers': 1, 'bidirectional': True, 'lstm_units_0': 84, 'lstm_activation': 'tanh', 'dropout_0': 0.008154521953796512, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.002611591616742946}. Best is trial 4 with value: 0.5.
+1/1 [==============================] - 2s 2s/step
+[I 2025-05-24 20:24:21,246] Trial 7 finished with value: 0.0 and parameters: {'batch_size': 16, 'epochs': 24, 'patience': 6, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 138, 'lstm_activation': 'tanh', 'dropout_0': 0.49622923448135253, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 1.1745950747582842e-05}. Best is trial 4 with value: 0.5.
+1/1 [==============================] - 3s 3s/step
+[I 2025-05-24 20:25:37,157] Trial 8 finished with value: 0.5 and parameters: {'batch_size': 64, 'epochs': 13, 'patience': 6, 'n_lstm_layers': 1, 'bidirectional': True, 'lstm_units_0': 190, 'lstm_activation': 'tanh', 'dropout_0': 0.023815647039021004, 'n_dense_layers': 1, 'dense_activation': 'tanh', 'learning_rate': 0.004237578945440589}. Best is trial 4 with value: 0.5.
+1/1 [==============================] - 3s 3s/step
+[I 2025-05-24 20:27:22,031] Trial 9 finished with value: 0.5 and parameters: {'batch_size': 64, 'epochs': 20, 'patience': 6, 'n_lstm_layers': 1, 'bidirectional': True, 'lstm_units_0': 186, 'lstm_activation': 'tanh', 'dropout_0': 0.2612659439797829, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.0004951759293362467}. Best is trial 4 with value: 0.5.
+[I 2025-05-24 20:30:58,826] Trial 10 finished with value: 0.0 and parameters: {'batch_size': 128, 'epochs': 35, 'patience': 10, 'n_lstm_layers': 3, 'bidirectional': False, 'lstm_units_0': 125, 'lstm_units_1': 255, 'lstm_units_2': 255, 'lstm_activation': 'tanh', 'dropout_0': 0.13836988693754687, 'dropout_1': 0.011145242730931981, 'dropout_2': 0.0023225399736789276, 'n_dense_layers': 2, 'dense_units_0': 48, 'dense_activation': 'tanh', 'learning_rate': 0.0005006145490759113}. Best is trial 4 with value: 0.5.
+1/1 [==============================] - 5s 5s/step
+1/1 [==============================] - 1s 685ms/step
+[I 2025-05-24 20:34:02,603] Trial 11 finished with value: 0.0 and parameters: {'batch_size': 16, 'epochs': 48, 'patience': 8, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 174, 'lstm_activation': 'relu', 'dropout_0': 0.36827293529086674, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.00012647883498937017}. Best is trial 4 with value: 0.5.
+1/1 [==============================] - 1s 600ms/step
+[I 2025-05-24 20:35:59,006] Trial 12 finished with value: 0.0 and parameters: {'batch_size': 64, 'epochs': 44, 'patience': 4, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 152, 'lstm_activation': 'relu', 'dropout_0': 0.18007710966392898, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 1.9234576157411063e-05}. Best is trial 4 with value: 0.5.
+1/1 [==============================] - 1s 923ms/step
+[I 2025-05-24 20:37:41,668] Trial 13 finished with value: 0.0 and parameters: {'batch_size': 32, 'epochs': 39, 'patience': 8, 'n_lstm_layers': 2, 'bidirectional': False, 'lstm_units_0': 39, 'lstm_units_1': 95, 'lstm_activation': 'relu', 'dropout_0': 0.3466055334531858, 'dropout_1': 0.488247641795378, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.009730267485909654}. Best is trial 4 with value: 0.5.
+1/1 [==============================] - 2s 2s/step
+[I 2025-05-24 20:38:23,238] Trial 14 finished with value: 0.0 and parameters: {'batch_size': 32, 'epochs': 48, 'patience': 4, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 214, 'lstm_activation': 'tanh', 'dropout_0': 0.19687134108789767, 'n_dense_layers': 1, 'dense_activation': 'tanh', 'learning_rate': 0.0008440635898333856}. Best is trial 4 with value: 0.5.
+1/1 [==============================] - 2s 2s/step
+[I 2025-05-24 20:48:30,047] Trial 15 finished with value: 0.0 and parameters: {'batch_size': 64, 'epochs': 40, 'patience': 10, 'n_lstm_layers': 2, 'bidirectional': False, 'lstm_units_0': 251, 'lstm_units_1': 239, 'lstm_activation': 'relu', 'dropout_0': 0.3272861705995789, 'dropout_1': 0.008553193640538082, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.00013995532652187005}. Best is trial 4 with value: 0.5.
+1/1 [==============================] - 2s 2s/step
+[I 2025-05-24 20:49:35,574] Trial 16 finished with value: 0.0 and parameters: {'batch_size': 16, 'epochs': 34, 'patience': 8, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 207, 'lstm_activation': 'tanh', 'dropout_0': 0.22472055956859685, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.0010617436347448385}. Best is trial 4 with value: 0.5.
+1/1 [==============================] - 2s 2s/step
+[I 2025-05-24 20:56:45,504] Trial 17 finished with value: 0.5 and parameters: {'batch_size': 128, 'epochs': 44, 'patience': 5, 'n_lstm_layers': 3, 'bidirectional': False, 'lstm_units_0': 157, 'lstm_units_1': 114, 'lstm_units_2': 18, 'lstm_activation': 'relu', 'dropout_0': 0.14441057989743772, 'dropout_1': 0.14773256011831873, 'dropout_2': 0.14587658970152714, 'n_dense_layers': 2, 'dense_units_0': 76, 'dense_activation': 'relu', 'learning_rate': 2.5384797963360447e-05}. Best is trial 4 with value: 0.5.
+[I 2025-05-24 21:01:03,587] Trial 18 finished with value: 0.0 and parameters: {'batch_size': 32, 'epochs': 30, 'patience': 9, 'n_lstm_layers': 2, 'bidirectional': False, 'lstm_units_0': 119, 'lstm_units_1': 187, 'lstm_activation': 'relu', 'dropout_0': 0.40516323075550964, 'dropout_1': 0.11985542806423793, 'n_dense_layers': 1, 'dense_activation': 'tanh', 'learning_rate': 0.00023572339726212147}. Best is trial 4 with value: 0.5.
+1/1 [==============================] - 1s 1s/step
+1/1 [==============================] - 1s 1s/step
+[I 2025-05-24 21:02:45,352] Trial 19 finished with value: 0.0 and parameters: {'batch_size': 64, 'epochs': 44, 'patience': 7, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 103, 'lstm_activation': 'tanh', 'dropout_0': 0.2930575267492727, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 3.576222161143943e-05}. Best is trial 4 with value: 0.5.
+1/1 [==============================] - 1s 1s/step
+[I 2025-05-24 21:03:23,553] Trial 20 finished with value: 0.8 and parameters: {'batch_size': 32, 'epochs': 39, 'patience': 5, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 26, 'lstm_activation': 'tanh', 'dropout_0': 0.09107272375037292, 'n_dense_layers': 2, 'dense_units_0': 78, 'dense_activation': 'relu', 'learning_rate': 0.0011392915542686277}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 1s 1s/step
+[I 2025-05-24 21:04:03,613] Trial 21 finished with value: 0.5 and parameters: {'batch_size': 32, 'epochs': 38, 'patience': 5, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 16, 'lstm_activation': 'tanh', 'dropout_0': 0.07604323945829233, 'n_dense_layers': 2, 'dense_units_0': 79, 'dense_activation': 'relu', 'learning_rate': 0.0009303943286955753}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 2s 2s/step
+[I 2025-05-24 21:06:19,854] Trial 22 finished with value: 0.2857142857142857 and parameters: {'batch_size': 32, 'epochs': 50, 'patience': 5, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 58, 'lstm_activation': 'tanh', 'dropout_0': 0.11700362561699215, 'n_dense_layers': 2, 'dense_units_0': 49, 'dense_activation': 'relu', 'learning_rate': 0.00028984045900341435}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 1s 1s/step
+[I 2025-05-24 21:06:49,769] Trial 23 finished with value: 0.0 and parameters: {'batch_size': 32, 'epochs': 36, 'patience': 3, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 163, 'lstm_activation': 'tanh', 'dropout_0': 0.05127792708195074, 'n_dense_layers': 2, 'dense_units_0': 101, 'dense_activation': 'relu', 'learning_rate': 0.0014223732710529932}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 1s 1s/step
+[I 2025-05-24 21:07:35,191] Trial 24 finished with value: 0.0 and parameters: {'batch_size': 32, 'epochs': 42, 'patience': 5, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 197, 'lstm_activation': 'tanh', 'dropout_0': 0.0006044953344105375, 'n_dense_layers': 2, 'dense_units_0': 9, 'dense_activation': 'relu', 'learning_rate': 0.007304841802355199}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 3s 3s/step
+[I 2025-05-24 21:10:50,487] Trial 25 finished with value: 0.8 and parameters: {'batch_size': 64, 'epochs': 33, 'patience': 7, 'n_lstm_layers': 2, 'bidirectional': False, 'lstm_units_0': 239, 'lstm_units_1': 17, 'lstm_activation': 'tanh', 'dropout_0': 0.22113070421675526, 'dropout_1': 0.31371290737282664, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.000517277993785766}. Best is trial 20 with value: 0.8.
+[I 2025-05-24 21:18:48,467] Trial 26 finished with value: 0.5 and parameters: {'batch_size': 128, 'epochs': 32, 'patience': 7, 'n_lstm_layers': 3, 'bidirectional': True, 'lstm_units_0': 104, 'lstm_units_1': 19, 'lstm_units_2': 201, 'lstm_activation': 'tanh', 'dropout_0': 0.1700462777773353, 'dropout_1': 0.31458557653217223, 'dropout_2': 0.48634966928330853, 'n_dense_layers': 2, 'dense_units_0': 97, 'dense_activation': 'tanh', 'learning_rate': 0.0005269722947160876}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 9s 9s/step
+[I 2025-05-24 21:22:00,894] Trial 27 finished with value: 0.5 and parameters: {'batch_size': 16, 'epochs': 27, 'patience': 9, 'n_lstm_layers': 2, 'bidirectional': False, 'lstm_units_0': 18, 'lstm_units_1': 70, 'lstm_activation': 'tanh', 'dropout_0': 0.21920750406751643, 'dropout_1': 0.4086917781555127, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.0050192934319684135}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 3s 3s/step
+1/1 [==============================] - 3s 3s/step
+[I 2025-05-24 21:25:11,716] Trial 28 finished with value: 0.8 and parameters: {'batch_size': 32, 'epochs': 37, 'patience': 7, 'n_lstm_layers': 2, 'bidirectional': False, 'lstm_units_0': 60, 'lstm_units_1': 127, 'lstm_activation': 'tanh', 'dropout_0': 0.04402138094468678, 'dropout_1': 0.2639469564997532, 'n_dense_layers': 2, 'dense_units_0': 49, 'dense_activation': 'relu', 'learning_rate': 0.0015390152376876262}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 8s 8s/step
+[I 2025-05-24 21:34:45,893] Trial 29 finished with value: 0.5 and parameters: {'batch_size': 32, 'epochs': 30, 'patience': 8, 'n_lstm_layers': 2, 'bidirectional': True, 'lstm_units_0': 45, 'lstm_units_1': 138, 'lstm_activation': 'tanh', 'dropout_0': 0.08801453057550385, 'dropout_1': 0.2640146920777761, 'n_dense_layers': 2, 'dense_units_0': 48, 'dense_activation': 'relu', 'learning_rate': 0.0017232118032835116}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 6s 6s/step
+[I 2025-05-24 21:37:46,191] Trial 30 finished with value: 0.5 and parameters: {'batch_size': 64, 'epochs': 26, 'patience': 3, 'n_lstm_layers': 3, 'bidirectional': False, 'lstm_units_0': 66, 'lstm_units_1': 143, 'lstm_units_2': 129, 'lstm_activation': 'tanh', 'dropout_0': 0.11665900951049374, 'dropout_1': 0.33411194904151964, 'dropout_2': 0.24352460430896328, 'n_dense_layers': 2, 'dense_units_0': 61, 'dense_activation': 'relu', 'learning_rate': 0.0006147236743038228}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 3s 3s/step
+[I 2025-05-24 21:40:09,168] Trial 31 finished with value: 0.0 and parameters: {'batch_size': 32, 'epochs': 37, 'patience': 7, 'n_lstm_layers': 2, 'bidirectional': False, 'lstm_units_0': 37, 'lstm_units_1': 216, 'lstm_activation': 'tanh', 'dropout_0': 0.04049282545483613, 'dropout_1': 0.20385236578149163, 'n_dense_layers': 2, 'dense_units_0': 23, 'dense_activation': 'relu', 'learning_rate': 0.0016487738355283037}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 4s 4s/step
+[I 2025-05-24 21:45:30,804] Trial 32 finished with value: 0.5 and parameters: {'batch_size': 32, 'epochs': 31, 'patience': 7, 'n_lstm_layers': 2, 'bidirectional': False, 'lstm_units_0': 223, 'lstm_units_1': 73, 'lstm_activation': 'tanh', 'dropout_0': 0.10618303364375307, 'dropout_1': 0.38072460909642003, 'n_dense_layers': 2, 'dense_units_0': 31, 'dense_activation': 'relu', 'learning_rate': 0.0011602649588418432}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 3s 3s/step
+[I 2025-05-24 21:48:19,156] Trial 33 finished with value: 0.5 and parameters: {'batch_size': 32, 'epochs': 36, 'patience': 9, 'n_lstm_layers': 2, 'bidirectional': False, 'lstm_units_0': 31, 'lstm_units_1': 109, 'lstm_activation': 'tanh', 'dropout_0': 0.06272720075785056, 'dropout_1': 0.4819549415927785, 'n_dense_layers': 2, 'dense_units_0': 96, 'dense_activation': 'relu', 'learning_rate': 0.002742476204925268}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 3s 3s/step
+[I 2025-05-24 21:52:28,764] Trial 34 finished with value: 0.5 and parameters: {'batch_size': 32, 'epochs': 41, 'patience': 7, 'n_lstm_layers': 2, 'bidirectional': False, 'lstm_units_0': 82, 'lstm_units_1': 45, 'lstm_activation': 'tanh', 'dropout_0': 0.032986583824441994, 'dropout_1': 0.2927883025335138, 'n_dense_layers': 2, 'dense_units_0': 70, 'dense_activation': 'relu', 'learning_rate': 0.000745098971273349}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 6s 6s/step
+[I 2025-05-24 21:58:13,596] Trial 35 finished with value: 0.0 and parameters: {'batch_size': 32, 'epochs': 34, 'patience': 8, 'n_lstm_layers': 3, 'bidirectional': False, 'lstm_units_0': 55, 'lstm_units_1': 155, 'lstm_units_2': 140, 'lstm_activation': 'tanh', 'dropout_0': 0.0873908558481318, 'dropout_1': 0.09580721562928551, 'dropout_2': 0.3350034376025662, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.00020031563800234207}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 9s 9s/step
+[I 2025-05-24 22:10:28,593] Trial 36 finished with value: 0.5 and parameters: {'batch_size': 32, 'epochs': 38, 'patience': 6, 'n_lstm_layers': 2, 'bidirectional': True, 'lstm_units_0': 228, 'lstm_units_1': 95, 'lstm_activation': 'tanh', 'dropout_0': 0.14466127015060337, 'dropout_1': 0.21445864300975082, 'n_dense_layers': 2, 'dense_units_0': 34, 'dense_activation': 'relu', 'learning_rate': 0.00034906815246061153}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 4s 4s/step
+[I 2025-05-24 22:11:57,644] Trial 37 finished with value: 0.0 and parameters: {'batch_size': 64, 'epochs': 29, 'patience': 6, 'n_lstm_layers': 2, 'bidirectional': False, 'lstm_units_0': 96, 'lstm_units_1': 209, 'lstm_activation': 'tanh', 'dropout_0': 0.022787284508616758, 'dropout_1': 0.3647956826354273, 'n_dense_layers': 1, 'dense_activation': 'tanh', 'learning_rate': 0.0020512792930737784}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 4s 4s/step
+[I 2025-05-24 22:13:31,493] Trial 38 finished with value: 0.5 and parameters: {'batch_size': 128, 'epochs': 10, 'patience': 7, 'n_lstm_layers': 2, 'bidirectional': False, 'lstm_units_0': 69, 'lstm_units_1': 119, 'lstm_activation': 'tanh', 'dropout_0': 0.04859480829191243, 'dropout_1': 0.06339095211176654, 'n_dense_layers': 2, 'dense_units_0': 85, 'dense_activation': 'relu', 'learning_rate': 0.004029390219986986}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 3s 3s/step
+[I 2025-05-24 22:23:04,430] Trial 39 finished with value: 0.5 and parameters: {'batch_size': 32, 'epochs': 21, 'patience': 6, 'n_lstm_layers': 1, 'bidirectional': True, 'lstm_units_0': 243, 'lstm_activation': 'tanh', 'dropout_0': 0.23415829581498426, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.0012989027516477204}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 6s 6s/step
+[I 2025-05-24 22:26:55,677] Trial 40 finished with value: 0.0 and parameters: {'batch_size': 64, 'epochs': 33, 'patience': 8, 'n_lstm_layers': 3, 'bidirectional': False, 'lstm_units_0': 141, 'lstm_units_1': 37, 'lstm_units_2': 130, 'lstm_activation': 'tanh', 'dropout_0': 0.2941480645875984, 'dropout_1': 0.17039900220896192, 'dropout_2': 0.014778918669353325, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.0003672651441073892}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 1s 929ms/step
+[I 2025-05-24 22:30:35,115] Trial 41 finished with value: 0.0 and parameters: {'batch_size': 64, 'epochs': 43, 'patience': 5, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 240, 'lstm_activation': 'relu', 'dropout_0': 0.28133666205480123, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 8.016645219805144e-05}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 1s 837ms/step
+[I 2025-05-24 22:31:18,602] Trial 42 finished with value: 0.0 and parameters: {'batch_size': 64, 'epochs': 46, 'patience': 4, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 203, 'lstm_activation': 'relu', 'dropout_0': 0.25008659693989066, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.0023139651827225683}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 1s 852ms/step
+[I 2025-05-24 22:33:46,292] Trial 43 finished with value: 0.0 and parameters: {'batch_size': 64, 'epochs': 41, 'patience': 5, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 179, 'lstm_activation': 'relu', 'dropout_0': 0.3123427098705105, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 1.231542179112422e-05}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 1s 915ms/step
+[I 2025-05-24 22:35:29,436] Trial 44 finished with value: 0.0 and parameters: {'batch_size': 16, 'epochs': 38, 'patience': 6, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 232, 'lstm_activation': 'relu', 'dropout_0': 0.40451680449021477, 'n_dense_layers': 1, 'dense_activation': 'tanh', 'learning_rate': 0.0006898446028570219}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 1s 1s/step
+[I 2025-05-24 22:36:12,512] Trial 45 finished with value: 0.0 and parameters: {'batch_size': 64, 'epochs': 34, 'patience': 4, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 256, 'lstm_activation': 'relu', 'dropout_0': 0.01492035231870957, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.0035823072077600807}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 3s 3s/step
+[I 2025-05-24 22:45:34,749] Trial 46 finished with value: 0.8 and parameters: {'batch_size': 64, 'epochs': 40, 'patience': 7, 'n_lstm_layers': 1, 'bidirectional': True, 'lstm_units_0': 213, 'lstm_activation': 'tanh', 'dropout_0': 0.19706924431390008, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.0004353176809081328}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 4s 4s/step
+[I 2025-05-24 22:57:23,679] Trial 47 finished with value: 0.8 and parameters: {'batch_size': 64, 'epochs': 40, 'patience': 7, 'n_lstm_layers': 1, 'bidirectional': True, 'lstm_units_0': 214, 'lstm_activation': 'tanh', 'dropout_0': 0.19540814501124534, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.00047951877341112026}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 3s 3s/step
+[I 2025-05-24 23:12:13,487] Trial 48 finished with value: 0.5 and parameters: {'batch_size': 64, 'epochs': 46, 'patience': 7, 'n_lstm_layers': 1, 'bidirectional': True, 'lstm_units_0': 216, 'lstm_activation': 'tanh', 'dropout_0': 0.19967289118571996, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.00014503754510504423}. Best is trial 20 with value: 0.8.
+1/1 [==============================] - 6s 6s/step
+Best parameters: {'batch_size': 32, 'epochs': 39, 'patience': 5, 'n_lstm_layers': 1, 'bidirectional': False, 'lstm_units_0': 26, 'lstm_activation': 'tanh', 'dropout_0': 0.09107272375037292, 'n_dense_layers': 2, 'dense_units_0': 78, 'dense_activation': 'relu', 'learning_rate': 0.0011392915542686277}
+Best f1 score: 0.8000
+[I 2025-05-24 23:14:34,993] Trial 49 finished with value: 0.0 and parameters: {'batch_size': 64, 'epochs': 40, 'patience': 8, 'n_lstm_layers': 2, 'bidirectional': True, 'lstm_units_0': 27, 'lstm_units_1': 88, 'lstm_activation': 'tanh', 'dropout_0': 0.1686214678351783, 'dropout_1': 0.23413913043727252, 'n_dense_layers': 1, 'dense_activation': 'relu', 'learning_rate': 0.0004418000945601557}. Best is trial 20 with value: 0.8.
+Epoch 1/39
+2/2 [==============================] - 10s 4s/step - loss: 0.6887 - accuracy: 0.5312 - val_loss: 0.6791 - val_accuracy: 0.6250
+Epoch 2/39
+2/2 [==============================] - 1s 690ms/step - loss: 0.6818 - accuracy: 0.5312 - val_loss: 0.6728 - val_accuracy: 0.6250
+Epoch 3/39
+2/2 [==============================] - 1s 688ms/step - loss: 0.6836 - accuracy: 0.5312 - val_loss: 0.6687 - val_accuracy: 0.6250
+Epoch 4/39
+2/2 [==============================] - 1s 688ms/step - loss: 0.6749 - accuracy: 0.5312 - val_loss: 0.6672 - val_accuracy: 0.6250
+Epoch 5/39
+2/2 [==============================] - 1s 690ms/step - loss: 0.6730 - accuracy: 0.5312 - val_loss: 0.6680 - val_accuracy: 0.6250
+Epoch 6/39
+2/2 [==============================] - 1s 683ms/step - loss: 0.6664 - accuracy: 0.5312 - val_loss: 0.6676 - val_accuracy: 0.6250
+Epoch 7/39
+2/2 [==============================] - 1s 689ms/step - loss: 0.6647 - accuracy: 0.5469 - val_loss: 0.6669 - val_accuracy: 0.6250
+Epoch 8/39
+2/2 [==============================] - 1s 686ms/step - loss: 0.6538 - accuracy: 0.5469 - val_loss: 0.6652 - val_accuracy: 0.6250
+Epoch 9/39
+2/2 [==============================] - 1s 689ms/step - loss: 0.6428 - accuracy: 0.6562 - val_loss: 0.6632 - val_accuracy: 0.7500
+Epoch 10/39
+2/2 [==============================] - 1s 685ms/step - loss: 0.6319 - accuracy: 0.7969 - val_loss: 0.6596 - val_accuracy: 0.7500
+Epoch 11/39
+2/2 [==============================] - 1s 687ms/step - loss: 0.6207 - accuracy: 0.8125 - val_loss: 0.6533 - val_accuracy: 0.7500
+Epoch 12/39
+2/2 [==============================] - 1s 689ms/step - loss: 0.5955 - accuracy: 0.9062 - val_loss: 0.6455 - val_accuracy: 0.7500
+Epoch 13/39
+2/2 [==============================] - 1s 698ms/step - loss: 0.5642 - accuracy: 0.9062 - val_loss: 0.6352 - val_accuracy: 0.7500
+Epoch 14/39
+2/2 [==============================] - 1s 689ms/step - loss: 0.5059 - accuracy: 0.9219 - val_loss: 0.6213 - val_accuracy: 0.7500
+Epoch 15/39
+2/2 [==============================] - 1s 687ms/step - loss: 0.4463 - accuracy: 0.9219 - val_loss: 0.6149 - val_accuracy: 0.7500
+Epoch 16/39
+2/2 [==============================] - 1s 685ms/step - loss: 0.4038 - accuracy: 0.9219 - val_loss: 0.6226 - val_accuracy: 0.7500
+Epoch 17/39
+2/2 [==============================] - 1s 696ms/step - loss: 0.3565 - accuracy: 0.9219 - val_loss: 0.7313 - val_accuracy: 0.6875
+Epoch 18/39
+2/2 [==============================] - 1s 691ms/step - loss: 0.4002 - accuracy: 0.8750 - val_loss: 0.7538 - val_accuracy: 0.6875
+Epoch 19/39
+2/2 [==============================] - 1s 684ms/step - loss: 0.6695 - accuracy: 0.7031 - val_loss: 0.6355 - val_accuracy: 0.7500
+Epoch 20/39
+2/2 [==============================] - 1s 683ms/step - loss: 0.3587 - accuracy: 0.8906 - val_loss: 0.5098 - val_accuracy: 0.8125
+Epoch 21/39
+2/2 [==============================] - 1s 687ms/step - loss: 0.3912 - accuracy: 0.8750 - val_loss: 0.5242 - val_accuracy: 0.8125
+Epoch 22/39
+2/2 [==============================] - 1s 686ms/step - loss: 0.4015 - accuracy: 0.8750 - val_loss: 0.5209 - val_accuracy: 0.8125
+Epoch 23/39
+2/2 [==============================] - 1s 690ms/step - loss: 0.3954 - accuracy: 0.8750 - val_loss: 0.5093 - val_accuracy: 0.8125
+Epoch 24/39
+2/2 [==============================] - 1s 683ms/step - loss: 0.3784 - accuracy: 0.8750 - val_loss: 0.6176 - val_accuracy: 0.7500
+Epoch 25/39
+2/2 [==============================] - 1s 683ms/step - loss: 0.3820 - accuracy: 0.8750 - val_loss: 0.6665 - val_accuracy: 0.7500
+Epoch 26/39
+2/2 [==============================] - 1s 689ms/step - loss: 0.3451 - accuracy: 0.8906 - val_loss: 0.7988 - val_accuracy: 0.6875
+Epoch 27/39
+2/2 [==============================] - 1s 685ms/step - loss: 1.0204 - accuracy: 0.5469 - val_loss: 0.7642 - val_accuracy: 0.6875
+Epoch 28/39
+2/2 [==============================] - 1s 695ms/step - loss: 0.3162 - accuracy: 0.9062 - val_loss: 0.6298 - val_accuracy: 0.7500
+1/1 [==============================] - 1s 1s/step
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.70      0.82        10
+         1.0       0.67      1.00      0.80         6
+
+    accuracy                           0.81        16
+   macro avg       0.83      0.85      0.81        16
+weighted avg       0.88      0.81      0.81        16
+
+Max RAM Usage: 18.22 MB
+Training time: 42.81 s
+Inference time: 1.1909 s
+
+Process finished with exit code 0
