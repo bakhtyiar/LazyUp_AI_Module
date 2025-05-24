@@ -3,9 +3,10 @@ import tracemalloc
 
 import numpy as np
 import pandas as pd
+import optuna
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report
-from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report, f1_score
+from sklearn.model_selection import train_test_split, cross_val_score
 
 from device_input.device_log_loader import load_device_logs
 
@@ -79,6 +80,38 @@ def prepare_dataset(json_data):
     return feature_df, np.array(y)
 
 
+def objective(trial, X, y):
+    """Objective function for Optuna optimization"""
+    # Define the hyperparameter space for RandomForestClassifier
+    params = {
+        'n_estimators': trial.suggest_int('n_estimators', 10, 500),
+        'max_depth': trial.suggest_int('max_depth', 2, 32, log=True),
+        'min_samples_split': trial.suggest_int('min_samples_split', 2, 20),
+        'min_samples_leaf': trial.suggest_int('min_samples_leaf', 1, 20),
+        'max_features': trial.suggest_categorical('max_features', ['sqrt', 'log2', None]),
+        'bootstrap': trial.suggest_categorical('bootstrap', [True, False]),
+        'class_weight': trial.suggest_categorical('class_weight', ['balanced', 'balanced_subsample', None]),
+        'criterion': trial.suggest_categorical('criterion', ['gini', 'entropy', 'log_loss']),
+        'min_weight_fraction_leaf': trial.suggest_float('min_weight_fraction_leaf', 0.0, 0.5),
+        'max_leaf_nodes': trial.suggest_int('max_leaf_nodes', 2, 100, log=True) if trial.suggest_categorical('use_max_leaf_nodes', [True, False]) else None,
+        'min_impurity_decrease': trial.suggest_float('min_impurity_decrease', 0.0, 0.5),
+        'random_state': 42,
+        'ccp_alpha': trial.suggest_float('ccp_alpha', 0.0, 0.1),
+        'max_samples': trial.suggest_float('max_samples', 0.5, 1.0) if trial.params['bootstrap'] else None
+    }
+    
+    # Handle conditional parameters
+    if params['bootstrap'] is False:
+        params['max_samples'] = None
+    
+    if trial.params.get('use_max_leaf_nodes', False) is False:
+        params['max_leaf_nodes'] = None
+    
+    # Create and evaluate model using cross-validation
+    model = RandomForestClassifier(**params)
+    return cross_val_score(model, X, y, scoring='f1_weighted', cv=5).mean()
+
+
 # Пример использования
 if __name__ == "__main__":
     sample_data = load_device_logs(1000)
@@ -88,47 +121,52 @@ if __name__ == "__main__":
 
     # Разделение на train/test
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
+    
+    # Оптимизация гиперпараметров с помощью Optuna
+    print("Starting hyperparameter optimization with Optuna...")
+    study = optuna.create_study(direction="maximize")
+    study.optimize(lambda trial: objective(trial, X_train, y_train), n_trials=50)
+    
+    # Получение лучших параметров
+    best_params = study.best_params
+    print(f"Best parameters: {best_params}")
+    print(f"Best F1 score: {study.best_value:.4f}")
+    
+    # Если use_max_leaf_nodes параметр не был выбран, уберем max_leaf_nodes из параметров
+    if 'use_max_leaf_nodes' in best_params and not best_params['use_max_leaf_nodes']:
+        best_params['max_leaf_nodes'] = None
+    if 'use_max_leaf_nodes' in best_params:
+        del best_params['use_max_leaf_nodes']
+    
+    # Если bootstrap=False, установим max_samples=None
+    if 'bootstrap' in best_params and best_params['bootstrap'] is False:
+        best_params['max_samples'] = None
+    
     # Измерение использования памяти до обучения
     tracemalloc.start()
     start_train = time.time()
-    # Обучение модели
-    model = RandomForestClassifier(
-        n_estimators=100,
-        max_depth=10,
-        random_state=42,
-        class_weight='balanced'  # Для несбалансированных данных
-    )
+    
+    # Обучение модели с лучшими параметрами
+    model = RandomForestClassifier(**best_params)
     model.fit(X_train, y_train)
+    
     end_train = time.time()
     training_time = end_train - start_train
+    
     # Измерение памяти после обучения
     current, peak = tracemalloc.get_traced_memory()
     max_ram_usage = peak / (1024 ** 2)  # в MB
     tracemalloc.stop()
 
     # Предсказание на тестовых данных с замером времени
-
-    y_pred = []
-
-    # Оценка качества
     start_inf = time.time()
-    y_pred = model.predict(X_test)  # вызывать predict для отдельных строк
+    y_pred = model.predict(X_test)
     end_inf = time.time()
     inference_time = end_inf - start_inf
+    
+    # Оценка качества
+    print("\nFinal model evaluation:")
     print(classification_report(y_test, y_pred))
     print(f"Max RAM Usage: {max_ram_usage:.2f} MB")
+    print(f"Training time: {training_time:.4f} s")
     print(f"Inference time: {inference_time:.4f} s")
-
-    # # Пример предсказания для новых данных
-    # new_data = {
-    #     "list": [
-    #         {"buttonKey": 1, "dateTime": 1620002000},
-    #         {"buttonKey": 1, "dateTime": 1620002003},
-    #         {"buttonKey": 3, "dateTime": 1620002008}
-    #     ]
-    # }
-    # new_features = extract_features(new_data['list'])
-    # new_X = pd.DataFrame([new_features])
-    # prediction = model.predict(new_X)
-    # print(f"Predicted mode: {prediction[0]}")
