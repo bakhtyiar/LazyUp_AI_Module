@@ -1,0 +1,391 @@
+C:\Users\bakhtiyar\.conda\envs\myenv\python.exe C:\Users\bakhtiyar\Projects\LazyUp_AI_Module\device_input\exp_v1_logistic_regression_classifier.py
+Начало оптимизации гиперпараметров...
+[I 2025-05-24 19:50:12,864] A new study created in memory with name: no-name-7dc01031-ccaf-4b54-a93c-68599bb94c67
+[I 2025-05-24 19:50:12,959] Trial 0 finished with value: 0.9371794871794872 and parameters: {'penalty': 'l2', 'C': 0.5734832745724739, 'solver': 'lbfgs', 'max_iter': 589, 'tol': 4.1447041401072306e-05, 'fit_intercept': False, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:13,042] Trial 1 finished with value: 0.5307692307692308 and parameters: {'penalty': 'elasticnet', 'C': 9.108983676300191e-05, 'solver': 'lbfgs', 'max_iter': 128, 'tol': 2.201746124237426e-06, 'fit_intercept': False, 'class_weight': None, 'l1_ratio': 0.8300059356957946}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[I 2025-05-24 19:50:13,205] Trial 2 finished with value: 0.9371794871794872 and parameters: {'penalty': None, 'C': 4.9523119066870995, 'solver': 'saga', 'max_iter': 635, 'tol': 0.00012960004400783213, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:13,325] Trial 3 finished with value: 0.5307692307692308 and parameters: {'penalty': 'l2', 'C': 5.461312784689419e-05, 'solver': 'saga', 'max_iter': 1773, 'tol': 2.0824847882736043e-05, 'fit_intercept': True, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:13,422] Trial 4 finished with value: 0.9371794871794872 and parameters: {'penalty': 'l2', 'C': 0.6258785395941768, 'solver': 'newton-cg', 'max_iter': 1970, 'tol': 1.1888930785405789e-05, 'fit_intercept': True, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:13,505] Trial 5 finished with value: 0.5307692307692308 and parameters: {'penalty': 'l1', 'C': 0.0017471854242167933, 'solver': 'lbfgs', 'max_iter': 617, 'tol': 0.0002197303788390811, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+[I 2025-05-24 19:50:13,604] Trial 6 finished with value: 0.9217948717948719 and parameters: {'penalty': None, 'C': 0.5572536955044358, 'solver': 'newton-cg', 'max_iter': 1404, 'tol': 1.833026388821669e-05, 'fit_intercept': True, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:13,688] Trial 7 finished with value: 0.48461538461538467 and parameters: {'penalty': 'l1', 'C': 0.003976036647512891, 'solver': 'lbfgs', 'max_iter': 1695, 'tol': 1.1003398694630205e-05, 'fit_intercept': True, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[I 2025-05-24 19:50:13,793] Trial 8 finished with value: 0.9371794871794872 and parameters: {'penalty': None, 'C': 59.74844801552498, 'solver': 'saga', 'max_iter': 198, 'tol': 5.215361962160469e-05, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:13,881] Trial 9 finished with value: 0.9217948717948719 and parameters: {'penalty': 'l2', 'C': 0.0005006014003983287, 'solver': 'sag', 'max_iter': 1243, 'tol': 5.1605616819088956e-06, 'fit_intercept': True, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:13,979] Trial 10 finished with value: 0.9217948717948719 and parameters: {'penalty': 'elasticnet', 'C': 0.04931327891278189, 'solver': 'liblinear', 'max_iter': 817, 'tol': 0.0006336787084455633, 'fit_intercept': False, 'class_weight': 'balanced', 'l1_ratio': 0.0030832764388187828}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[I 2025-05-24 19:50:14,148] Trial 11 finished with value: 0.9217948717948719 and parameters: {'penalty': None, 'C': 14.895651927516825, 'solver': 'saga', 'max_iter': 573, 'tol': 9.024793112517815e-05, 'fit_intercept': False, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+[I 2025-05-24 19:50:14,245] Trial 12 finished with value: 0.9217948717948719 and parameters: {'penalty': None, 'C': 2.3284227384234715, 'solver': 'liblinear', 'max_iter': 923, 'tol': 0.0001625471502564244, 'fit_intercept': False, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:14,338] Trial 13 finished with value: 0.9064102564102564 and parameters: {'penalty': 'l2', 'C': 0.11189121295963513, 'solver': 'sag', 'max_iter': 494, 'tol': 0.0006706424872810225, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:14,440] Trial 14 finished with value: 0.9371794871794872 and parameters: {'penalty': 'l2', 'C': 6.113393442264201, 'solver': 'lbfgs', 'max_iter': 401, 'tol': 4.860690966092874e-05, 'fit_intercept': False, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+[I 2025-05-24 19:50:14,676] Trial 15 finished with value: 0.9217948717948719 and parameters: {'penalty': None, 'C': 77.14888076406201, 'solver': 'saga', 'max_iter': 1205, 'tol': 0.0002440590774523194, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:14,789] Trial 16 finished with value: 0.9217948717948719 and parameters: {'penalty': 'elasticnet', 'C': 0.2681877072309942, 'solver': 'saga', 'max_iter': 874, 'tol': 9.8539929102255e-05, 'fit_intercept': False, 'class_weight': None, 'l1_ratio': 0.24255298948199533}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:14,883] Trial 17 finished with value: 0.5307692307692308 and parameters: {'penalty': 'l1', 'C': 0.007552093823519915, 'solver': 'lbfgs', 'max_iter': 733, 'tol': 1.135271598626509e-06, 'fit_intercept': False, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+[I 2025-05-24 19:50:14,986] Trial 18 finished with value: 0.9217948717948719 and parameters: {'penalty': None, 'C': 2.8477806660699256, 'solver': 'newton-cg', 'max_iter': 311, 'tol': 3.667323403849856e-05, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:15,079] Trial 19 finished with value: 0.9217948717948719 and parameters: {'penalty': 'l2', 'C': 0.02097958949662669, 'solver': 'liblinear', 'max_iter': 1007, 'tol': 0.00029324714731412553, 'fit_intercept': False, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[I 2025-05-24 19:50:15,250] Trial 20 finished with value: 0.9371794871794872 and parameters: {'penalty': 'l2', 'C': 7.973889812427848, 'solver': 'sag', 'max_iter': 674, 'tol': 5.130456630588045e-06, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:15,356] Trial 21 finished with value: 0.9371794871794872 and parameters: {'penalty': 'l2', 'C': 1.288067324884185, 'solver': 'newton-cg', 'max_iter': 1971, 'tol': 8.963039655405555e-06, 'fit_intercept': True, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:15,459] Trial 22 finished with value: 0.9371794871794872 and parameters: {'penalty': 'l2', 'C': 0.2973478290852095, 'solver': 'newton-cg', 'max_iter': 1490, 'tol': 2.203404084021723e-05, 'fit_intercept': True, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:15,565] Trial 23 finished with value: 0.9217948717948719 and parameters: {'penalty': 'l2', 'C': 21.772655899618997, 'solver': 'newton-cg', 'max_iter': 1134, 'tol': 7.845395346964307e-05, 'fit_intercept': True, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:15,668] Trial 24 finished with value: 0.9371794871794872 and parameters: {'penalty': 'l2', 'C': 0.8039557118734819, 'solver': 'newton-cg', 'max_iter': 424, 'tol': 1.0223825282171671e-05, 'fit_intercept': True, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[I 2025-05-24 19:50:15,943] Trial 25 finished with value: 0.9217948717948719 and parameters: {'penalty': None, 'C': 1.0095254813120644e-05, 'solver': 'saga', 'max_iter': 1392, 'tol': 0.0001298070528086583, 'fit_intercept': True, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:16,099] Trial 26 finished with value: 0.9064102564102564 and parameters: {'penalty': 'elasticnet', 'C': 0.15577580544924377, 'solver': 'lbfgs', 'max_iter': 1038, 'tol': 0.00040805146708752343, 'fit_intercept': True, 'class_weight': 'balanced', 'l1_ratio': 0.9884448815510968}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:16,206] Trial 27 finished with value: 0.9217948717948719 and parameters: {'penalty': 'l1', 'C': 0.04460820709942721, 'solver': 'saga', 'max_iter': 756, 'tol': 3.1171508520759386e-05, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:16,313] Trial 28 finished with value: 0.9371794871794872 and parameters: {'penalty': 'l2', 'C': 2.4987992619029264, 'solver': 'newton-cg', 'max_iter': 1989, 'tol': 4.796804661815437e-06, 'fit_intercept': True, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[I 2025-05-24 19:50:16,435] Trial 29 finished with value: 0.9371794871794872 and parameters: {'penalty': 'elasticnet', 'C': 17.898849354484803, 'solver': 'lbfgs', 'max_iter': 143, 'tol': 2.3230526991478584e-06, 'fit_intercept': False, 'class_weight': None, 'l1_ratio': 0.5365509533433865}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+[I 2025-05-24 19:50:16,535] Trial 30 finished with value: 0.9217948717948719 and parameters: {'penalty': None, 'C': 1.1474877802398182, 'solver': 'lbfgs', 'max_iter': 1668, 'tol': 5.980296952439397e-05, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[I 2025-05-24 19:50:16,646] Trial 31 finished with value: 0.9371794871794872 and parameters: {'penalty': None, 'C': 40.162730494826526, 'solver': 'saga', 'max_iter': 126, 'tol': 4.267533213118722e-05, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[I 2025-05-24 19:50:16,781] Trial 32 finished with value: 0.9371794871794872 and parameters: {'penalty': None, 'C': 60.27367981893456, 'solver': 'saga', 'max_iter': 266, 'tol': 2.1604487750019662e-05, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[I 2025-05-24 19:50:16,920] Trial 33 finished with value: 0.9371794871794872 and parameters: {'penalty': None, 'C': 6.230703922326366, 'solver': 'saga', 'max_iter': 245, 'tol': 1.3504120153020401e-05, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[I 2025-05-24 19:50:17,093] Trial 34 finished with value: 0.9371794871794872 and parameters: {'penalty': None, 'C': 0.4199363733788445, 'solver': 'saga', 'max_iter': 547, 'tol': 6.565245375326234e-05, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[I 2025-05-24 19:50:17,244] Trial 35 finished with value: 0.9371794871794872 and parameters: {'penalty': 'l2', 'C': 4.632761979871264, 'solver': 'saga', 'max_iter': 420, 'tol': 0.00013834534589144952, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[I 2025-05-24 19:50:17,448] Trial 36 finished with value: 0.9371794871794872 and parameters: {'penalty': 'l1', 'C': 31.299879797235977, 'solver': 'lbfgs', 'max_iter': 652, 'tol': 2.8286117943376518e-05, 'fit_intercept': True, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[I 2025-05-24 19:50:17,729] Trial 37 finished with value: 0.9217948717948719 and parameters: {'penalty': None, 'C': 9.990726664976997, 'solver': 'sag', 'max_iter': 1558, 'tol': 1.4549668273918303e-05, 'fit_intercept': True, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:17,833] Trial 38 finished with value: 0.9217948717948719 and parameters: {'penalty': 'l2', 'C': 97.34037146283356, 'solver': 'liblinear', 'max_iter': 1867, 'tol': 6.988655348881624e-06, 'fit_intercept': False, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+[I 2025-05-24 19:50:17,959] Trial 39 finished with value: 0.9217948717948719 and parameters: {'penalty': None, 'C': 0.0008898531181251397, 'solver': 'newton-cg', 'max_iter': 1319, 'tol': 3.4001709640129306e-06, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:18,071] Trial 40 finished with value: 0.9217948717948719 and parameters: {'penalty': 'elasticnet', 'C': 0.10747587541283579, 'solver': 'saga', 'max_iter': 901, 'tol': 0.00018231676546796806, 'fit_intercept': True, 'class_weight': 'balanced', 'l1_ratio': 0.5166868069741698}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:18,174] Trial 41 finished with value: 0.9371794871794872 and parameters: {'penalty': 'l2', 'C': 1.7750916111295907, 'solver': 'lbfgs', 'max_iter': 352, 'tol': 5.237623809015658e-05, 'fit_intercept': False, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:18,287] Trial 42 finished with value: 0.9371794871794872 and parameters: {'penalty': 'l2', 'C': 4.557957284115899, 'solver': 'lbfgs', 'max_iter': 197, 'tol': 0.0001028851048149972, 'fit_intercept': False, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:18,390] Trial 43 finished with value: 0.9371794871794872 and parameters: {'penalty': 'l2', 'C': 0.8228142067066458, 'solver': 'lbfgs', 'max_iter': 446, 'tol': 5.2277547202933316e-05, 'fit_intercept': False, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:18,493] Trial 44 finished with value: 0.9217948717948719 and parameters: {'penalty': 'l2', 'C': 14.049967004854382, 'solver': 'lbfgs', 'max_iter': 521, 'tol': 2.627552904240738e-05, 'fit_intercept': False, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:18,589] Trial 45 finished with value: 0.5307692307692308 and parameters: {'penalty': 'l1', 'C': 0.012413152615414966, 'solver': 'lbfgs', 'max_iter': 317, 'tol': 1.7293959347580843e-05, 'fit_intercept': False, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:18,685] Trial 46 finished with value: 0.9217948717948719 and parameters: {'penalty': 'l2', 'C': 33.19606837866611, 'solver': 'liblinear', 'max_iter': 793, 'tol': 0.0003309862633531266, 'fit_intercept': False, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_sag.py:349: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+[I 2025-05-24 19:50:18,853] Trial 47 finished with value: 0.9217948717948719 and parameters: {'penalty': None, 'C': 0.14836602986913733, 'solver': 'sag', 'max_iter': 605, 'tol': 4.022485471351681e-05, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+[I 2025-05-24 19:50:18,970] Trial 48 finished with value: 0.9371794871794872 and parameters: {'penalty': 'l2', 'C': 0.45291165552807594, 'solver': 'saga', 'max_iter': 405, 'tol': 8.557208315603378e-05, 'fit_intercept': False, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.9371794871794872.
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\linear_model\_logistic.py:1208: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+  warnings.warn(
+[I 2025-05-24 19:50:19,083] Trial 49 finished with value: 0.9217948717948719 and parameters: {'penalty': None, 'C': 4.1307803884452285, 'solver': 'lbfgs', 'max_iter': 687, 'tol': 0.00011586450295036204, 'fit_intercept': False, 'class_weight': None}. Best is trial 0 with value: 0.9371794871794872.
+Best trial: 0
+Best accuracy: 0.9372
+Best hyperparameters:
+    penalty: l2
+    C: 0.5734832745724739
+    solver: lbfgs
+    max_iter: 589
+    tol: 4.1447041401072306e-05
+    fit_intercept: False
+    class_weight: balanced
+
+Обучение модели с оптимальными параметрами...
+
+Результаты оптимизированной модели:
+              precision    recall  f1-score   support
+
+           0       0.73      0.80      0.76        10
+           1       0.60      0.50      0.55         6
+
+    accuracy                           0.69        16
+   macro avg       0.66      0.65      0.65        16
+weighted avg       0.68      0.69      0.68        16
+
+Max RAM Usage: 0.78 MB
+Training time: 0.1477 s
+Inference time: 0.0160 s
+
+Process finished with exit code 0
