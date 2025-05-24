@@ -1,0 +1,96 @@
+C:\Users\bakhtiyar\.conda\envs\myenv\python.exe C:\Users\bakhtiyar\Projects\LazyUp_AI_Module\device_input\exp_v1_gru_classifier.py
+Loading device logs...
+Initializing GRU classifier...
+Starting hyperparameter optimization...
+Starting hyperparameter optimization with Optuna...
+[I 2025-05-24 19:06:15,424] A new study created in memory with name: no-name-3630f053-b9f4-42e4-86c4-7ba838f8a7ab
+2025-05-24 19:06:15.589149: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-05-24 19:06:15.589984: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+[I 2025-05-24 19:07:06,526] Trial 0 finished with value: 0.5483405689398447 and parameters: {'batch_size': 32, 'embedding_dim': 32, 'gru1_units': 128, 'gru1_dropout': 0.41691744873531966, 'gru1_recurrent_dropout': 0.004714551941778611, 'gru2_units': 64, 'gru2_dropout': 0.03810671511868635, 'gru2_recurrent_dropout': 0.12199913497404968, 'dense_units': 128, 'dropout_rate': 0.6413358812533467, 'optimizer_name': 'rmsprop', 'learning_rate': 3.466474230422508e-05}. Best is trial 0 with value: 0.5483405689398447.
+[I 2025-05-24 19:07:52,517] Trial 1 finished with value: 0.5310245553652445 and parameters: {'batch_size': 64, 'embedding_dim': 16, 'gru1_units': 256, 'gru1_dropout': 0.4416254800664935, 'gru1_recurrent_dropout': 0.013325648309038873, 'gru2_units': 16, 'gru2_dropout': 0.06682359845915475, 'gru2_recurrent_dropout': 0.36759793677389546, 'dense_units': 64, 'dropout_rate': 0.6153856765403513, 'optimizer_name': 'sgd', 'learning_rate': 0.009609956485755567}. Best is trial 0 with value: 0.5483405689398447.
+[I 2025-05-24 19:08:39,904] Trial 2 finished with value: 0.5310245454311371 and parameters: {'batch_size': 64, 'embedding_dim': 32, 'gru1_units': 128, 'gru1_dropout': 0.10127760160100907, 'gru1_recurrent_dropout': 0.19659259319418398, 'gru2_units': 128, 'gru2_dropout': 0.45772942317728177, 'gru2_recurrent_dropout': 0.2539897811518663, 'dense_units': 128, 'dropout_rate': 0.3146829518923149, 'optimizer_name': 'rmsprop', 'learning_rate': 2.0657158919470207e-05}. Best is trial 0 with value: 0.5483405689398447.
+[I 2025-05-24 19:09:27,211] Trial 3 finished with value: 0.4523809552192688 and parameters: {'batch_size': 32, 'embedding_dim': 64, 'gru1_units': 128, 'gru1_dropout': 0.16452126699073838, 'gru1_recurrent_dropout': 0.1574519903527074, 'gru2_units': 16, 'gru2_dropout': 0.006753622587246655, 'gru2_recurrent_dropout': 0.48015546896272043, 'dense_units': 64, 'dropout_rate': 0.5448403966628591, 'optimizer_name': 'rmsprop', 'learning_rate': 2.164464109338289e-05}. Best is trial 0 with value: 0.5483405689398447.
+[I 2025-05-24 19:10:12,152] Trial 4 finished with value: 0.5461760560671488 and parameters: {'batch_size': 64, 'embedding_dim': 8, 'gru1_units': 128, 'gru1_dropout': 0.49899621364840024, 'gru1_recurrent_dropout': 0.18081065119894252, 'gru2_units': 16, 'gru2_dropout': 0.008126251833137477, 'gru2_recurrent_dropout': 0.11715414863448548, 'dense_units': 128, 'dropout_rate': 0.6667346031143971, 'optimizer_name': 'adam', 'learning_rate': 0.00314647515691957}. Best is trial 0 with value: 0.5483405689398447.
+[I 2025-05-24 19:10:58,808] Trial 5 finished with value: 0.6536796689033508 and parameters: {'batch_size': 16, 'embedding_dim': 16, 'gru1_units': 64, 'gru1_dropout': 0.2236635861491989, 'gru1_recurrent_dropout': 0.11980702312545694, 'gru2_units': 64, 'gru2_dropout': 0.36593645554060616, 'gru2_recurrent_dropout': 0.43906601719200655, 'dense_units': 128, 'dropout_rate': 0.5188736511623643, 'optimizer_name': 'adam', 'learning_rate': 0.00022939073915846414}. Best is trial 5 with value: 0.6536796689033508.
+[I 2025-05-24 19:11:44,593] Trial 6 finished with value: 0.5909090936183929 and parameters: {'batch_size': 32, 'embedding_dim': 16, 'gru1_units': 128, 'gru1_dropout': 0.3730431556754903, 'gru1_recurrent_dropout': 0.06899415936824665, 'gru2_units': 32, 'gru2_dropout': 0.4200798712308935, 'gru2_recurrent_dropout': 0.3078380219189781, 'dense_units': 128, 'dropout_rate': 0.6519504349013507, 'optimizer_name': 'adam', 'learning_rate': 5.2345217955142935e-05}. Best is trial 5 with value: 0.6536796689033508.
+[I 2025-05-24 19:12:33,306] Trial 7 finished with value: 0.6832611958185831 and parameters: {'batch_size': 16, 'embedding_dim': 32, 'gru1_units': 256, 'gru1_dropout': 0.45528028607020227, 'gru1_recurrent_dropout': 0.015365636380508363, 'gru2_units': 32, 'gru2_dropout': 0.09378246681499142, 'gru2_recurrent_dropout': 0.2587019013850929, 'dense_units': 32, 'dropout_rate': 0.1887726939055441, 'optimizer_name': 'adam', 'learning_rate': 6.032547489970745e-05}. Best is trial 7 with value: 0.6832611958185831.
+[I 2025-05-24 19:13:23,194] Trial 8 finished with value: 0.4689754744370778 and parameters: {'batch_size': 16, 'embedding_dim': 16, 'gru1_units': 256, 'gru1_dropout': 0.3830105143087051, 'gru1_recurrent_dropout': 0.45208014684307024, 'gru2_units': 64, 'gru2_dropout': 0.18700572129513182, 'gru2_recurrent_dropout': 0.19854001914467523, 'dense_units': 32, 'dropout_rate': 0.10501052009089112, 'optimizer_name': 'sgd', 'learning_rate': 1.1987146905336644e-05}. Best is trial 7 with value: 0.6832611958185831.
+[I 2025-05-24 19:14:11,653] Trial 9 finished with value: 0.874458889166514 and parameters: {'batch_size': 16, 'embedding_dim': 32, 'gru1_units': 32, 'gru1_dropout': 0.21290282331437616, 'gru1_recurrent_dropout': 0.2274953263486943, 'gru2_units': 64, 'gru2_dropout': 0.1900127228518234, 'gru2_recurrent_dropout': 0.008939174025796914, 'dense_units': 16, 'dropout_rate': 0.6133937514350056, 'optimizer_name': 'rmsprop', 'learning_rate': 0.006009014595221423}. Best is trial 9 with value: 0.874458889166514.
+[I 2025-05-24 19:14:58,165] Trial 10 finished with value: 0.6580086747805277 and parameters: {'batch_size': 128, 'embedding_dim': 8, 'gru1_units': 32, 'gru1_dropout': 0.01746480132160544, 'gru1_recurrent_dropout': 0.32405434361434027, 'gru2_units': 128, 'gru2_dropout': 0.28535400357013313, 'gru2_recurrent_dropout': 0.01274750640518171, 'dense_units': 16, 'dropout_rate': 0.39706986745186507, 'optimizer_name': 'rmsprop', 'learning_rate': 0.0009605854591490978}. Best is trial 9 with value: 0.874458889166514.
+[I 2025-05-24 19:15:44,404] Trial 11 finished with value: 0.7171717286109924 and parameters: {'batch_size': 16, 'embedding_dim': 32, 'gru1_units': 32, 'gru1_dropout': 0.3062587812143314, 'gru1_recurrent_dropout': 0.30798998110485454, 'gru2_units': 32, 'gru2_dropout': 0.16071231766062907, 'gru2_recurrent_dropout': 0.06133032825109317, 'dense_units': 16, 'dropout_rate': 0.13881263121725146, 'optimizer_name': 'adam', 'learning_rate': 0.00018406320654823388}. Best is trial 9 with value: 0.874458889166514.
+[I 2025-05-24 19:16:30,665] Trial 12 finished with value: 0.7784992853800455 and parameters: {'batch_size': 16, 'embedding_dim': 32, 'gru1_units': 32, 'gru1_dropout': 0.29536436351966344, 'gru1_recurrent_dropout': 0.31127091154372, 'gru2_units': 32, 'gru2_dropout': 0.1869336114965046, 'gru2_recurrent_dropout': 0.005341757687010895, 'dense_units': 16, 'dropout_rate': 0.05078817658935203, 'optimizer_name': 'adam', 'learning_rate': 0.00024128759779730175}. Best is trial 9 with value: 0.874458889166514.
+[I 2025-05-24 19:17:18,009] Trial 13 finished with value: 0.8903319040934244 and parameters: {'batch_size': 16, 'embedding_dim': 32, 'gru1_units': 32, 'gru1_dropout': 0.2896318788711876, 'gru1_recurrent_dropout': 0.40266522948245226, 'gru2_units': 32, 'gru2_dropout': 0.26513361358381116, 'gru2_recurrent_dropout': 9.805251714101182e-05, 'dense_units': 16, 'dropout_rate': 0.00906625218025385, 'optimizer_name': 'rmsprop', 'learning_rate': 0.000742143879356227}. Best is trial 13 with value: 0.8903319040934244.
+[I 2025-05-24 19:18:04,229] Trial 14 finished with value: 0.8759018778800964 and parameters: {'batch_size': 128, 'embedding_dim': 64, 'gru1_units': 32, 'gru1_dropout': 0.23940139061484156, 'gru1_recurrent_dropout': 0.4185397169457185, 'gru2_units': 64, 'gru2_dropout': 0.28414709900171486, 'gru2_recurrent_dropout': 0.13208540039816136, 'dense_units': 16, 'dropout_rate': 0.2744214627358539, 'optimizer_name': 'rmsprop', 'learning_rate': 0.0011316255778559636}. Best is trial 13 with value: 0.8903319040934244.
+[I 2025-05-24 19:18:51,282] Trial 15 finished with value: 0.8910533984502157 and parameters: {'batch_size': 128, 'embedding_dim': 64, 'gru1_units': 32, 'gru1_dropout': 0.3042581682339071, 'gru1_recurrent_dropout': 0.4828062124416061, 'gru2_units': 64, 'gru2_dropout': 0.29275762886885537, 'gru2_recurrent_dropout': 0.1415252160936072, 'dense_units': 16, 'dropout_rate': 0.25439171332875166, 'optimizer_name': 'rmsprop', 'learning_rate': 0.001283969620296216}. Best is trial 15 with value: 0.8910533984502157.
+[I 2025-05-24 19:19:39,820] Trial 16 finished with value: 0.8607503573099772 and parameters: {'batch_size': 128, 'embedding_dim': 64, 'gru1_units': 64, 'gru1_dropout': 0.3179855264893874, 'gru1_recurrent_dropout': 0.4957777817861561, 'gru2_units': 32, 'gru2_dropout': 0.34795183306679356, 'gru2_recurrent_dropout': 0.19435794078397098, 'dense_units': 16, 'dropout_rate': 0.010157474435661805, 'optimizer_name': 'rmsprop', 'learning_rate': 0.0010538872871367036}. Best is trial 15 with value: 0.8910533984502157.
+[I 2025-05-24 19:20:27,764] Trial 17 finished with value: 0.8751803835233053 and parameters: {'batch_size': 128, 'embedding_dim': 64, 'gru1_units': 32, 'gru1_dropout': 0.1571094959488496, 'gru1_recurrent_dropout': 0.3860482868469364, 'gru2_units': 128, 'gru2_dropout': 0.25621630811336316, 'gru2_recurrent_dropout': 0.06483019894997138, 'dense_units': 16, 'dropout_rate': 0.21924984326104988, 'optimizer_name': 'rmsprop', 'learning_rate': 0.0005548717810431689}. Best is trial 15 with value: 0.8910533984502157.
+[I 2025-05-24 19:21:12,293] Trial 18 finished with value: 0.4682539800802867 and parameters: {'batch_size': 128, 'embedding_dim': 64, 'gru1_units': 32, 'gru1_dropout': 0.33504991455374433, 'gru1_recurrent_dropout': 0.3663749038576695, 'gru2_units': 32, 'gru2_dropout': 0.33624331532248586, 'gru2_recurrent_dropout': 0.17100569172851, 'dense_units': 16, 'dropout_rate': 0.40148974008874677, 'optimizer_name': 'sgd', 'learning_rate': 0.00251073202138272}. Best is trial 15 with value: 0.8910533984502157.
+
+Optimization completed!
+Best accuracy: 0.8911
+Best hyperparameters:
+  batch_size: 128
+  embedding_dim: 64
+  gru1_units: 32
+  gru1_dropout: 0.3042581682339071
+  gru1_recurrent_dropout: 0.4828062124416061
+  gru2_units: 64
+  gru2_dropout: 0.29275762886885537
+  gru2_recurrent_dropout: 0.1415252160936072
+  dense_units: 16
+  dropout_rate: 0.25439171332875166
+  optimizer_name: rmsprop
+  learning_rate: 0.001283969620296216
+[I 2025-05-24 19:21:58,041] Trial 19 finished with value: 0.5786436001459757 and parameters: {'batch_size': 128, 'embedding_dim': 8, 'gru1_units': 32, 'gru1_dropout': 0.2873834694297128, 'gru1_recurrent_dropout': 0.49439132250768847, 'gru2_units': 64, 'gru2_dropout': 0.4002769557609198, 'gru2_recurrent_dropout': 0.07509979355252845, 'dense_units': 64, 'dropout_rate': 0.07583661600591875, 'optimizer_name': 'rmsprop', 'learning_rate': 0.00011549562070341749}. Best is trial 15 with value: 0.8910533984502157.
+
+Training model with optimal hyperparameters...
+Epoch 1/15
+1/1 [==============================] - 13s 13s/step - loss: 0.6932 - accuracy: 0.4531 - val_loss: 0.6870 - val_accuracy: 0.6250
+Epoch 2/15
+1/1 [==============================] - 0s 123ms/step - loss: 0.6882 - accuracy: 0.6094 - val_loss: 0.6751 - val_accuracy: 0.6250
+Epoch 3/15
+1/1 [==============================] - 0s 128ms/step - loss: 0.6789 - accuracy: 0.5938 - val_loss: 0.6624 - val_accuracy: 0.6250
+Epoch 4/15
+1/1 [==============================] - 0s 130ms/step - loss: 0.6608 - accuracy: 0.6406 - val_loss: 0.6457 - val_accuracy: 0.7500
+Epoch 5/15
+1/1 [==============================] - 0s 135ms/step - loss: 0.6374 - accuracy: 0.8281 - val_loss: 0.6088 - val_accuracy: 0.7500
+Epoch 6/15
+1/1 [==============================] - 0s 127ms/step - loss: 0.5962 - accuracy: 0.9219 - val_loss: 0.5615 - val_accuracy: 0.8125
+Epoch 7/15
+1/1 [==============================] - 0s 129ms/step - loss: 0.5497 - accuracy: 0.9219 - val_loss: 0.5099 - val_accuracy: 0.7500
+Epoch 8/15
+1/1 [==============================] - 0s 124ms/step - loss: 0.4641 - accuracy: 0.9219 - val_loss: 0.4473 - val_accuracy: 0.8125
+Epoch 9/15
+1/1 [==============================] - 0s 126ms/step - loss: 0.3840 - accuracy: 0.9219 - val_loss: 0.4194 - val_accuracy: 0.8125
+Epoch 10/15
+1/1 [==============================] - 0s 124ms/step - loss: 0.3401 - accuracy: 0.9219 - val_loss: 0.3632 - val_accuracy: 0.8750
+Epoch 11/15
+1/1 [==============================] - 0s 128ms/step - loss: 0.2636 - accuracy: 0.8906 - val_loss: 0.3544 - val_accuracy: 0.7500
+Epoch 12/15
+1/1 [==============================] - 0s 122ms/step - loss: 0.2453 - accuracy: 0.8594 - val_loss: 0.3560 - val_accuracy: 0.8125
+Epoch 13/15
+1/1 [==============================] - 0s 125ms/step - loss: 0.1952 - accuracy: 0.8906 - val_loss: 0.3779 - val_accuracy: 0.8750
+Epoch 14/15
+1/1 [==============================] - 0s 128ms/step - loss: 0.2338 - accuracy: 0.9062 - val_loss: 0.3845 - val_accuracy: 0.7500
+Epoch 15/15
+1/1 [==============================] - 0s 126ms/step - loss: 0.2509 - accuracy: 0.8906 - val_loss: 0.3590 - val_accuracy: 0.8750
+
+Evaluating model...
+1/1 [==============================] - 1s 547ms/step
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.83      1.00      0.91        10
+           1       1.00      0.67      0.80         6
+
+    accuracy                           0.88        16
+   macro avg       0.92      0.83      0.85        16
+weighted avg       0.90      0.88      0.87        16
+
+Training time: 959.76 s
+Max RAM Usage: 41.76 MB
+Inference time: 0.6123 s
+
+Process finished with exit code 0
