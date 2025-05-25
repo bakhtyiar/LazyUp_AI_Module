@@ -1,6 +1,6 @@
 import sys
 import os
-from process import process
+from monitor_activity import monitor_activity
 from repeat_with_interval import repeat_with_interval
 from user_session_manipulator.lock_session import keep_locked
 
@@ -78,7 +78,7 @@ def main():
 
                 # Create monitoring function with specified lock period
                 def monitoring_func():
-                    process(lock_period)
+                    monitor_activity(lock_period)
 
                 # Start monitoring with interval
                 stop_event = repeat_with_interval(interval_seconds, monitoring_func)

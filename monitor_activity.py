@@ -22,7 +22,7 @@ def compute_status():
     ret = process_names_prediction / 2 + device_input_prediction / 2
     return ret
 
-def process(lock_period: int):
+def monitor_activity(lock_period: int):
     status = compute_status()
     if status > 0.5:
         lock_session.keep_locked(lock_period)
