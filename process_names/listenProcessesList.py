@@ -1,32 +1,37 @@
-import psutil
-import json
 import argparse
-from datetime import datetime
-import threading
+import json
+import os
 import signal
 import sys
-import os
+import threading
 import time
+from datetime import datetime
 from pathlib import Path
+
+import psutil
+
 from logs_cypher import JsonFolderCrypto
 
 is_working_mode = True
 module_dir = Path(__file__).resolve().parent
 crypto = JsonFolderCrypto()
 
+
 def set_interval(func, sec):
     def func_wrapper():
         set_interval(func, sec)
         func()
+
     t = threading.Timer(sec, func_wrapper)
     t.start()
     return t
 
-def save_processes_to_file(dir_to_logs, is_working_mode_target_value):
+
+def save_processes_to_file(dir_to_logs, is_working_mode_target_value=None):
     processes = []
     processes_seen = set()  # Use a set to track seen (name, pid) tuples.
     for p in psutil.process_iter(attrs=['name', 'pid', 'cpu_percent']):
-        if hasattr(p,'info'):
+        if hasattr(p, 'info'):
             try:
                 # Получаем нагрузку на CPU
                 p.cpu_percent(interval=0)  # Для получения текущего значения в будущем
@@ -43,20 +48,22 @@ def save_processes_to_file(dir_to_logs, is_working_mode_target_value):
     # result = [f"{name} (нагрузка: {cpu}% )" for name, pid, cpu in sorted_processes]
     timestamp = datetime.now().isoformat()
     result = {
-        'is_working_mode': is_working_mode_target_value,
         'timestamp': timestamp,
         'processes': []
     }
+    if is_working_mode_target_value is not None:
+        result['is_working_mode'] = is_working_mode_target_value
     for name, pid, cpu in sorted_processes:
         if name.endswith(".exe"):
             clean_process_name = name[:-4]  # Убираем последние 4 символа ".exe"
         else:
             clean_process_name = name
-        if not clean_process_name in result and not clean_process_name.endswith(".json"): # Не добавляем повторы и (json файлы?)
+        if not clean_process_name in result and not clean_process_name.endswith(
+                ".json"):  # Не добавляем повторы и (json файлы?)
             result['processes'].append(clean_process_name)
 
     # Формируем имя файла в папке "logs_folder"
-    clean_timestamp = time.strftime("%Y-%m-%d_%H-%M-%S") # Убраны неправильные символы для названия файла в windows
+    clean_timestamp = time.strftime("%Y-%m-%d_%H-%M-%S")  # Убраны неправильные символы для названия файла в windows
     logs_file_name = os.path.join(dir_to_logs, f"{clean_timestamp}.json")
 
     # Убеждаемся, что папка существует
@@ -72,17 +79,20 @@ def save_processes_to_file(dir_to_logs, is_working_mode_target_value):
 
     print(f"Названия процессов с нагрузкой успешно записаны в {dir_to_logs}.")
 
+
 def signal_handler(sig, frame):
     loggingInterval.cancel()
     print("Прерывание процесса. Сохранение данных и выход.")
     sys.exit(0)
 
+
 def init_process_logging(is_working_mode, logs_dir, time_interval):
     # Process the parsed arguments
     logging_interval = set_interval(lambda: save_processes_to_file(logs_dir, is_working_mode), time_interval)
     signal.signal(signal.SIGINT, signal_handler)
-    
+
     return logging_interval
+
 
 if __name__ == "__main__":
     # Создаем парсер аргументов командной строки

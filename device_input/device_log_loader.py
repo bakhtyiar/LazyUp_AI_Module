@@ -1,11 +1,13 @@
-import os
 import json
+import os
 from datetime import datetime
 from pathlib import Path
+
 from logs_cypher import JsonFolderCrypto
 
 module_dir = Path(__file__).resolve().parent
 crypto = JsonFolderCrypto()
+
 
 def load_device_logs(max_files: int | None = None, max_units: int | None = None) -> list:
     """
@@ -59,23 +61,33 @@ def load_device_logs(max_files: int | None = None, max_units: int | None = None)
         try:
             # Проверяем, зашифрован ли файл
             is_encrypted = crypto.is_file_encrypted(filepath)
-            
+
             if is_encrypted:
                 # Создаем временный файл для расшифрованных данных
                 temp_filepath = filepath + '.temp'
                 crypto.decrypt_file(filepath, temp_filepath)
-                
+
                 with open(temp_filepath, 'r') as f:
                     data = json.load(f)
-                    
+
                 # Удаляем временный файл
                 os.remove(temp_filepath)
             else:
                 with open(filepath, 'r') as f:
                     data = json.load(f)
 
+            # Calculate average mode from all valid entries
+            valid_modes = []
+            for entry in data.get("deviceLogs", []):
+                # Skip entries without isWorkingMode key or with None value
+                if "isWorkingMode" in entry and entry["isWorkingMode"] is not None:
+                    # Convert True to 1, False to 0
+                    mode_value = 1 if entry["isWorkingMode"] else 0
+                    valid_modes.append(mode_value)
+
+            # Calculate the average if there are valid modes, otherwise default to 0
             file_data = {
-                "mode": int(data.get("deviceLogs", [])[0].get("isWorkingMode", False)),
+                "mode": round(sum(valid_modes) / len(valid_modes)) if valid_modes else 0,
                 "list": []
             }
 
@@ -89,6 +101,10 @@ def load_device_logs(max_files: int | None = None, max_units: int | None = None)
 
                 if timestamp_str and button_key is not None:
                     try:
+                        # Skip entries without isWorkingMode key or with None value
+                        if "isWorkingMode" not in entry or entry["isWorkingMode"] is None:
+                            continue
+
                         dt = datetime.fromisoformat(timestamp_str)
                         timestamp_ms = int(dt.timestamp() * 1000)
 
@@ -112,6 +128,7 @@ def load_device_logs(max_files: int | None = None, max_units: int | None = None)
             continue
 
     return file_logs
+
 
 if __name__ == "__main__":
     data = load_device_logs(10, 10000)

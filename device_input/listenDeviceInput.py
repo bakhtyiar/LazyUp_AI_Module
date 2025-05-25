@@ -1,11 +1,13 @@
 import json
-import sys
-import signal
 import os
+import signal
+import sys
 from datetime import datetime
+from pathlib import Path
+
 import keyboard  # Убедитесь, что эта библиотека установлена
 import mouse  # Убедитесь, что эта библиотека установлена
-from pathlib import Path
+
 from logs_cypher import JsonFolderCrypto
 
 # Mouse buttons map
@@ -37,17 +39,20 @@ keyboard_hook = None
 mouse_hook = None
 is_listening = False
 
+
 def get_log_filename():
     return datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".json"
 
-def init_log_file():
+
+def init_log_file(directory=directory_path):
     global current_log_file, logs
     if not os.path.exists(directory_path):
         os.makedirs(directory_path)
-    current_log_file = os.path.join(directory_path, get_log_filename())
+    current_log_file = os.path.join(directory, get_log_filename())
     logs = []  # Очищаем логи при создании нового файла
 
-def log_event(button_key, is_working_mode):
+
+def log_event(button_key, is_working_mode=None):
     global current_log_file, logs
     timestamp = datetime.now().isoformat()
     log_entry = {
@@ -55,11 +60,14 @@ def log_event(button_key, is_working_mode):
         "buttonKey": button_key,
         "isWorkingMode": is_working_mode
     }
+    if is_working_mode is not None:
+        log_entry['isWorkingMode'] = is_working_mode
     logs.append(log_entry)
     with open(current_log_file, 'w', encoding='utf-8') as f:
         json.dump({"deviceLogs": logs}, f, indent=4)
     # Шифруем файл после записи
     crypto.encrypt_file(current_log_file)
+
 
 def on_key_event(event):
     global is_working_mode
@@ -68,6 +76,7 @@ def on_key_event(event):
         log_event(event.scan_code, is_working_mode)
     except:
         print("Pressed button out from processing range")
+
 
 def on_mouse_event(event):
     global is_working_mode
@@ -83,41 +92,45 @@ def on_mouse_event(event):
     except:
         print("Pressed button out from processing range")
 
-def start_listening(working_mode=True):
+
+def start_listening(working_mode=None, directory=directory_path):
     """Start listening to keyboard and mouse events"""
     global is_working_mode, is_listening, keyboard_hook, mouse_hook
-    
+
     if is_listening:
         print("Already listening to events")
         return
-    
+
     is_working_mode = working_mode
-    init_log_file()  # Инициализируем файл логов при старте
-    
+    init_log_file(directory)  # Инициализируем файл логов при старте
+
     # Устанавливаем хуки для клавиатуры и мыши
     keyboard_hook = keyboard.hook(on_key_event)
     mouse_hook = mouse.hook(on_mouse_event)
     is_listening = True
     print("Started listening to device inputs")
 
+
 def stop_listening():
     """Stop listening to keyboard and mouse events"""
     global is_listening, keyboard_hook, mouse_hook
-    
+
     if not is_listening:
         print("Not currently listening to events")
         return
-        
+
     # Удаляем хуки
     keyboard.unhook(keyboard_hook)
     mouse.unhook(mouse_hook)
     is_listening = False
     print("Stopped listening to device inputs")
 
+
 def signal_handler(sig, frame):
     stop_listening()
     print("Прерывание процесса. Сохранение данных и выход.")
     sys.exit(0)
+
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
@@ -125,7 +138,7 @@ if __name__ == "__main__":
 
     signal.signal(signal.SIGINT, signal_handler)
     start_listening(is_working_mode)
-    
+
     try:
         keyboard.wait()  # Ожидаем завершения
     except KeyboardInterrupt:
