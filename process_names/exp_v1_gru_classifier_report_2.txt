@@ -1,0 +1,85 @@
+C:\Users\bakhtiyar\.conda\envs\myenv\python.exe C:\Users\bakhtiyar\Projects\LazyUp_AI_Module\process_names\exp_v1_gru_classifier.py 
+[I 2025-05-25 12:50:04,580] A new study created in memory with name: no-name-a9e01290-822b-4d62-962d-9c1709426356
+2025-05-25 12:50:04.583688: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-05-25 12:50:04.584661: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+7/7 [==============================] - 0s 7ms/step
+[I 2025-05-25 12:50:12,529] Trial 0 finished with value: 0.0 and parameters: {'embedding_dim': 89, 'gru_units': 161, 'gru_recurrent_dropout': 0.016808302688514576, 'bidirectional': False, 'dropout_rate': 0.0350262129407069, 'dense_units': 124, 'batch_size': 128, 'learning_rate': 9.029573201789438e-05, 'optimizer': 'adam', 'early_stopping_patience': 4, 'epochs': 26}. Best is trial 0 with value: 0.0.
+7/7 [==============================] - 0s 4ms/step
+[I 2025-05-25 12:50:17,213] Trial 1 finished with value: 0.0 and parameters: {'embedding_dim': 60, 'gru_units': 48, 'gru_recurrent_dropout': 0.06014509480343044, 'bidirectional': False, 'dropout_rate': 0.4749460978937371, 'dense_units': 50, 'batch_size': 32, 'learning_rate': 5.2700228373847455e-05, 'optimizer': 'adam', 'early_stopping_patience': 6, 'epochs': 7}. Best is trial 0 with value: 0.0.
+7/7 [==============================] - 0s 4ms/step
+[I 2025-05-25 12:50:21,742] Trial 2 finished with value: 0.0 and parameters: {'embedding_dim': 45, 'gru_units': 41, 'gru_recurrent_dropout': 0.04912200886776891, 'bidirectional': False, 'dropout_rate': 0.04304122081981954, 'dense_units': 74, 'batch_size': 128, 'learning_rate': 0.0005942811993213443, 'optimizer': 'sgd', 'early_stopping_patience': 7, 'epochs': 13}. Best is trial 0 with value: 0.0.
+7/7 [==============================] - 0s 8ms/step
+[I 2025-05-25 12:50:37,665] Trial 3 finished with value: 0.0 and parameters: {'embedding_dim': 61, 'gru_units': 86, 'gru_recurrent_dropout': 0.2743870867397963, 'bidirectional': False, 'dropout_rate': 0.2906982215219121, 'dense_units': 37, 'batch_size': 32, 'learning_rate': 0.0020013877875600817, 'optimizer': 'sgd', 'early_stopping_patience': 6, 'epochs': 23}. Best is trial 0 with value: 0.0.
+7/7 [==============================] - 0s 10ms/step
+[I 2025-05-25 12:50:44,442] Trial 4 finished with value: 0.8125 and parameters: {'embedding_dim': 100, 'gru_units': 173, 'gru_recurrent_dropout': 0.16921119981831784, 'bidirectional': False, 'dropout_rate': 0.19165919730338055, 'dense_units': 89, 'batch_size': 64, 'learning_rate': 0.0011099952049036085, 'optimizer': 'adam', 'early_stopping_patience': 5, 'epochs': 5}. Best is trial 4 with value: 0.8125.
+7/7 [==============================] - 1s 23ms/step
+[I 2025-05-25 12:50:58,489] Trial 5 finished with value: 0.7967479674796748 and parameters: {'embedding_dim': 85, 'gru_units': 237, 'gru_recurrent_dropout': 0.1423353543312661, 'bidirectional': True, 'dropout_rate': 0.05395529669267576, 'dense_units': 36, 'batch_size': 128, 'learning_rate': 0.001488473566373913, 'optimizer': 'adam', 'early_stopping_patience': 10, 'epochs': 10}. Best is trial 4 with value: 0.8125.
+7/7 [==============================] - 1s 10ms/step
+[I 2025-05-25 12:51:13,031] Trial 6 finished with value: 0.8299319727891157 and parameters: {'embedding_dim': 107, 'gru_units': 74, 'gru_recurrent_dropout': 0.2838602140841446, 'bidirectional': True, 'dropout_rate': 0.46674437398101687, 'dense_units': 41, 'batch_size': 32, 'learning_rate': 0.0007798622545061875, 'optimizer': 'adam', 'early_stopping_patience': 4, 'epochs': 13}. Best is trial 6 with value: 0.8299319727891157.
+7/7 [==============================] - 0s 5ms/step
+[I 2025-05-25 12:51:29,421] Trial 7 finished with value: 0.8591549295774648 and parameters: {'embedding_dim': 114, 'gru_units': 47, 'gru_recurrent_dropout': 0.203268434077912, 'bidirectional': False, 'dropout_rate': 0.2880447861841239, 'dense_units': 102, 'batch_size': 16, 'learning_rate': 0.0004610752362321157, 'optimizer': 'adam', 'early_stopping_patience': 10, 'epochs': 21}. Best is trial 7 with value: 0.8591549295774648.
+7/7 [==============================] - 0s 5ms/step
+[I 2025-05-25 12:51:35,420] Trial 8 finished with value: 0.8507462686567164 and parameters: {'embedding_dim': 26, 'gru_units': 84, 'gru_recurrent_dropout': 0.23411885070276123, 'bidirectional': False, 'dropout_rate': 0.5730746174030438, 'dense_units': 18, 'batch_size': 32, 'learning_rate': 0.0013726045448504663, 'optimizer': 'rmsprop', 'early_stopping_patience': 6, 'epochs': 8}. Best is trial 7 with value: 0.8591549295774648.
+7/7 [==============================] - 0s 4ms/step
+[I 2025-05-25 12:51:43,776] Trial 9 finished with value: 0.0 and parameters: {'embedding_dim': 26, 'gru_units': 61, 'gru_recurrent_dropout': 0.11587080921235032, 'bidirectional': False, 'dropout_rate': 0.23125124286936272, 'dense_units': 43, 'batch_size': 64, 'learning_rate': 0.0014560583317565652, 'optimizer': 'sgd', 'early_stopping_patience': 5, 'epochs': 24}. Best is trial 7 with value: 0.8591549295774648.
+7/7 [==============================] - 1s 11ms/step
+[I 2025-05-25 12:52:23,271] Trial 10 finished with value: 0.7672955974842768 and parameters: {'embedding_dim': 116, 'gru_units': 116, 'gru_recurrent_dropout': 0.43469645380757926, 'bidirectional': True, 'dropout_rate': 0.6573925688433441, 'dense_units': 116, 'batch_size': 16, 'learning_rate': 0.0060798236874477305, 'optimizer': 'rmsprop', 'early_stopping_patience': 10, 'epochs': 19}. Best is trial 7 with value: 0.8591549295774648.
+7/7 [==============================] - 0s 7ms/step
+[I 2025-05-25 12:53:07,622] Trial 11 finished with value: 0.8551724137931035 and parameters: {'embedding_dim': 127, 'gru_units': 116, 'gru_recurrent_dropout': 0.3659280321264079, 'bidirectional': False, 'dropout_rate': 0.6704530491858962, 'dense_units': 11, 'batch_size': 16, 'learning_rate': 0.00017401996279310582, 'optimizer': 'rmsprop', 'early_stopping_patience': 8, 'epochs': 30}. Best is trial 7 with value: 0.8591549295774648.
+7/7 [==============================] - 0s 7ms/step
+[I 2025-05-25 12:53:54,197] Trial 12 finished with value: 0.0 and parameters: {'embedding_dim': 127, 'gru_units': 124, 'gru_recurrent_dropout': 0.406069010211233, 'bidirectional': False, 'dropout_rate': 0.3913158303499252, 'dense_units': 101, 'batch_size': 16, 'learning_rate': 1.1580607238168502e-05, 'optimizer': 'rmsprop', 'early_stopping_patience': 8, 'epochs': 30}. Best is trial 7 with value: 0.8591549295774648.
+7/7 [==============================] - 0s 10ms/step
+[I 2025-05-25 12:55:06,383] Trial 13 finished with value: 0.8129032258064516 and parameters: {'embedding_dim': 127, 'gru_units': 187, 'gru_recurrent_dropout': 0.33371930387057125, 'bidirectional': False, 'dropout_rate': 0.6395089156083589, 'dense_units': 10, 'batch_size': 16, 'learning_rate': 0.0002208146763803649, 'optimizer': 'rmsprop', 'early_stopping_patience': 9, 'epochs': 30}. Best is trial 7 with value: 0.8591549295774648.
+7/7 [==============================] - 1s 11ms/step
+[I 2025-05-25 12:55:58,128] Trial 14 finished with value: 0.8391608391608392 and parameters: {'embedding_dim': 107, 'gru_units': 113, 'gru_recurrent_dropout': 0.36055944877129054, 'bidirectional': True, 'dropout_rate': 0.3563339304940626, 'dense_units': 68, 'batch_size': 16, 'learning_rate': 0.0002187084963595905, 'optimizer': 'rmsprop', 'early_stopping_patience': 8, 'epochs': 19}. Best is trial 7 with value: 0.8591549295774648.
+7/7 [==============================] - 0s 8ms/step
+[I 2025-05-25 12:56:58,395] Trial 15 finished with value: 0.7969924812030075 and parameters: {'embedding_dim': 77, 'gru_units': 206, 'gru_recurrent_dropout': 0.20483319251680512, 'bidirectional': False, 'dropout_rate': 0.16559744164177864, 'dense_units': 95, 'batch_size': 16, 'learning_rate': 6.057641459035081e-05, 'optimizer': 'adam', 'early_stopping_patience': 9, 'epochs': 26}. Best is trial 7 with value: 0.8591549295774648.
+7/7 [==============================] - 0s 11ms/step
+[I 2025-05-25 12:57:29,842] Trial 16 finished with value: 0.0 and parameters: {'embedding_dim': 115, 'gru_units': 131, 'gru_recurrent_dropout': 0.474304547041872, 'bidirectional': False, 'dropout_rate': 0.4941391735105286, 'dense_units': 67, 'batch_size': 16, 'learning_rate': 1.7715549106982725e-05, 'optimizer': 'rmsprop', 'early_stopping_patience': 8, 'epochs': 16}. Best is trial 7 with value: 0.8591549295774648.
+7/7 [==============================] - 0s 6ms/step
+[I 2025-05-25 12:57:57,899] Trial 17 finished with value: 0.8840579710144928 and parameters: {'embedding_dim': 95, 'gru_units': 93, 'gru_recurrent_dropout': 0.33020947067833417, 'bidirectional': False, 'dropout_rate': 0.2986822140619035, 'dense_units': 84, 'batch_size': 16, 'learning_rate': 0.00012348622478428875, 'optimizer': 'adam', 'early_stopping_patience': 9, 'epochs': 22}. Best is trial 17 with value: 0.8840579710144928.
+7/7 [==============================] - 1s 8ms/step
+[I 2025-05-25 12:58:23,125] Trial 18 finished with value: 0.8333333333333334 and parameters: {'embedding_dim': 94, 'gru_units': 34, 'gru_recurrent_dropout': 0.2993135902081595, 'bidirectional': True, 'dropout_rate': 0.2834171515869951, 'dense_units': 109, 'batch_size': 16, 'learning_rate': 0.0004270256220076923, 'optimizer': 'adam', 'early_stopping_patience': 10, 'epochs': 21}. Best is trial 17 with value: 0.8840579710144928.
+7/7 [==============================] - 0s 7ms/step
+[I 2025-05-25 12:58:32,466] Trial 19 finished with value: 0.8805970149253731 and parameters: {'embedding_dim': 74, 'gru_units': 94, 'gru_recurrent_dropout': 0.22434559019398972, 'bidirectional': False, 'dropout_rate': 0.1277536735013536, 'dense_units': 83, 'batch_size': 64, 'learning_rate': 0.0038654132671062076, 'optimizer': 'adam', 'early_stopping_patience': 9, 'epochs': 16}. Best is trial 17 with value: 0.8840579710144928.
+7/7 [==============================] - 0s 6ms/step
+[I 2025-05-25 12:58:41,172] Trial 20 finished with value: 0.8244274809160306 and parameters: {'embedding_dim': 67, 'gru_units': 94, 'gru_recurrent_dropout': 0.3196320052063081, 'bidirectional': False, 'dropout_rate': 0.09997420257747303, 'dense_units': 82, 'batch_size': 64, 'learning_rate': 0.008339493833365923, 'optimizer': 'adam', 'early_stopping_patience': 9, 'epochs': 16}. Best is trial 17 with value: 0.8840579710144928.
+7/7 [==============================] - 0s 5ms/step
+[I 2025-05-25 12:58:50,048] Trial 21 finished with value: 0.8266666666666667 and parameters: {'embedding_dim': 78, 'gru_units': 59, 'gru_recurrent_dropout': 0.2125896368077056, 'bidirectional': False, 'dropout_rate': 0.13702315341491111, 'dense_units': 81, 'batch_size': 64, 'learning_rate': 0.003691645469725919, 'optimizer': 'adam', 'early_stopping_patience': 9, 'epochs': 21}. Best is trial 17 with value: 0.8840579710144928.
+7/7 [==============================] - 0s 6ms/step
+[I 2025-05-25 12:58:58,863] Trial 22 finished with value: 0.8840579710144928 and parameters: {'embedding_dim': 98, 'gru_units': 98, 'gru_recurrent_dropout': 0.24484144433836585, 'bidirectional': False, 'dropout_rate': 0.27482599740758573, 'dense_units': 104, 'batch_size': 64, 'learning_rate': 0.0034394939221964174, 'optimizer': 'adam', 'early_stopping_patience': 10, 'epochs': 15}. Best is trial 17 with value: 0.8840579710144928.
+7/7 [==============================] - 0s 6ms/step
+[I 2025-05-25 12:59:06,175] Trial 23 finished with value: 0.8549618320610687 and parameters: {'embedding_dim': 52, 'gru_units': 92, 'gru_recurrent_dropout': 0.25754548387894083, 'bidirectional': False, 'dropout_rate': 0.23787284151750704, 'dense_units': 58, 'batch_size': 64, 'learning_rate': 0.0035365536580871998, 'optimizer': 'adam', 'early_stopping_patience': 7, 'epochs': 14}. Best is trial 17 with value: 0.8840579710144928.
+7/7 [==============================] - 1s 6ms/step
+[I 2025-05-25 12:59:14,237] Trial 24 finished with value: 0.8484848484848485 and parameters: {'embedding_dim': 83, 'gru_units': 144, 'gru_recurrent_dropout': 0.11198887970208668, 'bidirectional': False, 'dropout_rate': 0.41494668525385237, 'dense_units': 88, 'batch_size': 64, 'learning_rate': 0.003644988905322508, 'optimizer': 'adam', 'early_stopping_patience': 9, 'epochs': 11}. Best is trial 17 with value: 0.8840579710144928.
+7/7 [==============================] - 0s 6ms/step
+[I 2025-05-25 12:59:23,946] Trial 25 finished with value: 0.0 and parameters: {'embedding_dim': 96, 'gru_units': 105, 'gru_recurrent_dropout': 0.389564043573822, 'bidirectional': False, 'dropout_rate': 0.10784923947741955, 'dense_units': 127, 'batch_size': 64, 'learning_rate': 3.091260440806361e-05, 'optimizer': 'adam', 'early_stopping_patience': 10, 'epochs': 18}. Best is trial 17 with value: 0.8840579710144928.
+7/7 [==============================] - 1s 12ms/step
+[I 2025-05-25 12:59:43,512] Trial 26 finished with value: 0.0 and parameters: {'embedding_dim': 72, 'gru_units': 143, 'gru_recurrent_dropout': 0.1670770777066191, 'bidirectional': True, 'dropout_rate': 0.32975616625638776, 'dense_units': 105, 'batch_size': 64, 'learning_rate': 0.00012089958446397438, 'optimizer': 'sgd', 'early_stopping_patience': 9, 'epochs': 16}. Best is trial 17 with value: 0.8840579710144928.
+7/7 [==============================] - 0s 5ms/step
+[I 2025-05-25 12:59:51,018] Trial 27 finished with value: 0.8671328671328671 and parameters: {'embedding_dim': 102, 'gru_units': 70, 'gru_recurrent_dropout': 0.2454660273583062, 'bidirectional': False, 'dropout_rate': 0.21616989260330371, 'dense_units': 114, 'batch_size': 64, 'learning_rate': 0.0024948490019064285, 'optimizer': 'adam', 'early_stopping_patience': 3, 'epochs': 15}. Best is trial 17 with value: 0.8840579710144928.
+7/7 [==============================] - 0s 6ms/step
+[I 2025-05-25 12:59:57,588] Trial 28 finished with value: 0.8435374149659864 and parameters: {'embedding_dim': 43, 'gru_units': 100, 'gru_recurrent_dropout': 0.32295495434988564, 'bidirectional': False, 'dropout_rate': 0.3342400909333982, 'dense_units': 76, 'batch_size': 64, 'learning_rate': 0.006400450212934591, 'optimizer': 'adam', 'early_stopping_patience': 7, 'epochs': 11}. Best is trial 17 with value: 0.8840579710144928.
+7/7 [==============================] - 0s 7ms/step
+[I 2025-05-25 13:00:07,504] Trial 29 finished with value: 0.0 and parameters: {'embedding_dim': 86, 'gru_units': 140, 'gru_recurrent_dropout': 0.4391755246744088, 'bidirectional': False, 'dropout_rate': 0.1561471660323434, 'dense_units': 92, 'batch_size': 128, 'learning_rate': 9.570588416349378e-05, 'optimizer': 'adam', 'early_stopping_patience': 8, 'epochs': 27}. Best is trial 17 with value: 0.8840579710144928.
+Best parameters: {'embedding_dim': 95, 'gru_units': 93, 'gru_recurrent_dropout': 0.33020947067833417, 'bidirectional': False, 'dropout_rate': 0.2986822140619035, 'dense_units': 84, 'batch_size': 16, 'learning_rate': 0.00012348622478428875, 'optimizer': 'adam', 'early_stopping_patience': 9, 'epochs': 22}
+Best F1 score: 0.8840579710144928
+7/7 [==============================] - 1s 6ms/step
+7/7 [==============================] - 0s 5ms/step
+
+Classification Report for Best Model:
+              precision    recall  f1-score   support
+
+       False       0.92      0.92      0.92       130
+        True       0.85      0.86      0.85        70
+
+    accuracy                           0.90       200
+   macro avg       0.88      0.89      0.88       200
+weighted avg       0.90      0.90      0.90       200
+
+Max RAM Usage: 11.48 MB
+Training time: 28.0059 s
+Inference time: 0.0891 s
+
+Process finished with exit code 0
