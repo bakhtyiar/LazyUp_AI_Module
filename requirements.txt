@@ -3,9 +3,9 @@ cryptography==41.0.3
 joblib==1.4.2
 keras==2.8.0
 keyboard==0.13.5
-matplotlib==3.10.3
+matplotlib~=3.10.1
 mouse==0.7.1
-numpy==2.2.6
+numpy~=1.26.4
 optuna==4.3.0
 pandas==2.2.3
 psutil==5.9.0
@@ -16,3 +16,9 @@ tensorflow==2.8.0
 torch==2.6.0
 torch_geometric==2.6.1
 xgboost==3.0.1
+
+scikit-learn~=1.5.1
+torch-geometric~=2.6.1
+imblearn~=0.0
+imbalanced-learn~=0.13.0
+dotenv~=0.9.9
