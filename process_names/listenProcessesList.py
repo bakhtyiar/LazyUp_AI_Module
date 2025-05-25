@@ -75,7 +75,7 @@ def save_processes_to_file(dir_to_logs, is_working_mode_target_value=None):
         # Записываем объект `result` в файл в формате JSON
         json.dump(result, json_file, ensure_ascii=False, indent=4)
     # Шифруем файл после записи
-    crypto.encrypt_file(json_file)
+    crypto.encrypt_file(logs_file_name)
 
     print(f"Названия процессов с нагрузкой успешно записаны в {dir_to_logs}.")
 
