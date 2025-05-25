@@ -1,0 +1,209 @@
+C:\Users\bakhtiyar\.conda\envs\myenv\python.exe C:\Users\bakhtiyar\Projects\LazyUp_AI_Module\process_names\exp_v1_logistric_regression_classifier.py 
+[I 2025-05-25 13:18:00,238] A new study created in memory with name: no-name-19049b28-7a2c-4787-afa6-a1bb9cb08c03
+[I 2025-05-25 13:18:00,342] Trial 0 finished with value: 0.5553287209142226 and parameters: {'penalty': 'l1', 'solver': 'sag', 'solver_l1': 'saga', 'C': 1.6298178497622203e-05, 'tol': 0.00024621823914783877, 'fit_intercept': False, 'intercept_scaling': 0.31559961923051716, 'max_iter': 551, 'class_weight': 'balanced'}. Best is trial 0 with value: 0.5553287209142226.
+[I 2025-05-25 13:18:00,454] Trial 1 finished with value: 0.9046843335394195 and parameters: {'penalty': 'elasticnet', 'solver': 'liblinear', 'l1_ratio': 0.7246200466576184, 'C': 0.26232370503310365, 'tol': 0.005726581511708651, 'fit_intercept': True, 'intercept_scaling': 3.7981320392895044, 'max_iter': 709, 'class_weight': None}. Best is trial 1 with value: 0.9046843335394195.
+[I 2025-05-25 13:18:00,561] Trial 2 finished with value: 0.8974783679854041 and parameters: {'penalty': 'l2', 'solver': 'liblinear', 'C': 0.0003729046308137408, 'tol': 0.00041942017193119003, 'fit_intercept': True, 'intercept_scaling': 0.7718697524289698, 'max_iter': 898, 'class_weight': 'balanced'}. Best is trial 1 with value: 0.9046843335394195.
+[I 2025-05-25 13:18:00,633] Trial 3 finished with value: -inf and parameters: {'penalty': 'none', 'solver': 'saga', 'C': 0.03914164720855778, 'tol': 1.2677801102441147e-05, 'fit_intercept': True, 'intercept_scaling': 2.2943633485706987, 'max_iter': 438, 'class_weight': None}. Best is trial 1 with value: 0.9046843335394195.
+Error with parameters {'penalty': 'none', 'C': 0.03914164720855778, 'solver': 'saga', 'tol': 1.2677801102441147e-05, 'fit_intercept': True, 'intercept_scaling': 2.2943633485706987, 'max_iter': 438, 'class_weight': None, 'random_state': 42}: 
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\model_selection\_validation.py", line 888, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\pipeline.py", line 473, in fit
+    self._final_estimator.fit(Xt, y, **last_step_params["fit"])
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 1466, in wrapper
+    estimator._validate_params()
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 666, in _validate_params
+    validate_parameter_constraints(
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\utils\_param_validation.py", line 95, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l2', 'elasticnet', 'l1'} or None. Got 'none' instead.
+
+[I 2025-05-25 13:18:00,703] Trial 4 finished with value: -inf and parameters: {'penalty': 'none', 'solver': 'lbfgs', 'C': 2.954543663730346, 'tol': 3.710162952734211e-05, 'fit_intercept': True, 'intercept_scaling': 0.7310735749130393, 'max_iter': 725, 'class_weight': None}. Best is trial 1 with value: 0.9046843335394195.
+Error with parameters {'penalty': 'none', 'C': 2.954543663730346, 'solver': 'lbfgs', 'tol': 3.710162952734211e-05, 'fit_intercept': True, 'intercept_scaling': 0.7310735749130393, 'max_iter': 725, 'class_weight': None, 'random_state': 42}: 
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\model_selection\_validation.py", line 888, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\pipeline.py", line 473, in fit
+    self._final_estimator.fit(Xt, y, **last_step_params["fit"])
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 1466, in wrapper
+    estimator._validate_params()
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 666, in _validate_params
+    validate_parameter_constraints(
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\utils\_param_validation.py", line 95, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l2', 'elasticnet', 'l1'} or None. Got 'none' instead.
+
+[I 2025-05-25 13:18:00,814] Trial 5 finished with value: 0.8967925373694013 and parameters: {'penalty': 'elasticnet', 'solver': 'lbfgs', 'l1_ratio': 0.6667090909627668, 'C': 0.0686191625091653, 'tol': 0.00951162962018398, 'fit_intercept': False, 'intercept_scaling': 4.098030283911597, 'max_iter': 625, 'class_weight': 'balanced'}. Best is trial 1 with value: 0.9046843335394195.
+[I 2025-05-25 13:18:00,918] Trial 6 finished with value: 0.8869854904559918 and parameters: {'penalty': 'l1', 'solver': 'liblinear', 'C': 0.07548980940050844, 'tol': 3.902376351997228e-05, 'fit_intercept': True, 'intercept_scaling': 7.170403415531907, 'max_iter': 386, 'class_weight': None}. Best is trial 1 with value: 0.9046843335394195.
+[I 2025-05-25 13:18:01,035] Trial 7 finished with value: 0.8986773415214928 and parameters: {'penalty': 'l2', 'solver': 'lbfgs', 'C': 0.0002374078314935888, 'tol': 0.00023861115360378858, 'fit_intercept': True, 'intercept_scaling': 8.02458471658042, 'max_iter': 871, 'class_weight': 'balanced'}. Best is trial 1 with value: 0.9046843335394195.
+[I 2025-05-25 13:18:01,169] Trial 8 finished with value: 0.902856295487324 and parameters: {'penalty': 'elasticnet', 'solver': 'liblinear', 'l1_ratio': 0.1052894729047057, 'C': 0.15132347067665577, 'tol': 1.1204098048365449e-05, 'fit_intercept': False, 'intercept_scaling': 4.544772477521926, 'max_iter': 924, 'class_weight': 'balanced'}. Best is trial 1 with value: 0.9046843335394195.
+[I 2025-05-25 13:18:01,434] Trial 9 finished with value: 0.8982121021607231 and parameters: {'penalty': 'l1', 'solver': 'lbfgs', 'solver_l1': 'saga', 'C': 4.07704651977486, 'tol': 0.00015029380995462433, 'fit_intercept': True, 'intercept_scaling': 6.8529827454233665, 'max_iter': 250, 'class_weight': 'balanced'}. Best is trial 1 with value: 0.9046843335394195.
+[I 2025-05-25 13:18:01,561] Trial 10 finished with value: 0.9051876201427339 and parameters: {'penalty': 'elasticnet', 'solver': 'newton-cg', 'l1_ratio': 0.9944714192445804, 'C': 61.54254078784788, 'tol': 0.006978838542948213, 'fit_intercept': False, 'intercept_scaling': 3.2088152272267405, 'max_iter': 229, 'class_weight': None}. Best is trial 10 with value: 0.9051876201427339.
+[I 2025-05-25 13:18:01,688] Trial 11 finished with value: 0.9051876201427339 and parameters: {'penalty': 'elasticnet', 'solver': 'newton-cg', 'l1_ratio': 0.9983742646740089, 'C': 40.386990961504246, 'tol': 0.007257007541009215, 'fit_intercept': False, 'intercept_scaling': 3.211011749179071, 'max_iter': 51, 'class_weight': None}. Best is trial 10 with value: 0.9051876201427339.
+[I 2025-05-25 13:18:01,818] Trial 12 finished with value: 0.9051876201427339 and parameters: {'penalty': 'elasticnet', 'solver': 'newton-cg', 'l1_ratio': 0.996967044759341, 'C': 59.02936481728431, 'tol': 0.0023061189087125646, 'fit_intercept': False, 'intercept_scaling': 9.96785064558367, 'max_iter': 60, 'class_weight': None}. Best is trial 10 with value: 0.9051876201427339.
+[I 2025-05-25 13:18:01,952] Trial 13 finished with value: 0.9051876201427339 and parameters: {'penalty': 'elasticnet', 'solver': 'newton-cg', 'l1_ratio': 0.986519484239972, 'C': 97.75276578043446, 'tol': 0.0016151840697192668, 'fit_intercept': False, 'intercept_scaling': 2.6633383397985364, 'max_iter': 87, 'class_weight': None}. Best is trial 10 with value: 0.9051876201427339.
+[I 2025-05-25 13:18:02,082] Trial 14 finished with value: 0.9051876201427339 and parameters: {'penalty': 'elasticnet', 'solver': 'newton-cg', 'l1_ratio': 0.80106743888361, 'C': 7.33224278879982, 'tol': 0.0022228615279804927, 'fit_intercept': False, 'intercept_scaling': 2.1187472116753328, 'max_iter': 220, 'class_weight': None}. Best is trial 10 with value: 0.9051876201427339.
+[I 2025-05-25 13:18:02,219] Trial 15 finished with value: 0.9051876201427339 and parameters: {'penalty': 'elasticnet', 'solver': 'newton-cg', 'l1_ratio': 0.3572263354871106, 'C': 12.604717543490006, 'tol': 0.0007830042870032712, 'fit_intercept': False, 'intercept_scaling': 5.820044652698824, 'max_iter': 222, 'class_weight': None}. Best is trial 10 with value: 0.9051876201427339.
+[I 2025-05-25 13:18:02,343] Trial 16 finished with value: 0.907404151363699 and parameters: {'penalty': 'elasticnet', 'solver': 'newton-cg', 'l1_ratio': 0.4396869616115048, 'C': 0.8908258925900464, 'tol': 0.00527798996140807, 'fit_intercept': False, 'intercept_scaling': 3.2985809305725198, 'max_iter': 345, 'class_weight': None}. Best is trial 16 with value: 0.907404151363699.
+[I 2025-05-25 13:18:02,470] Trial 17 finished with value: 0.9075388672722806 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 1.0697730203878506, 'tol': 0.004122871839249181, 'fit_intercept': False, 'intercept_scaling': 5.176897244081941, 'max_iter': 367, 'class_weight': None}. Best is trial 17 with value: 0.9075388672722806.
+[I 2025-05-25 13:18:02,598] Trial 18 finished with value: 0.9075388672722806 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 0.7371918003384584, 'tol': 0.0034815262847136775, 'fit_intercept': False, 'intercept_scaling': 5.501640117230048, 'max_iter': 370, 'class_weight': None}. Best is trial 17 with value: 0.9075388672722806.
+[I 2025-05-25 13:18:02,717] Trial 19 finished with value: 0.7812053977438322 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 0.0036100964057104454, 'tol': 0.0010374628302672832, 'fit_intercept': False, 'intercept_scaling': 5.529780650078908, 'max_iter': 480, 'class_weight': None}. Best is trial 17 with value: 0.9075388672722806.
+[I 2025-05-25 13:18:02,833] Trial 20 finished with value: 0.8577242629816896 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 0.010272743136762618, 'tol': 0.0034749321900130596, 'fit_intercept': False, 'intercept_scaling': 6.1734193775492585, 'max_iter': 311, 'class_weight': None}. Best is trial 17 with value: 0.9075388672722806.
+[I 2025-05-25 13:18:02,960] Trial 21 finished with value: 0.9075388672722806 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 0.7100769633215848, 'tol': 0.003802720448714838, 'fit_intercept': False, 'intercept_scaling': 4.776932166072665, 'max_iter': 368, 'class_weight': None}. Best is trial 17 with value: 0.9075388672722806.
+[I 2025-05-25 13:18:03,093] Trial 22 finished with value: 0.9087462105384473 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 0.6839267345628709, 'tol': 0.0007359023450588118, 'fit_intercept': False, 'intercept_scaling': 5.11892532087651, 'max_iter': 529, 'class_weight': None}. Best is trial 22 with value: 0.9087462105384473.
+[I 2025-05-25 13:18:03,224] Trial 23 finished with value: 0.9075388672722806 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 0.7415590949967036, 'tol': 0.0007470282586134679, 'fit_intercept': False, 'intercept_scaling': 7.565816045605397, 'max_iter': 503, 'class_weight': None}. Best is trial 22 with value: 0.9087462105384473.
+[I 2025-05-25 13:18:03,344] Trial 24 finished with value: 0.8577242629816896 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 0.010276820446386411, 'tol': 0.0015089430752136307, 'fit_intercept': False, 'intercept_scaling': 8.440654971139677, 'max_iter': 580, 'class_weight': None}. Best is trial 22 with value: 0.9087462105384473.
+[I 2025-05-25 13:18:03,477] Trial 25 finished with value: 0.9063332432863559 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 1.5127633586558453, 'tol': 0.0004860689013576585, 'fit_intercept': False, 'intercept_scaling': 5.037682915794875, 'max_iter': 663, 'class_weight': None}. Best is trial 22 with value: 0.9087462105384473.
+[I 2025-05-25 13:18:03,602] Trial 26 finished with value: 0.9110277704661212 and parameters: {'penalty': 'l2', 'solver': 'saga', 'C': 0.2877993148792891, 'tol': 0.0030645165919423135, 'fit_intercept': False, 'intercept_scaling': 6.062667595158414, 'max_iter': 424, 'class_weight': None}. Best is trial 26 with value: 0.9110277704661212.
+[I 2025-05-25 13:18:03,732] Trial 27 finished with value: 0.9051876201427339 and parameters: {'penalty': 'l2', 'solver': 'saga', 'C': 13.880374254210732, 'tol': 0.0013474723785755292, 'fit_intercept': False, 'intercept_scaling': 6.708137817766872, 'max_iter': 794, 'class_weight': None}. Best is trial 26 with value: 0.9110277704661212.
+Error with parameters {'penalty': 'none', 'C': 0.25481769848077096, 'solver': 'saga', 'tol': 0.002590215633795531, 'fit_intercept': False, 'intercept_scaling': 8.974272519153624, 'max_iter': 442, 'class_weight': None, 'random_state': 42}: 
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\model_selection\_validation.py", line 888, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\pipeline.py", line 473, in fit
+    self._final_estimator.fit(Xt, y, **last_step_params["fit"])
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 1466, in wrapper
+    estimator._validate_params()
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 666, in _validate_params
+    validate_parameter_constraints(
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\utils\_param_validation.py", line 95, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l2', 'elasticnet', 'l1'} or None. Got 'none' instead.
+
+[I 2025-05-25 13:18:03,815] Trial 28 finished with value: -inf and parameters: {'penalty': 'none', 'solver': 'saga', 'C': 0.25481769848077096, 'tol': 0.002590215633795531, 'fit_intercept': False, 'intercept_scaling': 8.974272519153624, 'max_iter': 442, 'class_weight': None}. Best is trial 26 with value: 0.9110277704661212.
+[I 2025-05-25 13:18:03,929] Trial 29 finished with value: 0.5553287209142226 and parameters: {'penalty': 'l1', 'solver': 'saga', 'C': 1.121271519666873e-05, 'tol': 0.0001719199388333667, 'fit_intercept': False, 'intercept_scaling': 6.266328302136735, 'max_iter': 553, 'class_weight': 'balanced'}. Best is trial 26 with value: 0.9110277704661212.
+[I 2025-05-25 13:18:04,059] Trial 30 finished with value: 0.5553287209142226 and parameters: {'penalty': 'l2', 'solver': 'saga', 'C': 0.000917585253117879, 'tol': 0.0005747277743396453, 'fit_intercept': False, 'intercept_scaling': 4.3659084359270635, 'max_iter': 291, 'class_weight': None}. Best is trial 26 with value: 0.9110277704661212.
+[I 2025-05-25 13:18:04,183] Trial 31 finished with value: 0.9098215075644351 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 0.2664539622615485, 'tol': 0.0038329925131957367, 'fit_intercept': False, 'intercept_scaling': 5.352168032941096, 'max_iter': 416, 'class_weight': None}. Best is trial 26 with value: 0.9110277704661212.
+[I 2025-05-25 13:18:04,308] Trial 32 finished with value: 0.9110277704661212 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 0.23139278494432333, 'tol': 0.004493628059248098, 'fit_intercept': False, 'intercept_scaling': 5.245605277933739, 'max_iter': 426, 'class_weight': None}. Best is trial 26 with value: 0.9110277704661212.
+[I 2025-05-25 13:18:04,431] Trial 33 finished with value: 0.9081944297792232 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 0.1980995703984936, 'tol': 0.009582845990535336, 'fit_intercept': False, 'intercept_scaling': 6.164643033372394, 'max_iter': 453, 'class_weight': None}. Best is trial 26 with value: 0.9110277704661212.
+[I 2025-05-25 13:18:04,556] Trial 34 finished with value: 0.8918121104217187 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 0.0271810768538982, 'tol': 0.00031958693977628523, 'fit_intercept': False, 'intercept_scaling': 4.008132193039437, 'max_iter': 543, 'class_weight': None}. Best is trial 26 with value: 0.9110277704661212.
+[I 2025-05-25 13:18:04,678] Trial 35 finished with value: 0.9111592309918135 and parameters: {'penalty': 'l2', 'solver': 'saga', 'C': 0.28582016195773047, 'tol': 0.005257356710178173, 'fit_intercept': True, 'intercept_scaling': 5.131115130404712, 'max_iter': 993, 'class_weight': None}. Best is trial 35 with value: 0.9111592309918135.
+Error with parameters {'penalty': 'none', 'C': 0.02370409080528608, 'solver': 'saga', 'tol': 0.005384415018929109, 'fit_intercept': True, 'intercept_scaling': 5.83144203498869, 'max_iter': 987, 'class_weight': 'balanced', 'random_state': 42}: 
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\model_selection\_validation.py", line 888, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\pipeline.py", line 473, in fit
+    self._final_estimator.fit(Xt, y, **last_step_params["fit"])
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 1466, in wrapper
+    estimator._validate_params()
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 666, in _validate_params
+    validate_parameter_constraints(
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\utils\_param_validation.py", line 95, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l2', 'elasticnet', 'l1'} or None. Got 'none' instead.
+
+[I 2025-05-25 13:18:04,761] Trial 36 finished with value: -inf and parameters: {'penalty': 'none', 'solver': 'saga', 'C': 0.02370409080528608, 'tol': 0.005384415018929109, 'fit_intercept': True, 'intercept_scaling': 5.83144203498869, 'max_iter': 987, 'class_weight': 'balanced'}. Best is trial 35 with value: 0.9111592309918135.
+[I 2025-05-25 13:18:04,882] Trial 37 finished with value: 0.9062632729094272 and parameters: {'penalty': 'l2', 'solver': 'saga', 'C': 0.07600735727340271, 'tol': 0.0026412730520478235, 'fit_intercept': True, 'intercept_scaling': 7.328928128121895, 'max_iter': 135, 'class_weight': None}. Best is trial 35 with value: 0.9111592309918135.
+[I 2025-05-25 13:18:05,024] Trial 38 finished with value: 0.9039196955608558 and parameters: {'penalty': 'l2', 'solver': 'saga', 'C': 2.65287730081461, 'tol': 7.170358576375902e-05, 'fit_intercept': True, 'intercept_scaling': 3.6363195029908173, 'max_iter': 738, 'class_weight': None}. Best is trial 35 with value: 0.9111592309918135.
+[I 2025-05-25 13:18:05,138] Trial 39 finished with value: 0.5553287209142226 and parameters: {'penalty': 'l1', 'solver': 'liblinear', 'C': 3.6346566457989484e-05, 'tol': 0.0070751349600501855, 'fit_intercept': True, 'intercept_scaling': 6.663455275991324, 'max_iter': 605, 'class_weight': 'balanced'}. Best is trial 35 with value: 0.9111592309918135.
+Error with parameters {'penalty': 'none', 'C': 0.12430634714155442, 'solver': 'saga', 'tol': 0.009983403587812571, 'fit_intercept': True, 'intercept_scaling': 4.486505516025687, 'max_iter': 432, 'class_weight': None, 'random_state': 42}: 
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\model_selection\_validation.py", line 888, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\pipeline.py", line 473, in fit
+    self._final_estimator.fit(Xt, y, **last_step_params["fit"])
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 1466, in wrapper
+    estimator._validate_params()
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 666, in _validate_params
+    validate_parameter_constraints(
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\utils\_param_validation.py", line 95, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l2', 'elasticnet', 'l1'} or None. Got 'none' instead.
+
+[I 2025-05-25 13:18:05,222] Trial 40 finished with value: -inf and parameters: {'penalty': 'none', 'solver': 'saga', 'C': 0.12430634714155442, 'tol': 0.009983403587812571, 'fit_intercept': True, 'intercept_scaling': 4.486505516025687, 'max_iter': 432, 'class_weight': None}. Best is trial 35 with value: 0.9111592309918135.
+[I 2025-05-25 13:18:05,350] Trial 41 finished with value: 0.9111592309918135 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 0.3654846875133254, 'tol': 0.0018870960977493897, 'fit_intercept': True, 'intercept_scaling': 5.158657119348136, 'max_iter': 813, 'class_weight': None}. Best is trial 35 with value: 0.9111592309918135.
+[I 2025-05-25 13:18:05,470] Trial 42 finished with value: 0.9072879342003926 and parameters: {'penalty': 'l2', 'solver': 'lbfgs', 'C': 0.2999280665808951, 'tol': 0.004468658140813173, 'fit_intercept': True, 'intercept_scaling': 5.433128587447065, 'max_iter': 836, 'class_weight': None}. Best is trial 35 with value: 0.9111592309918135.
+[I 2025-05-25 13:18:05,595] Trial 43 finished with value: 0.9111592309918135 and parameters: {'penalty': 'l2', 'solver': 'sag', 'C': 0.33680202355851757, 'tol': 0.0028147274436352244, 'fit_intercept': True, 'intercept_scaling': 4.835857537690095, 'max_iter': 987, 'class_weight': None}. Best is trial 35 with value: 0.9111592309918135.
+[I 2025-05-25 13:18:05,711] Trial 44 finished with value: 0.9030852356121517 and parameters: {'penalty': 'l2', 'solver': 'liblinear', 'C': 0.049464063832094035, 'tol': 0.0016453594491596852, 'fit_intercept': True, 'intercept_scaling': 4.696123814243239, 'max_iter': 984, 'class_weight': None}. Best is trial 35 with value: 0.9111592309918135.
+[I 2025-05-25 13:18:05,837] Trial 45 finished with value: 0.9111592309918135 and parameters: {'penalty': 'l2', 'solver': 'saga', 'C': 0.3544216877486785, 'tol': 0.0011153195858253954, 'fit_intercept': True, 'intercept_scaling': 3.8469788121286332, 'max_iter': 940, 'class_weight': None}. Best is trial 35 with value: 0.9111592309918135.
+[I 2025-05-25 13:18:05,964] Trial 46 finished with value: 0.8970257378493587 and parameters: {'penalty': 'l1', 'solver': 'saga', 'C': 1.8253594149377277, 'tol': 0.00288603240042264, 'fit_intercept': True, 'intercept_scaling': 1.4249594809268062, 'max_iter': 941, 'class_weight': 'balanced'}. Best is trial 35 with value: 0.9111592309918135.
+[I 2025-05-25 13:18:06,096] Trial 47 finished with value: 0.9039196955608558 and parameters: {'penalty': 'l2', 'solver': 'saga', 'C': 4.3107722055511815, 'tol': 0.001089523640231007, 'fit_intercept': True, 'intercept_scaling': 3.8935731479618605, 'max_iter': 889, 'class_weight': None}. Best is trial 35 with value: 0.9111592309918135.
+[I 2025-05-25 13:18:06,219] Trial 48 finished with value: 0.880055486899656 and parameters: {'penalty': 'l2', 'solver': 'saga', 'C': 0.017414882127523325, 'tol': 0.0019500909357636654, 'fit_intercept': True, 'intercept_scaling': 2.6645542579712216, 'max_iter': 947, 'class_weight': None}. Best is trial 35 with value: 0.9111592309918135.
+[I 2025-05-25 13:18:06,304] Trial 49 finished with value: -inf and parameters: {'penalty': 'none', 'solver': 'lbfgs', 'C': 0.3976550524654489, 'tol': 0.0011580211341678543, 'fit_intercept': True, 'intercept_scaling': 4.224959856362426, 'max_iter': 809, 'class_weight': None}. Best is trial 35 with value: 0.9111592309918135.
+Error with parameters {'penalty': 'none', 'C': 0.3976550524654489, 'solver': 'lbfgs', 'tol': 0.0011580211341678543, 'fit_intercept': True, 'intercept_scaling': 4.224959856362426, 'max_iter': 809, 'class_weight': None, 'random_state': 42}: 
+All the 5 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\model_selection\_validation.py", line 888, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 1473, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\pipeline.py", line 473, in fit
+    self._final_estimator.fit(Xt, y, **last_step_params["fit"])
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 1466, in wrapper
+    estimator._validate_params()
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\base.py", line 666, in _validate_params
+    validate_parameter_constraints(
+  File "C:\Users\bakhtiyar\.conda\envs\myenv\lib\site-packages\sklearn\utils\_param_validation.py", line 95, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l2', 'elasticnet', 'l1'} or None. Got 'none' instead.
+
+Best parameters: {'penalty': 'l2', 'solver': 'saga', 'C': 0.28582016195773047, 'tol': 0.005257356710178173, 'fit_intercept': True, 'intercept_scaling': 5.131115130404712, 'max_iter': 993, 'class_weight': None}
+Best f1_weighted score: 0.9111592309918135
+Accuracy: 0.925
+
+Classification Report:
+               precision    recall  f1-score   support
+
+       False       0.93      0.95      0.94       130
+        True       0.91      0.87      0.89        70
+
+    accuracy                           0.93       200
+   macro avg       0.92      0.91      0.92       200
+weighted avg       0.92      0.93      0.92       200
+
+Max RAM Usage: 0.78 MB
+Training time: 0.0382 s
+Inference time: 0.0046 s
+
+Process finished with exit code 0
