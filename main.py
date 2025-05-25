@@ -70,15 +70,15 @@ def main():
 
             elif choice == "2":
                 print("Input 'b' to go back.")
-                input_val = input("Enter monitoring interval in minutes: ")
-                if input_val == "b":
+                input_valA = input("Enter checking activity interval in minutes: ")
+                if input_valA == "b":
                     continue
-                input_val = input("Enter lock period in minutes when triggered: ")
-                if input_val == "b":
+                input_valB = input("Enter lock period in minutes when triggered: ")
+                if input_valB == "b":
                     continue
 
-                interval = float(input_val)
-                lock_period = int(input_val)
+                interval = float(input_valA)
+                lock_period = int(input_valB)
 
                 # Convert interval to seconds for repeat_with_interval
                 interval_seconds = interval * 60
