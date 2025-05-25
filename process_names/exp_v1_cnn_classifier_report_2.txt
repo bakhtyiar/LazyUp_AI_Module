@@ -1,74 +1,501 @@
-Начало оптимизации гиперпараметров с Optuna...
-[I 2025-05-24 18:42:54,606] A new study created in memory with name: cnn_optimization
-2025-05-24 18:42:54.609450: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+C:\Users\bakhtiyar\.conda\envs\myenv\python.exe C:\Users\bakhtiyar\Projects\LazyUp_AI_Module\process_names\exp_v1_cnn_classifier.py
+       timestamp  ...   mode
+0  1745197431078  ...  False
+1  1745197491078  ...  False
+2  1745197551078  ...  False
+3  1745197611078  ...  False
+4  1745197671078  ...  False
+
+[5 rows x 6 columns]
+[I 2025-05-25 12:11:02,822] A new study created in memory with name: no-name-7a15374e-0e60-4c0c-8c32-b8093c0860bd
+2025-05-25 12:11:02.830481: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
 To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2025-05-24 18:42:54.610159: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
-[I 2025-05-24 18:42:56,654] Trial 0 finished with value: 0.0833333432674408 and parameters: {'batch_size': 80, 'epochs': 10, 'n_conv_layers': 2, 'optimizer': 'sgd', 'learning_rate': 1.0797042754892915e-05, 'momentum': 0.1979316624374762, 'filters_layer_0': 192, 'kernel_size_layer_0': 4, 'activation_layer_0': 'relu', 'pool_size_layer_0': 2, 'filters_layer_1': 96, 'kernel_size_layer_1': 3, 'activation_layer_1': 'relu', 'global_pooling': 'avg', 'n_dense_layers': 3, 'dense_units_0': 256, 'dense_activation_0': 'relu', 'dropout_0': 0.36731103944743804, 'dense_units_1': 128, 'dense_activation_1': 'selu', 'dropout_1': 0.49637055748974135, 'dense_units_2': 64, 'dense_activation_2': 'selu', 'dropout_2': 0.23140320132950928, 'patience': 6}. Best is trial 0 with value: 0.0833333432674408.
-[I 2025-05-24 18:42:58,937] Trial 1 finished with value: 0.8571428656578064 and parameters: {'batch_size': 112, 'epochs': 17, 'n_conv_layers': 2, 'optimizer': 'sgd', 'learning_rate': 0.0006488849812646601, 'momentum': 0.2550428023982381, 'filters_layer_0': 192, 'kernel_size_layer_0': 4, 'activation_layer_0': 'relu', 'pool_size_layer_0': 2, 'filters_layer_1': 192, 'kernel_size_layer_1': 4, 'activation_layer_1': 'elu', 'global_pooling': 'max', 'n_dense_layers': 3, 'dense_units_0': 160, 'dense_activation_0': 'relu', 'dropout_0': 0.16302412989456375, 'dense_units_1': 256, 'dense_activation_1': 'elu', 'dropout_1': 0.48503191211824903, 'dense_units_2': 192, 'dense_activation_2': 'selu', 'dropout_2': 0.4907125082778745, 'patience': 9}. Best is trial 1 with value: 0.8571428656578064.
-[I 2025-05-24 18:43:00,664] Trial 2 finished with value: 1.0 and parameters: {'batch_size': 96, 'epochs': 11, 'n_conv_layers': 1, 'optimizer': 'rmsprop', 'learning_rate': 0.007493320880885453, 'filters_layer_0': 64, 'kernel_size_layer_0': 2, 'activation_layer_0': 'relu', 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 64, 'dense_activation_0': 'relu', 'dropout_0': 0.23939974553930077, 'patience': 5}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:02,277] Trial 3 finished with value: 0.1428571492433548 and parameters: {'batch_size': 64, 'epochs': 17, 'n_conv_layers': 2, 'optimizer': 'sgd', 'learning_rate': 1.5808440299497954e-05, 'momentum': 0.41772284657641023, 'filters_layer_0': 32, 'kernel_size_layer_0': 2, 'activation_layer_0': 'selu', 'pool_size_layer_0': 3, 'filters_layer_1': 160, 'kernel_size_layer_1': 5, 'activation_layer_1': 'relu', 'global_pooling': 'max', 'n_dense_layers': 2, 'dense_units_0': 96, 'dense_activation_0': 'relu', 'dropout_0': 0.221029228269565, 'dense_units_1': 96, 'dense_activation_1': 'relu', 'dropout_1': 0.13785106069743264, 'patience': 5}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:04,469] Trial 4 finished with value: 0.9523809552192688 and parameters: {'batch_size': 128, 'epochs': 12, 'n_conv_layers': 3, 'optimizer': 'adam', 'learning_rate': 0.0007009572426510536, 'filters_layer_0': 96, 'kernel_size_layer_0': 2, 'activation_layer_0': 'selu', 'pool_size_layer_0': 2, 'filters_layer_1': 64, 'kernel_size_layer_1': 5, 'activation_layer_1': 'relu', 'pool_size_layer_1': 2, 'filters_layer_2': 160, 'kernel_size_layer_2': 2, 'activation_layer_2': 'selu', 'global_pooling': 'avg', 'n_dense_layers': 3, 'dense_units_0': 64, 'dense_activation_0': 'elu', 'dropout_0': 0.41741772563106505, 'dense_units_1': 160, 'dense_activation_1': 'selu', 'dropout_1': 0.1236301159195218, 'dense_units_2': 192, 'dense_activation_2': 'elu', 'dropout_2': 0.3058659416218179, 'patience': 5}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:07,520] Trial 5 finished with value: 0.8452380895614624 and parameters: {'batch_size': 96, 'epochs': 21, 'n_conv_layers': 4, 'optimizer': 'rmsprop', 'learning_rate': 0.00010750438205012756, 'filters_layer_0': 224, 'kernel_size_layer_0': 2, 'activation_layer_0': 'relu', 'pool_size_layer_0': 2, 'filters_layer_1': 32, 'kernel_size_layer_1': 4, 'activation_layer_1': 'selu', 'pool_size_layer_1': 3, 'filters_layer_2': 256, 'kernel_size_layer_2': 3, 'activation_layer_2': 'relu', 'pool_size_layer_2': 3, 'filters_layer_3': 64, 'kernel_size_layer_3': 3, 'activation_layer_3': 'selu', 'global_pooling': 'max', 'n_dense_layers': 3, 'dense_units_0': 160, 'dense_activation_0': 'selu', 'dropout_0': 0.3620796944163317, 'dense_units_1': 32, 'dense_activation_1': 'relu', 'dropout_1': 0.22599302360476484, 'dense_units_2': 224, 'dense_activation_2': 'relu', 'dropout_2': 0.16600183139393598, 'patience': 6}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:09,224] Trial 6 finished with value: 0.02380952797830105 and parameters: {'batch_size': 32, 'epochs': 19, 'n_conv_layers': 2, 'optimizer': 'sgd', 'learning_rate': 0.00038818150631835256, 'momentum': 0.2909982478723305, 'filters_layer_0': 128, 'kernel_size_layer_0': 3, 'activation_layer_0': 'selu', 'pool_size_layer_0': 3, 'filters_layer_1': 128, 'kernel_size_layer_1': 2, 'activation_layer_1': 'elu', 'global_pooling': 'avg', 'n_dense_layers': 2, 'dense_units_0': 224, 'dense_activation_0': 'relu', 'dropout_0': 0.19058866579962652, 'dense_units_1': 96, 'dense_activation_1': 'relu', 'dropout_1': 0.35547138727694316, 'patience': 6}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:11,098] Trial 7 finished with value: 0.7380952835083008 and parameters: {'batch_size': 80, 'epochs': 13, 'n_conv_layers': 1, 'optimizer': 'adam', 'learning_rate': 1.948977725573859e-05, 'filters_layer_0': 96, 'kernel_size_layer_0': 5, 'activation_layer_0': 'selu', 'global_pooling': 'avg', 'n_dense_layers': 3, 'dense_units_0': 192, 'dense_activation_0': 'relu', 'dropout_0': 0.43722970269100503, 'dense_units_1': 128, 'dense_activation_1': 'relu', 'dropout_1': 0.11997764337468048, 'dense_units_2': 160, 'dense_activation_2': 'selu', 'dropout_2': 0.4834020459629135, 'patience': 10}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:12,764] Trial 8 finished with value: 0.9523809552192688 and parameters: {'batch_size': 96, 'epochs': 16, 'n_conv_layers': 2, 'optimizer': 'adam', 'learning_rate': 0.0006574594066169449, 'filters_layer_0': 192, 'kernel_size_layer_0': 4, 'activation_layer_0': 'selu', 'pool_size_layer_0': 2, 'filters_layer_1': 64, 'kernel_size_layer_1': 5, 'activation_layer_1': 'elu', 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 64, 'dense_activation_0': 'relu', 'dropout_0': 0.38314441062810367, 'patience': 6}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:14,714] Trial 9 finished with value: 0.9523809552192688 and parameters: {'batch_size': 64, 'epochs': 28, 'n_conv_layers': 1, 'optimizer': 'rmsprop', 'learning_rate': 0.00013474870238698293, 'filters_layer_0': 224, 'kernel_size_layer_0': 5, 'activation_layer_0': 'elu', 'global_pooling': 'max', 'n_dense_layers': 2, 'dense_units_0': 160, 'dense_activation_0': 'selu', 'dropout_0': 0.39135007088069296, 'dense_units_1': 64, 'dense_activation_1': 'relu', 'dropout_1': 0.4080231076480073, 'patience': 9}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:16,375] Trial 10 finished with value: 1.0 and parameters: {'batch_size': 16, 'epochs': 25, 'n_conv_layers': 1, 'optimizer': 'rmsprop', 'learning_rate': 0.009556485531218642, 'filters_layer_0': 32, 'kernel_size_layer_0': 3, 'activation_layer_0': 'elu', 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 32, 'dense_activation_0': 'elu', 'dropout_0': 0.2649958179640848, 'patience': 3}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:17,904] Trial 11 finished with value: 1.0 and parameters: {'batch_size': 16, 'epochs': 25, 'n_conv_layers': 1, 'optimizer': 'rmsprop', 'learning_rate': 0.009140506815428657, 'filters_layer_0': 32, 'kernel_size_layer_0': 3, 'activation_layer_0': 'elu', 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 32, 'dense_activation_0': 'elu', 'dropout_0': 0.2699243161235152, 'patience': 3}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:19,674] Trial 12 finished with value: 1.0 and parameters: {'batch_size': 48, 'epochs': 24, 'n_conv_layers': 1, 'optimizer': 'rmsprop', 'learning_rate': 0.00981414382385802, 'filters_layer_0': 64, 'kernel_size_layer_0': 3, 'activation_layer_0': 'elu', 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 32, 'dense_activation_0': 'elu', 'dropout_0': 0.28686063424905595, 'patience': 3}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:22,039] Trial 13 finished with value: 1.0 and parameters: {'batch_size': 16, 'epochs': 30, 'n_conv_layers': 3, 'optimizer': 'rmsprop', 'learning_rate': 0.0025270149240400937, 'filters_layer_0': 64, 'kernel_size_layer_0': 2, 'activation_layer_0': 'elu', 'pool_size_layer_0': 3, 'filters_layer_1': 256, 'kernel_size_layer_1': 2, 'activation_layer_1': 'selu', 'pool_size_layer_1': 2, 'filters_layer_2': 32, 'kernel_size_layer_2': 5, 'activation_layer_2': 'elu', 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 96, 'dense_activation_0': 'elu', 'dropout_0': 0.11088288977562488, 'patience': 4}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:23,837] Trial 14 finished with value: 1.0 and parameters: {'batch_size': 48, 'epochs': 24, 'n_conv_layers': 1, 'optimizer': 'rmsprop', 'learning_rate': 0.0028081684478593123, 'filters_layer_0': 32, 'kernel_size_layer_0': 3, 'activation_layer_0': 'relu', 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 96, 'dense_activation_0': 'elu', 'dropout_0': 0.49585168256514744, 'patience': 4}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:26,654] Trial 15 finished with value: 0.9523809552192688 and parameters: {'batch_size': 128, 'epochs': 21, 'n_conv_layers': 4, 'optimizer': 'rmsprop', 'learning_rate': 0.00286572838122455, 'filters_layer_0': 128, 'kernel_size_layer_0': 2, 'activation_layer_0': 'elu', 'pool_size_layer_0': 3, 'filters_layer_1': 256, 'kernel_size_layer_1': 3, 'activation_layer_1': 'selu', 'pool_size_layer_1': 3, 'filters_layer_2': 32, 'kernel_size_layer_2': 5, 'activation_layer_2': 'relu', 'pool_size_layer_2': 2, 'filters_layer_3': 224, 'kernel_size_layer_3': 5, 'activation_layer_3': 'elu', 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 32, 'dense_activation_0': 'selu', 'dropout_0': 0.24702624221774785, 'patience': 4}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:28,581] Trial 16 finished with value: 1.0 and parameters: {'batch_size': 96, 'epochs': 27, 'n_conv_layers': 1, 'optimizer': 'rmsprop', 'learning_rate': 0.005005288180778575, 'filters_layer_0': 64, 'kernel_size_layer_0': 3, 'activation_layer_0': 'relu', 'global_pooling': 'max', 'n_dense_layers': 2, 'dense_units_0': 64, 'dense_activation_0': 'elu', 'dropout_0': 0.3101609847253825, 'dense_units_1': 256, 'dense_activation_1': 'elu', 'dropout_1': 0.24247160950870897, 'patience': 8}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:31,163] Trial 17 finished with value: 1.0 and parameters: {'batch_size': 32, 'epochs': 14, 'n_conv_layers': 3, 'optimizer': 'rmsprop', 'learning_rate': 0.0014174704450127622, 'filters_layer_0': 96, 'kernel_size_layer_0': 2, 'activation_layer_0': 'relu', 'pool_size_layer_0': 3, 'filters_layer_1': 192, 'kernel_size_layer_1': 3, 'activation_layer_1': 'elu', 'pool_size_layer_1': 3, 'filters_layer_2': 224, 'kernel_size_layer_2': 2, 'activation_layer_2': 'elu', 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 128, 'dense_activation_0': 'relu', 'dropout_0': 0.31879469273094935, 'patience': 3}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:32,889] Trial 18 finished with value: 1.0 and parameters: {'batch_size': 112, 'epochs': 10, 'n_conv_layers': 1, 'optimizer': 'rmsprop', 'learning_rate': 0.0059493687272136695, 'filters_layer_0': 64, 'kernel_size_layer_0': 3, 'activation_layer_0': 'elu', 'global_pooling': 'avg', 'n_dense_layers': 2, 'dense_units_0': 128, 'dense_activation_0': 'elu', 'dropout_0': 0.13988475280013635, 'dense_units_1': 192, 'dense_activation_1': 'elu', 'dropout_1': 0.30306493346200003, 'patience': 7}. Best is trial 2 with value: 1.0.
-[I 2025-05-24 18:43:34,784] Trial 19 finished with value: 0.9523810148239136 and parameters: {'batch_size': 48, 'epochs': 22, 'n_conv_layers': 2, 'optimizer': 'adam', 'learning_rate': 0.001430664919904227, 'filters_layer_0': 32, 'kernel_size_layer_0': 4, 'activation_layer_0': 'relu', 'pool_size_layer_0': 2, 'filters_layer_1': 224, 'kernel_size_layer_1': 4, 'activation_layer_1': 'selu', 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 64, 'dense_activation_0': 'selu', 'dropout_0': 0.1998808736945609, 'patience': 5}. Best is trial 2 with value: 1.0.
-Лучшие гиперпараметры:
-    batch_size: 96
-    epochs: 11
+2025-05-25 12:11:02.831598: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+Layer shapes:
+input_1: [(None, 37)]
+embedding: (None, 37, 17)
+conv1d: (None, 37, 64)
+dropout: (None, 37, 64)
+conv1d_1: (None, 37, 256)
+max_pooling1d: (None, 18, 256)
+dropout_1: (None, 18, 256)
+conv1d_2: (None, 16, 64)
+dropout_2: (None, 16, 64)
+global_max_pooling1d: (None, 64)
+input_2: [(None, 1)]
+concatenate: (None, 65)
+dense: (None, 222)
+dropout_3: (None, 222)
+dense_1: (None, 143)
+dense_2: (None, 1)
+[I 2025-05-25 12:11:21,059] Trial 0 finished with value: 0.898809552192688 and parameters: {'embedding_dim': 17, 'n_conv_layers': 3, 'filters_0': 64, 'kernel_size_0': 2, 'activation_conv_0': 'selu', 'padding_0': 'same', 'use_pooling_0': True, 'pool_size_0': 1, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.34936419452074174, 'filters_1': 256, 'kernel_size_1': 2, 'activation_conv_1': 'elu', 'padding_1': 'same', 'use_pooling_1': True, 'pool_size_1': 2, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.19952884970005444, 'filters_2': 64, 'kernel_size_2': 3, 'activation_conv_2': 'relu', 'padding_2': 'valid', 'use_pooling_2': False, 'use_dropout_conv_2': True, 'dropout_rate_conv_2': 0.22262131774743948, 'global_pooling': 'max', 'n_dense_layers': 2, 'dense_units_0': 222, 'activation_dense_0': 'relu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.1954878488079388, 'dense_units_1': 143, 'activation_dense_1': 'elu', 'use_dropout_dense_1': False, 'optimizer': 'rmsprop', 'learning_rate': 0.0002143054966462011, 'rho': 0.9246734921217753, 'loss': 'binary_focal_loss', 'focal_loss_gamma': 2.468906502198709, 'focal_loss_alpha': 0.31671017859314055, 'batch_size': 16, 'patience': 7}. Best is trial 0 with value: 0.898809552192688.
+Layer shapes:
+input_3: [(None, 37)]
+embedding_1: (None, 37, 63)
+conv1d_3: (None, 35, 256)
+max_pooling1d_1: (None, 17, 256)
+dropout_4: (None, 17, 256)
+global_max_pooling1d_1: (None, 256)
+input_4: [(None, 1)]
+concatenate_1: (None, 257)
+dense_3: (None, 198)
+dense_4: (None, 126)
+dropout_5: (None, 126)
+dense_5: (None, 229)
+dropout_6: (None, 229)
+dense_6: (None, 1)
+[I 2025-05-25 12:11:31,255] Trial 1 finished with value: 0.9084821343421936 and parameters: {'embedding_dim': 63, 'n_conv_layers': 1, 'filters_0': 256, 'kernel_size_0': 3, 'activation_conv_0': 'elu', 'padding_0': 'valid', 'use_pooling_0': True, 'pool_size_0': 2, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.2751128611852268, 'global_pooling': 'max', 'n_dense_layers': 3, 'dense_units_0': 198, 'activation_dense_0': 'relu', 'use_dropout_dense_0': False, 'dense_units_1': 126, 'activation_dense_1': 'elu', 'use_dropout_dense_1': True, 'dropout_rate_dense_1': 0.33778832616257715, 'dense_units_2': 229, 'activation_dense_2': 'elu', 'use_dropout_dense_2': True, 'dropout_rate_dense_2': 0.3065809296039197, 'optimizer': 'rmsprop', 'learning_rate': 0.005594533957666432, 'rho': 0.8503855274039381, 'loss': 'binary_crossentropy', 'batch_size': 16, 'patience': 7}. Best is trial 1 with value: 0.9084821343421936.
+Layer shapes:
+input_5: [(None, 37)]
+embedding_2: (None, 37, 67)
+conv1d_4: (None, 36, 64)
+max_pooling1d_2: (None, 18, 64)
+global_average_pooling1d: (None, 64)
+input_6: [(None, 1)]
+concatenate_2: (None, 65)
+dense_7: (None, 176)
+dropout_7: (None, 176)
+dense_8: (None, 38)
+dense_9: (None, 189)
+dense_10: (None, 1)
+[I 2025-05-25 12:11:35,072] Trial 2 finished with value: 0.9188988208770752 and parameters: {'embedding_dim': 67, 'n_conv_layers': 1, 'filters_0': 64, 'kernel_size_0': 2, 'activation_conv_0': 'relu', 'padding_0': 'valid', 'use_pooling_0': True, 'pool_size_0': 2, 'use_dropout_conv_0': False, 'global_pooling': 'avg', 'n_dense_layers': 3, 'dense_units_0': 176, 'activation_dense_0': 'elu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.4704246744766868, 'dense_units_1': 38, 'activation_dense_1': 'elu', 'use_dropout_dense_1': False, 'dense_units_2': 189, 'activation_dense_2': 'relu', 'use_dropout_dense_2': False, 'optimizer': 'rmsprop', 'learning_rate': 0.0030533498647105296, 'rho': 0.9645692339104646, 'loss': 'binary_crossentropy', 'batch_size': 128, 'patience': 10}. Best is trial 2 with value: 0.9188988208770752.
+Layer shapes:
+input_7: [(None, 37)]
+embedding_3: (None, 37, 29)
+conv1d_5: (None, 37, 128)
+dropout_8: (None, 37, 128)
+conv1d_6: (None, 37, 32)
+dropout_9: (None, 37, 32)
+global_max_pooling1d_2: (None, 32)
+input_8: [(None, 1)]
+concatenate_3: (None, 33)
+dense_11: (None, 178)
+dense_12: (None, 170)
+dense_13: (None, 1)
+Layer shapes:
+input_9: [(None, 37)]
+embedding_4: (None, 37, 34)
+conv1d_7: (None, 37, 256)
+global_average_pooling1d_1: (None, 256)
+input_10: [(None, 1)]
+concatenate_4: (None, 257)
+dense_14: (None, 26)
+dropout_10: (None, 26)
+dense_15: (None, 112)
+dense_16: (None, 1)
+[I 2025-05-25 12:11:39,753] Trial 3 finished with value: 0.609375 and parameters: {'embedding_dim': 29, 'n_conv_layers': 2, 'filters_0': 128, 'kernel_size_0': 2, 'activation_conv_0': 'relu', 'padding_0': 'same', 'use_pooling_0': False, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.19293240854795154, 'filters_1': 32, 'kernel_size_1': 5, 'activation_conv_1': 'relu', 'padding_1': 'same', 'use_pooling_1': False, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.3417048573660043, 'global_pooling': 'max', 'n_dense_layers': 2, 'dense_units_0': 178, 'activation_dense_0': 'selu', 'use_dropout_dense_0': False, 'dense_units_1': 170, 'activation_dense_1': 'relu', 'use_dropout_dense_1': False, 'optimizer': 'sgd', 'learning_rate': 0.000823836902890338, 'momentum': 0.5287968825187749, 'loss': 'binary_focal_loss', 'focal_loss_gamma': 1.703195401555922, 'focal_loss_alpha': 0.10685565813043443, 'batch_size': 128, 'patience': 8}. Best is trial 2 with value: 0.9188988208770752.
+Layer shapes:
+input_11: [(None, 37)]
+embedding_5: (None, 37, 22)
+conv1d_8: (None, 37, 32)
+dropout_11: (None, 37, 32)
+global_max_pooling1d_3: (None, 32)
+input_12: [(None, 1)]
+concatenate_5: (None, 33)
+dense_17: (None, 247)
+dropout_12: (None, 247)
+dense_18: (None, 1)
+[I 2025-05-25 12:11:43,573] Trial 4 finished with value: 0.4813988208770752 and parameters: {'embedding_dim': 34, 'n_conv_layers': 1, 'filters_0': 256, 'kernel_size_0': 4, 'activation_conv_0': 'selu', 'padding_0': 'same', 'use_pooling_0': False, 'use_dropout_conv_0': False, 'global_pooling': 'avg', 'n_dense_layers': 2, 'dense_units_0': 26, 'activation_dense_0': 'elu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.15000441432306766, 'dense_units_1': 112, 'activation_dense_1': 'selu', 'use_dropout_dense_1': False, 'optimizer': 'sgd', 'learning_rate': 0.0002916756796648175, 'momentum': 0.05605254930209731, 'loss': 'binary_focal_loss', 'focal_loss_gamma': 2.74330276595938, 'focal_loss_alpha': 0.6829357039488855, 'batch_size': 128, 'patience': 7}. Best is trial 2 with value: 0.9188988208770752.
+[I 2025-05-25 12:11:45,669] Trial 5 finished with value: 0.9002976417541504 and parameters: {'embedding_dim': 22, 'n_conv_layers': 1, 'filters_0': 32, 'kernel_size_0': 5, 'activation_conv_0': 'selu', 'padding_0': 'same', 'use_pooling_0': False, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.276125949790353, 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 247, 'activation_dense_0': 'selu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.2588968705151893, 'optimizer': 'adam', 'learning_rate': 0.004254314993027146, 'beta1': 0.9009234804381269, 'beta2': 0.9149931560391737, 'loss': 'binary_focal_loss', 'focal_loss_gamma': 1.766533441694157, 'focal_loss_alpha': 0.7672727938623779, 'batch_size': 128, 'patience': 7}. Best is trial 2 with value: 0.9188988208770752.
+Layer shapes:
+input_13: [(None, 37)]
+embedding_6: (None, 37, 103)
+conv1d_9: (None, 37, 32)
+dropout_13: (None, 37, 32)
+global_max_pooling1d_4: (None, 32)
+input_14: [(None, 1)]
+concatenate_6: (None, 33)
+dense_19: (None, 63)
+dense_20: (None, 1)
+[I 2025-05-25 12:11:49,571] Trial 6 finished with value: 0.9241071343421936 and parameters: {'embedding_dim': 103, 'n_conv_layers': 1, 'filters_0': 32, 'kernel_size_0': 3, 'activation_conv_0': 'selu', 'padding_0': 'same', 'use_pooling_0': False, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.3428218350065193, 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 63, 'activation_dense_0': 'elu', 'use_dropout_dense_0': False, 'optimizer': 'rmsprop', 'learning_rate': 0.006182179787065901, 'rho': 0.9875986793844692, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 4}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_15: [(None, 37)]
+embedding_7: (None, 37, 72)
+conv1d_10: (None, 37, 64)
+dropout_14: (None, 37, 64)
+conv1d_11: (None, 37, 256)
+dropout_15: (None, 37, 256)
+conv1d_12: (None, 37, 128)
+dropout_16: (None, 37, 128)
+global_average_pooling1d_2: (None, 128)
+input_16: [(None, 1)]
+concatenate_7: (None, 129)
+dense_21: (None, 223)
+dense_22: (None, 1)
+[I 2025-05-25 12:11:59,415] Trial 7 finished with value: 0.609375 and parameters: {'embedding_dim': 72, 'n_conv_layers': 3, 'filters_0': 64, 'kernel_size_0': 5, 'activation_conv_0': 'selu', 'padding_0': 'same', 'use_pooling_0': False, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.3641745845997817, 'filters_1': 256, 'kernel_size_1': 5, 'activation_conv_1': 'relu', 'padding_1': 'same', 'use_pooling_1': False, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.31765776577095706, 'filters_2': 128, 'kernel_size_2': 3, 'activation_conv_2': 'selu', 'padding_2': 'same', 'use_pooling_2': True, 'pool_size_2': 1, 'use_dropout_conv_2': True, 'dropout_rate_conv_2': 0.14861259906264568, 'global_pooling': 'avg', 'n_dense_layers': 1, 'dense_units_0': 223, 'activation_dense_0': 'relu', 'use_dropout_dense_0': False, 'optimizer': 'sgd', 'learning_rate': 0.00013289540440563792, 'momentum': 0.8580010734029985, 'loss': 'binary_crossentropy', 'batch_size': 16, 'patience': 5}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_17: [(None, 37)]
+embedding_8: (None, 37, 73)
+conv1d_13: (None, 37, 256)
+conv1d_14: (None, 35, 128)
+global_average_pooling1d_3: (None, 128)
+input_18: [(None, 1)]
+concatenate_8: (None, 129)
+dense_23: (None, 156)
+dropout_17: (None, 156)
+dense_24: (None, 178)
+dropout_18: (None, 178)
+dense_25: (None, 1)
+[I 2025-05-25 12:12:12,182] Trial 8 finished with value: 0.6153273582458496 and parameters: {'embedding_dim': 73, 'n_conv_layers': 2, 'filters_0': 256, 'kernel_size_0': 4, 'activation_conv_0': 'relu', 'padding_0': 'same', 'use_pooling_0': True, 'pool_size_0': 1, 'use_dropout_conv_0': False, 'filters_1': 128, 'kernel_size_1': 3, 'activation_conv_1': 'relu', 'padding_1': 'valid', 'use_pooling_1': False, 'use_dropout_conv_1': False, 'global_pooling': 'avg', 'n_dense_layers': 2, 'dense_units_0': 156, 'activation_dense_0': 'elu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.43166057018354, 'dense_units_1': 178, 'activation_dense_1': 'selu', 'use_dropout_dense_1': True, 'dropout_rate_dense_1': 0.37332998243018356, 'optimizer': 'sgd', 'learning_rate': 0.0007996990256928048, 'momentum': 0.621850584719284, 'loss': 'binary_focal_loss', 'focal_loss_gamma': 2.6832283732024393, 'focal_loss_alpha': 0.5818517064410488, 'batch_size': 16, 'patience': 9}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_19: [(None, 37)]
+embedding_9: (None, 37, 72)
+conv1d_15: (None, 34, 256)
+max_pooling1d_3: (None, 17, 256)
+global_average_pooling1d_4: (None, 256)
+input_20: [(None, 1)]
+concatenate_9: (None, 257)
+dense_26: (None, 123)
+dense_27: (None, 1)
+[I 2025-05-25 12:12:20,893] Trial 9 finished with value: 0.9151785969734192 and parameters: {'embedding_dim': 72, 'n_conv_layers': 1, 'filters_0': 256, 'kernel_size_0': 4, 'activation_conv_0': 'relu', 'padding_0': 'valid', 'use_pooling_0': True, 'pool_size_0': 2, 'use_dropout_conv_0': False, 'global_pooling': 'avg', 'n_dense_layers': 1, 'dense_units_0': 123, 'activation_dense_0': 'elu', 'use_dropout_dense_0': False, 'optimizer': 'rmsprop', 'learning_rate': 0.00013222480851262907, 'rho': 0.8096242881716936, 'loss': 'binary_focal_loss', 'focal_loss_gamma': 2.175716172638309, 'focal_loss_alpha': 0.7054014501538168, 'batch_size': 16, 'patience': 4}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_21: [(None, 37)]
+embedding_10: (None, 37, 107)
+conv1d_16: (None, 35, 32)
+dropout_19: (None, 35, 32)
+conv1d_17: (None, 34, 64)
+global_max_pooling1d_5: (None, 64)
+input_22: [(None, 1)]
+concatenate_10: (None, 65)
+dense_28: (None, 70)
+dense_29: (None, 1)
+[I 2025-05-25 12:12:22,761] Trial 10 finished with value: 0.8816964030265808 and parameters: {'embedding_dim': 107, 'n_conv_layers': 2, 'filters_0': 32, 'kernel_size_0': 3, 'activation_conv_0': 'elu', 'padding_0': 'valid', 'use_pooling_0': False, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.44648354168799065, 'filters_1': 64, 'kernel_size_1': 2, 'activation_conv_1': 'selu', 'padding_1': 'valid', 'use_pooling_1': True, 'pool_size_1': 1, 'use_dropout_conv_1': False, 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 70, 'activation_dense_0': 'elu', 'use_dropout_dense_0': False, 'optimizer': 'adam', 'learning_rate': 0.009469983436146391, 'beta1': 0.9977287246495841, 'beta2': 0.8131947560270254, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 3}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_23: [(None, 37)]
+embedding_11: (None, 37, 125)
+conv1d_18: (None, 36, 64)
+max_pooling1d_4: (None, 18, 64)
+global_average_pooling1d_5: (None, 64)
+input_24: [(None, 1)]
+concatenate_11: (None, 65)
+dense_30: (None, 85)
+dropout_20: (None, 85)
+dense_31: (None, 20)
+dense_32: (None, 107)
+dense_33: (None, 1)
+[I 2025-05-25 12:12:27,249] Trial 11 finished with value: 0.9188988208770752 and parameters: {'embedding_dim': 125, 'n_conv_layers': 1, 'filters_0': 64, 'kernel_size_0': 2, 'activation_conv_0': 'relu', 'padding_0': 'valid', 'use_pooling_0': True, 'pool_size_0': 2, 'use_dropout_conv_0': False, 'global_pooling': 'avg', 'n_dense_layers': 3, 'dense_units_0': 85, 'activation_dense_0': 'elu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.4928430012495919, 'dense_units_1': 20, 'activation_dense_1': 'elu', 'use_dropout_dense_1': False, 'dense_units_2': 107, 'activation_dense_2': 'relu', 'use_dropout_dense_2': False, 'optimizer': 'rmsprop', 'learning_rate': 0.00243978986179404, 'rho': 0.9891787416065366, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 10}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_25: [(None, 37)]
+embedding_12: (None, 37, 103)
+conv1d_19: (None, 35, 32)
+max_pooling1d_5: (None, 17, 32)
+global_average_pooling1d_6: (None, 32)
+input_26: [(None, 1)]
+concatenate_12: (None, 33)
+dense_34: (None, 121)
+dropout_21: (None, 121)
+dense_35: (None, 23)
+dense_36: (None, 217)
+dense_37: (None, 1)
+[I 2025-05-25 12:12:33,115] Trial 12 finished with value: 0.918154776096344 and parameters: {'embedding_dim': 103, 'n_conv_layers': 1, 'filters_0': 32, 'kernel_size_0': 3, 'activation_conv_0': 'selu', 'padding_0': 'valid', 'use_pooling_0': True, 'pool_size_0': 2, 'use_dropout_conv_0': False, 'global_pooling': 'avg', 'n_dense_layers': 3, 'dense_units_0': 121, 'activation_dense_0': 'elu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.38370552437269456, 'dense_units_1': 23, 'activation_dense_1': 'relu', 'use_dropout_dense_1': False, 'dense_units_2': 217, 'activation_dense_2': 'relu', 'use_dropout_dense_2': False, 'optimizer': 'rmsprop', 'learning_rate': 0.002029082288113458, 'rho': 0.9880460441934611, 'loss': 'binary_crossentropy', 'batch_size': 32, 'patience': 5}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_27: [(None, 37)]
+embedding_13: (None, 37, 92)
+conv1d_20: (None, 36, 128)
+conv1d_21: (None, 33, 64)
+global_max_pooling1d_6: (None, 64)
+input_28: [(None, 1)]
+concatenate_13: (None, 65)
+dense_38: (None, 30)
+dense_39: (None, 239)
+dropout_22: (None, 239)
+dense_40: (None, 38)
+dense_41: (None, 1)
+[I 2025-05-25 12:12:39,830] Trial 13 finished with value: 0.9084821343421936 and parameters: {'embedding_dim': 92, 'n_conv_layers': 2, 'filters_0': 128, 'kernel_size_0': 2, 'activation_conv_0': 'relu', 'padding_0': 'valid', 'use_pooling_0': False, 'use_dropout_conv_0': False, 'filters_1': 64, 'kernel_size_1': 4, 'activation_conv_1': 'elu', 'padding_1': 'valid', 'use_pooling_1': True, 'pool_size_1': 1, 'use_dropout_conv_1': False, 'global_pooling': 'max', 'n_dense_layers': 3, 'dense_units_0': 30, 'activation_dense_0': 'elu', 'use_dropout_dense_0': False, 'dense_units_1': 239, 'activation_dense_1': 'elu', 'use_dropout_dense_1': True, 'dropout_rate_dense_1': 0.14488471140350032, 'dense_units_2': 38, 'activation_dense_2': 'selu', 'use_dropout_dense_2': False, 'optimizer': 'rmsprop', 'learning_rate': 0.0018704526236114805, 'rho': 0.9355475172722483, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 10}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_29: [(None, 37)]
+embedding_14: (None, 37, 47)
+conv1d_22: (None, 37, 32)
+dropout_23: (None, 37, 32)
+global_max_pooling1d_7: (None, 32)
+input_30: [(None, 1)]
+concatenate_14: (None, 33)
+dense_42: (None, 89)
+dropout_24: (None, 89)
+dense_43: (None, 69)
+dense_44: (None, 1)
+[I 2025-05-25 12:12:45,123] Trial 14 finished with value: 0.918154776096344 and parameters: {'embedding_dim': 47, 'n_conv_layers': 1, 'filters_0': 32, 'kernel_size_0': 3, 'activation_conv_0': 'elu', 'padding_0': 'same', 'use_pooling_0': False, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.48972302429630876, 'global_pooling': 'max', 'n_dense_layers': 2, 'dense_units_0': 89, 'activation_dense_0': 'selu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.34512969984306285, 'dense_units_1': 69, 'activation_dense_1': 'elu', 'use_dropout_dense_1': False, 'optimizer': 'rmsprop', 'learning_rate': 0.008901664912478008, 'rho': 0.9558451345384064, 'loss': 'binary_crossentropy', 'batch_size': 32, 'patience': 5}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_31: [(None, 37)]
+embedding_15: (None, 37, 89)
+conv1d_23: (None, 36, 64)
+conv1d_24: (None, 36, 32)
+global_average_pooling1d_7: (None, 32)
+input_32: [(None, 1)]
+concatenate_15: (None, 33)
+dense_45: (None, 146)
+dense_46: (None, 68)
+dropout_25: (None, 68)
+dense_47: (None, 155)
+dropout_26: (None, 155)
+dense_48: (None, 1)
+[I 2025-05-25 12:12:48,534] Trial 15 finished with value: 0.9166666865348816 and parameters: {'embedding_dim': 89, 'n_conv_layers': 2, 'filters_0': 64, 'kernel_size_0': 2, 'activation_conv_0': 'selu', 'padding_0': 'valid', 'use_pooling_0': True, 'pool_size_0': 1, 'use_dropout_conv_0': False, 'filters_1': 32, 'kernel_size_1': 4, 'activation_conv_1': 'selu', 'padding_1': 'same', 'use_pooling_1': False, 'use_dropout_conv_1': False, 'global_pooling': 'avg', 'n_dense_layers': 3, 'dense_units_0': 146, 'activation_dense_0': 'elu', 'use_dropout_dense_0': False, 'dense_units_1': 68, 'activation_dense_1': 'relu', 'use_dropout_dense_1': True, 'dropout_rate_dense_1': 0.4978573669018759, 'dense_units_2': 155, 'activation_dense_2': 'relu', 'use_dropout_dense_2': True, 'dropout_rate_dense_2': 0.11218984609179511, 'optimizer': 'rmsprop', 'learning_rate': 0.0039063135178884845, 'rho': 0.8907565830218264, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 3}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_33: [(None, 37)]
+embedding_16: (None, 37, 118)
+conv1d_25: (None, 37, 32)
+global_average_pooling1d_8: (None, 32)
+input_34: [(None, 1)]
+concatenate_16: (None, 33)
+dense_49: (None, 68)
+dropout_27: (None, 68)
+dense_50: (None, 1)
+[I 2025-05-25 12:12:51,196] Trial 16 finished with value: 0.9151785969734192 and parameters: {'embedding_dim': 118, 'n_conv_layers': 1, 'filters_0': 32, 'kernel_size_0': 3, 'activation_conv_0': 'relu', 'padding_0': 'same', 'use_pooling_0': False, 'use_dropout_conv_0': False, 'global_pooling': 'avg', 'n_dense_layers': 1, 'dense_units_0': 68, 'activation_dense_0': 'elu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.4825100266754211, 'optimizer': 'adam', 'learning_rate': 0.0013876100216226345, 'beta1': 0.8018718220920654, 'beta2': 0.9908813634410146, 'loss': 'binary_crossentropy', 'batch_size': 128, 'patience': 9}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_35: [(None, 37)]
+embedding_17: (None, 37, 52)
+conv1d_26: (None, 36, 64)
+max_pooling1d_6: (None, 18, 64)
+dropout_28: (None, 18, 64)
+conv1d_27: (None, 16, 128)
+max_pooling1d_7: (None, 8, 128)
+dropout_29: (None, 8, 128)
+conv1d_28: (None, 4, 32)
+max_pooling1d_8: (None, 2, 32)
+global_max_pooling1d_8: (None, 32)
+input_36: [(None, 1)]
+concatenate_17: (None, 33)
+dense_51: (None, 184)
+dense_52: (None, 252)
+dense_53: (None, 1)
+[I 2025-05-25 12:12:55,367] Trial 17 finished with value: 0.9069940447807312 and parameters: {'embedding_dim': 52, 'n_conv_layers': 3, 'filters_0': 64, 'kernel_size_0': 2, 'activation_conv_0': 'selu', 'padding_0': 'valid', 'use_pooling_0': True, 'pool_size_0': 2, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.12522982437435176, 'filters_1': 128, 'kernel_size_1': 3, 'activation_conv_1': 'selu', 'padding_1': 'valid', 'use_pooling_1': True, 'pool_size_1': 2, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.4908750157023238, 'filters_2': 32, 'kernel_size_2': 5, 'activation_conv_2': 'elu', 'padding_2': 'valid', 'use_pooling_2': True, 'pool_size_2': 2, 'use_dropout_conv_2': False, 'global_pooling': 'max', 'n_dense_layers': 2, 'dense_units_0': 184, 'activation_dense_0': 'elu', 'use_dropout_dense_0': False, 'dense_units_1': 252, 'activation_dense_1': 'selu', 'use_dropout_dense_1': False, 'optimizer': 'rmsprop', 'learning_rate': 0.003615807143572801, 'rho': 0.9606457150197286, 'loss': 'binary_crossentropy', 'batch_size': 128, 'patience': 6}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_37: [(None, 37)]
+embedding_18: (None, 37, 87)
+conv1d_29: (None, 37, 128)
+dropout_30: (None, 37, 128)
+conv1d_30: (None, 33, 128)
+dropout_31: (None, 33, 128)
+global_average_pooling1d_9: (None, 128)
+input_38: [(None, 1)]
+concatenate_18: (None, 129)
+dense_54: (None, 107)
+dropout_32: (None, 107)
+dense_55: (None, 1)
+[I 2025-05-25 12:13:07,179] Trial 18 finished with value: 0.921875 and parameters: {'embedding_dim': 87, 'n_conv_layers': 2, 'filters_0': 128, 'kernel_size_0': 3, 'activation_conv_0': 'relu', 'padding_0': 'same', 'use_pooling_0': True, 'pool_size_0': 1, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.4006325345632594, 'filters_1': 128, 'kernel_size_1': 5, 'activation_conv_1': 'elu', 'padding_1': 'valid', 'use_pooling_1': False, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.12050633697784202, 'global_pooling': 'avg', 'n_dense_layers': 1, 'dense_units_0': 107, 'activation_dense_0': 'relu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.2713264834586006, 'optimizer': 'rmsprop', 'learning_rate': 0.0004495443428339483, 'rho': 0.9023795697534391, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 4}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_39: [(None, 37)]
+embedding_19: (None, 37, 87)
+conv1d_31: (None, 37, 128)
+dropout_33: (None, 37, 128)
+conv1d_32: (None, 33, 128)
+dropout_34: (None, 33, 128)
+global_max_pooling1d_9: (None, 128)
+input_40: [(None, 1)]
+concatenate_19: (None, 129)
+dense_56: (None, 52)
+dense_57: (None, 1)
+[I 2025-05-25 12:13:15,657] Trial 19 finished with value: 0.9040178656578064 and parameters: {'embedding_dim': 87, 'n_conv_layers': 2, 'filters_0': 128, 'kernel_size_0': 4, 'activation_conv_0': 'elu', 'padding_0': 'same', 'use_pooling_0': False, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.40321800386010753, 'filters_1': 128, 'kernel_size_1': 5, 'activation_conv_1': 'elu', 'padding_1': 'valid', 'use_pooling_1': False, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.11456739623615923, 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 52, 'activation_dense_0': 'relu', 'use_dropout_dense_0': False, 'optimizer': 'adam', 'learning_rate': 0.0005252404320804765, 'beta1': 0.8002225118233941, 'beta2': 0.8028888613549252, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 4}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_41: [(None, 37)]
+embedding_20: (None, 37, 104)
+conv1d_33: (None, 37, 128)
+dropout_35: (None, 37, 128)
+conv1d_34: (None, 34, 128)
+dropout_36: (None, 34, 128)
+conv1d_35: (None, 34, 256)
+global_max_pooling1d_10: (None, 256)
+input_42: [(None, 1)]
+concatenate_20: (None, 257)
+dense_58: (None, 105)
+dense_59: (None, 1)
+[I 2025-05-25 12:13:34,475] Trial 20 finished with value: 0.9092261791229248 and parameters: {'embedding_dim': 104, 'n_conv_layers': 3, 'filters_0': 128, 'kernel_size_0': 3, 'activation_conv_0': 'selu', 'padding_0': 'same', 'use_pooling_0': True, 'pool_size_0': 1, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.32379077683201085, 'filters_1': 128, 'kernel_size_1': 4, 'activation_conv_1': 'elu', 'padding_1': 'valid', 'use_pooling_1': False, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.11895773869075882, 'filters_2': 256, 'kernel_size_2': 5, 'activation_conv_2': 'elu', 'padding_2': 'same', 'use_pooling_2': False, 'use_dropout_conv_2': False, 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 105, 'activation_dense_0': 'relu', 'use_dropout_dense_0': False, 'optimizer': 'rmsprop', 'learning_rate': 0.00040728772528506865, 'rho': 0.8937355490754302, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 4}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_43: [(None, 37)]
+embedding_21: (None, 37, 84)
+conv1d_36: (None, 37, 128)
+dropout_37: (None, 37, 128)
+conv1d_37: (None, 33, 128)
+dropout_38: (None, 33, 128)
+global_average_pooling1d_10: (None, 128)
+input_44: [(None, 1)]
+concatenate_21: (None, 129)
+dense_60: (None, 161)
+dropout_39: (None, 161)
+dense_61: (None, 1)
+[I 2025-05-25 12:13:47,496] Trial 21 finished with value: 0.9233630895614624 and parameters: {'embedding_dim': 84, 'n_conv_layers': 2, 'filters_0': 128, 'kernel_size_0': 3, 'activation_conv_0': 'relu', 'padding_0': 'same', 'use_pooling_0': True, 'pool_size_0': 1, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.4167145582147226, 'filters_1': 128, 'kernel_size_1': 5, 'activation_conv_1': 'elu', 'padding_1': 'valid', 'use_pooling_1': False, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.22670805395134522, 'global_pooling': 'avg', 'n_dense_layers': 1, 'dense_units_0': 161, 'activation_dense_0': 'relu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.27204981611517826, 'optimizer': 'rmsprop', 'learning_rate': 0.007036041972388759, 'rho': 0.9689610341588955, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 6}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_45: [(None, 37)]
+embedding_22: (None, 37, 82)
+conv1d_38: (None, 37, 128)
+dropout_40: (None, 37, 128)
+conv1d_39: (None, 33, 128)
+dropout_41: (None, 33, 128)
+global_average_pooling1d_11: (None, 128)
+input_46: [(None, 1)]
+concatenate_22: (None, 129)
+dense_62: (None, 103)
+dropout_42: (None, 103)
+dense_63: (None, 1)
+[I 2025-05-25 12:13:58,271] Trial 22 finished with value: 0.9196428656578064 and parameters: {'embedding_dim': 82, 'n_conv_layers': 2, 'filters_0': 128, 'kernel_size_0': 3, 'activation_conv_0': 'relu', 'padding_0': 'same', 'use_pooling_0': True, 'pool_size_0': 1, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.4107396439574258, 'filters_1': 128, 'kernel_size_1': 5, 'activation_conv_1': 'elu', 'padding_1': 'valid', 'use_pooling_1': False, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.22640044415273558, 'global_pooling': 'avg', 'n_dense_layers': 1, 'dense_units_0': 103, 'activation_dense_0': 'relu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.25801462021267296, 'optimizer': 'rmsprop', 'learning_rate': 0.006771360684988685, 'rho': 0.9224830751083386, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 6}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_47: [(None, 37)]
+embedding_23: (None, 37, 97)
+conv1d_40: (None, 37, 128)
+dropout_43: (None, 37, 128)
+conv1d_41: (None, 33, 128)
+dropout_44: (None, 33, 128)
+global_average_pooling1d_12: (None, 128)
+input_48: [(None, 1)]
+concatenate_23: (None, 129)
+dense_64: (None, 133)
+dropout_45: (None, 133)
+dense_65: (None, 1)
+[I 2025-05-25 12:14:03,934] Trial 23 finished with value: 0.9211309552192688 and parameters: {'embedding_dim': 97, 'n_conv_layers': 2, 'filters_0': 128, 'kernel_size_0': 3, 'activation_conv_0': 'relu', 'padding_0': 'same', 'use_pooling_0': True, 'pool_size_0': 1, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.4172565607419, 'filters_1': 128, 'kernel_size_1': 5, 'activation_conv_1': 'elu', 'padding_1': 'valid', 'use_pooling_1': False, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.21003483668285639, 'global_pooling': 'avg', 'n_dense_layers': 1, 'dense_units_0': 133, 'activation_dense_0': 'relu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.29766345465970934, 'optimizer': 'rmsprop', 'learning_rate': 0.001346938973149907, 'rho': 0.8619248384015982, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 3}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_49: [(None, 37)]
+embedding_24: (None, 37, 112)
+conv1d_42: (None, 37, 128)
+dropout_46: (None, 37, 128)
+conv1d_43: (None, 34, 128)
+dropout_47: (None, 34, 128)
+global_average_pooling1d_13: (None, 128)
+input_50: [(None, 1)]
+concatenate_24: (None, 129)
+dense_66: (None, 159)
+dropout_48: (None, 159)
+dense_67: (None, 1)
+[I 2025-05-25 12:14:08,212] Trial 24 finished with value: 0.9114583134651184 and parameters: {'embedding_dim': 112, 'n_conv_layers': 2, 'filters_0': 128, 'kernel_size_0': 4, 'activation_conv_0': 'relu', 'padding_0': 'same', 'use_pooling_0': True, 'pool_size_0': 1, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.4911003487540825, 'filters_1': 128, 'kernel_size_1': 4, 'activation_conv_1': 'elu', 'padding_1': 'valid', 'use_pooling_1': False, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.16907045883517566, 'global_pooling': 'avg', 'n_dense_layers': 1, 'dense_units_0': 159, 'activation_dense_0': 'relu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.20936964729692384, 'optimizer': 'rmsprop', 'learning_rate': 0.0004796725972662598, 'rho': 0.9729011655060815, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 4}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_51: [(None, 37)]
+embedding_25: (None, 37, 81)
+conv1d_44: (None, 37, 128)
+dropout_49: (None, 37, 128)
+conv1d_45: (None, 33, 128)
+dropout_50: (None, 33, 128)
+conv1d_46: (None, 33, 256)
+global_average_pooling1d_14: (None, 256)
+input_52: [(None, 1)]
+concatenate_25: (None, 257)
+dense_68: (None, 47)
+dropout_51: (None, 47)
+dense_69: (None, 1)
+[I 2025-05-25 12:14:24,526] Trial 25 finished with value: 0.9159226417541504 and parameters: {'embedding_dim': 81, 'n_conv_layers': 3, 'filters_0': 128, 'kernel_size_0': 3, 'activation_conv_0': 'relu', 'padding_0': 'same', 'use_pooling_0': True, 'pool_size_0': 1, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.3786237046237001, 'filters_1': 128, 'kernel_size_1': 5, 'activation_conv_1': 'elu', 'padding_1': 'valid', 'use_pooling_1': False, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.25673815087696605, 'filters_2': 256, 'kernel_size_2': 2, 'activation_conv_2': 'selu', 'padding_2': 'same', 'use_pooling_2': True, 'pool_size_2': 1, 'use_dropout_conv_2': False, 'global_pooling': 'avg', 'n_dense_layers': 1, 'dense_units_0': 47, 'activation_dense_0': 'relu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.3371286417239353, 'optimizer': 'rmsprop', 'learning_rate': 0.006874473953785699, 'rho': 0.9316301386677273, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 5}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_53: [(None, 37)]
+embedding_26: (None, 37, 97)
+conv1d_47: (None, 37, 32)
+dropout_52: (None, 37, 32)
+conv1d_48: (None, 35, 256)
+dropout_53: (None, 35, 256)
+global_average_pooling1d_15: (None, 256)
+input_54: [(None, 1)]
+concatenate_26: (None, 257)
+dense_70: (None, 114)
+dropout_54: (None, 114)
+dense_71: (None, 1)
+[I 2025-05-25 12:14:30,694] Trial 26 finished with value: 0.9203869104385376 and parameters: {'embedding_dim': 97, 'n_conv_layers': 2, 'filters_0': 32, 'kernel_size_0': 4, 'activation_conv_0': 'relu', 'padding_0': 'same', 'use_pooling_0': False, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.3085525417431737, 'filters_1': 256, 'kernel_size_1': 3, 'activation_conv_1': 'elu', 'padding_1': 'valid', 'use_pooling_1': False, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.3894555076631222, 'global_pooling': 'avg', 'n_dense_layers': 1, 'dense_units_0': 114, 'activation_dense_0': 'relu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.11187129305699123, 'optimizer': 'rmsprop', 'learning_rate': 0.005144972208009857, 'rho': 0.8656299433077399, 'loss': 'binary_crossentropy', 'batch_size': 32, 'patience': 6}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_55: [(None, 37)]
+embedding_27: (None, 37, 59)
+conv1d_49: (None, 37, 128)
+dropout_55: (None, 37, 128)
+conv1d_50: (None, 34, 32)
+dropout_56: (None, 34, 32)
+global_average_pooling1d_16: (None, 32)
+input_56: [(None, 1)]
+concatenate_27: (None, 33)
+dense_72: (None, 81)
+dropout_57: (None, 81)
+dense_73: (None, 210)
+dropout_58: (None, 210)
+dense_74: (None, 1)
+[I 2025-05-25 12:14:36,028] Trial 27 finished with value: 0.9122023582458496 and parameters: {'embedding_dim': 59, 'n_conv_layers': 2, 'filters_0': 128, 'kernel_size_0': 3, 'activation_conv_0': 'relu', 'padding_0': 'same', 'use_pooling_0': True, 'pool_size_0': 1, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.3458640152751392, 'filters_1': 32, 'kernel_size_1': 4, 'activation_conv_1': 'elu', 'padding_1': 'valid', 'use_pooling_1': False, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.15269151047134127, 'global_pooling': 'avg', 'n_dense_layers': 2, 'dense_units_0': 81, 'activation_dense_0': 'selu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.24994688463500989, 'dense_units_1': 210, 'activation_dense_1': 'selu', 'use_dropout_dense_1': True, 'dropout_rate_dense_1': 0.10976424409542712, 'optimizer': 'rmsprop', 'learning_rate': 0.000219495679717578, 'rho': 0.9487190986071073, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 4}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_57: [(None, 37)]
+embedding_28: (None, 37, 128)
+conv1d_51: (None, 37, 128)
+dropout_59: (None, 37, 128)
+conv1d_52: (None, 37, 64)
+max_pooling1d_9: (None, 18, 64)
+conv1d_53: (None, 15, 64)
+dropout_60: (None, 15, 64)
+global_max_pooling1d_11: (None, 64)
+input_58: [(None, 1)]
+concatenate_28: (None, 65)
+dense_75: (None, 53)
+dense_76: (None, 1)
+[I 2025-05-25 12:14:44,073] Trial 28 finished with value: 0.613095223903656 and parameters: {'embedding_dim': 128, 'n_conv_layers': 3, 'filters_0': 128, 'kernel_size_0': 3, 'activation_conv_0': 'elu', 'padding_0': 'same', 'use_pooling_0': False, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.23355371799988728, 'filters_1': 64, 'kernel_size_1': 5, 'activation_conv_1': 'selu', 'padding_1': 'same', 'use_pooling_1': True, 'pool_size_1': 2, 'use_dropout_conv_1': False, 'filters_2': 64, 'kernel_size_2': 4, 'activation_conv_2': 'relu', 'padding_2': 'valid', 'use_pooling_2': False, 'use_dropout_conv_2': True, 'dropout_rate_conv_2': 0.49572041089944524, 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 53, 'activation_dense_0': 'relu', 'use_dropout_dense_0': False, 'optimizer': 'sgd', 'learning_rate': 0.0007120624568651971, 'momentum': 0.003142555673013192, 'loss': 'binary_crossentropy', 'batch_size': 64, 'patience': 5}. Best is trial 6 with value: 0.9241071343421936.
+Layer shapes:
+input_59: [(None, 37)]
+embedding_29: (None, 37, 80)
+conv1d_54: (None, 37, 32)
+dropout_61: (None, 37, 32)
+conv1d_55: (None, 34, 128)
+dropout_62: (None, 34, 128)
+conv1d_56: (None, 33, 128)
+max_pooling1d_10: (None, 16, 128)
+dropout_63: (None, 16, 128)
+global_max_pooling1d_12: (None, 128)
+input_60: [(None, 1)]
+concatenate_29: (None, 129)
+dense_77: (None, 146)
+dropout_64: (None, 146)
+dense_78: (None, 1)
+Best trial:
+  Value: 0.9241071343421936
+  Params:
+    embedding_dim: 103
     n_conv_layers: 1
-    optimizer: rmsprop
-    learning_rate: 0.007493320880885453
-    filters_layer_0: 64
-    kernel_size_layer_0: 2
-    activation_layer_0: relu
+    filters_0: 32
+    kernel_size_0: 3
+    activation_conv_0: selu
+    padding_0: same
+    use_pooling_0: False
+    use_dropout_conv_0: True
+    dropout_rate_conv_0: 0.3428218350065193
     global_pooling: max
     n_dense_layers: 1
-    dense_units_0: 64
-    dense_activation_0: relu
-    dropout_0: 0.23939974553930077
-    patience: 5
-
-Обучение модели с оптимальными гиперпараметрами...
-Epoch 1/11
-1/1 [==============================] - 2s 2s/step - loss: 3.3298 - accuracy: 0.4510 - auc_20: 0.2795 - val_loss: 0.5224 - val_accuracy: 0.8462 - val_auc_20: 0.9524
-Epoch 2/11
-1/1 [==============================] - 0s 27ms/step - loss: 0.1537 - accuracy: 0.9412 - auc_20: 0.9845 - val_loss: 0.3505 - val_accuracy: 0.9231 - val_auc_20: 1.0000
-Epoch 3/11
-1/1 [==============================] - 0s 25ms/step - loss: 0.3762 - accuracy: 0.8627 - auc_20: 0.9720 - val_loss: 0.6856 - val_accuracy: 0.6154 - val_auc_20: 0.8571
-Epoch 4/11
-1/1 [==============================] - 0s 26ms/step - loss: 0.4975 - accuracy: 0.8824 - auc_20: 0.9495 - val_loss: 0.3958 - val_accuracy: 0.8462 - val_auc_20: 0.9524
-Epoch 5/11
-1/1 [==============================] - 0s 25ms/step - loss: 0.2423 - accuracy: 0.8824 - auc_20: 0.9837 - val_loss: 0.4654 - val_accuracy: 0.8462 - val_auc_20: 0.9524
-Epoch 6/11
-1/1 [==============================] - 0s 26ms/step - loss: 0.1481 - accuracy: 0.9020 - auc_20: 0.9876 - val_loss: 0.4625 - val_accuracy: 0.8462 - val_auc_20: 0.9524
-Epoch 7/11
-1/1 [==============================] - 0s 54ms/step - loss: 0.1797 - accuracy: 0.8824 - auc_20: 0.9783 - val_loss: 0.4261 - val_accuracy: 0.9231 - val_auc_20: 0.9762
-
-Оценка качества на тестовых данных:
-1/1 [==============================] - 0s 297ms/step
+    dense_units_0: 63
+    activation_dense_0: elu
+    use_dropout_dense_0: False
+    optimizer: rmsprop
+    learning_rate: 0.006182179787065901
+    rho: 0.9875986793844692
+    loss: binary_crossentropy
+    batch_size: 64
+    patience: 4
+[I 2025-05-25 12:14:53,961] Trial 29 finished with value: 0.8891369104385376 and parameters: {'embedding_dim': 80, 'n_conv_layers': 3, 'filters_0': 32, 'kernel_size_0': 4, 'activation_conv_0': 'selu', 'padding_0': 'same', 'use_pooling_0': True, 'pool_size_0': 1, 'use_dropout_conv_0': True, 'dropout_rate_conv_0': 0.4268630074933596, 'filters_1': 128, 'kernel_size_1': 4, 'activation_conv_1': 'relu', 'padding_1': 'valid', 'use_pooling_1': False, 'use_dropout_conv_1': True, 'dropout_rate_conv_1': 0.2573623152060157, 'filters_2': 128, 'kernel_size_2': 2, 'activation_conv_2': 'relu', 'padding_2': 'valid', 'use_pooling_2': True, 'pool_size_2': 2, 'use_dropout_conv_2': True, 'dropout_rate_conv_2': 0.43437805853243006, 'global_pooling': 'max', 'n_dense_layers': 1, 'dense_units_0': 146, 'activation_dense_0': 'relu', 'use_dropout_dense_0': True, 'dropout_rate_dense_0': 0.31467813513824594, 'optimizer': 'adam', 'learning_rate': 0.001134657858113952, 'beta1': 0.9667340068552782, 'beta2': 0.8929837671306644, 'loss': 'binary_focal_loss', 'focal_loss_gamma': 1.0139443876333822, 'focal_loss_alpha': 0.36489994310736484, 'batch_size': 64, 'patience': 8}. Best is trial 6 with value: 0.9241071343421936.
+Epoch 1/50
+95/95 [==============================] - 2s 7ms/step - loss: 0.3652 - accuracy: 0.8527 - val_loss: 0.2758 - val_accuracy: 0.8943
+Epoch 2/50
+95/95 [==============================] - 0s 3ms/step - loss: 0.2629 - accuracy: 0.8967 - val_loss: 0.2632 - val_accuracy: 0.8929
+Epoch 3/50
+95/95 [==============================] - 0s 4ms/step - loss: 0.2423 - accuracy: 0.9081 - val_loss: 0.2622 - val_accuracy: 0.8943
+Epoch 4/50
+95/95 [==============================] - 0s 3ms/step - loss: 0.2281 - accuracy: 0.9139 - val_loss: 0.2905 - val_accuracy: 0.9003
+Epoch 5/50
+95/95 [==============================] - 0s 3ms/step - loss: 0.2110 - accuracy: 0.9206 - val_loss: 0.2505 - val_accuracy: 0.9048
+Epoch 6/50
+95/95 [==============================] - 0s 3ms/step - loss: 0.2123 - accuracy: 0.9216 - val_loss: 0.2275 - val_accuracy: 0.9152
+Epoch 7/50
+95/95 [==============================] - 0s 3ms/step - loss: 0.1964 - accuracy: 0.9258 - val_loss: 0.2339 - val_accuracy: 0.9226
+Epoch 8/50
+95/95 [==============================] - 0s 3ms/step - loss: 0.1922 - accuracy: 0.9254 - val_loss: 0.2577 - val_accuracy: 0.9092
+Epoch 9/50
+95/95 [==============================] - 0s 3ms/step - loss: 0.1852 - accuracy: 0.9281 - val_loss: 0.2707 - val_accuracy: 0.9137
+Epoch 10/50
+95/95 [==============================] - 0s 3ms/step - loss: 0.1820 - accuracy: 0.9291 - val_loss: 0.2353 - val_accuracy: 0.9256
+Epoch 11/50
+95/95 [==============================] - 0s 3ms/step - loss: 0.1746 - accuracy: 0.9297 - val_loss: 0.2534 - val_accuracy: 0.9107
+Epoch 12/50
+95/95 [==============================] - 0s 3ms/step - loss: 0.1734 - accuracy: 0.9349 - val_loss: 0.2401 - val_accuracy: 0.9092
+Epoch 13/50
+95/95 [==============================] - 0s 3ms/step - loss: 0.1671 - accuracy: 0.9370 - val_loss: 0.2366 - val_accuracy: 0.9107
+Epoch 14/50
+95/95 [==============================] - 0s 3ms/step - loss: 0.1650 - accuracy: 0.9342 - val_loss: 0.2394 - val_accuracy: 0.9256
+53/53 [==============================] - 0s 798us/step
               precision    recall  f1-score   support
 
-           0       1.00      0.70      0.82        10
-           1       0.67      1.00      0.80         6
+       False       0.89      0.96      0.93      1012
+        True       0.93      0.83      0.88       668
 
-    accuracy                           0.81        16
-   macro avg       0.83      0.85      0.81        16
-weighted avg       0.88      0.81      0.81        16
+    accuracy                           0.91      1680
+   macro avg       0.91      0.89      0.90      1680
+weighted avg       0.91      0.91      0.91      1680
 
-Лучшее значение AUC: 1.0000
-Время обучения: 2.91 с
-Max RAM Usage: 7.30 MB
-Inference time: 0.3415 s
+Max RAM Usage: 5.22 MB
+Training time: 6.1323 s
+Inference time: 0.2251 s
 
 Process finished with exit code 0
