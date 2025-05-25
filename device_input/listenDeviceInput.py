@@ -32,6 +32,11 @@ module_dir = Path(__file__).resolve().parent
 directory_path = os.path.join(module_dir, 'device_input_logs')  # Путь к директории с JSON-файлами
 crypto = JsonFolderCrypto()
 
+# Глобальные переменные для отслеживания хуков
+keyboard_hook = None
+mouse_hook = None
+is_listening = False
+
 def get_log_filename():
     return datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".json"
 
@@ -78,7 +83,39 @@ def on_mouse_event(event):
     except:
         print("Pressed button out from processing range")
 
+def start_listening(working_mode=True):
+    """Start listening to keyboard and mouse events"""
+    global is_working_mode, is_listening, keyboard_hook, mouse_hook
+    
+    if is_listening:
+        print("Already listening to events")
+        return
+    
+    is_working_mode = working_mode
+    init_log_file()  # Инициализируем файл логов при старте
+    
+    # Устанавливаем хуки для клавиатуры и мыши
+    keyboard_hook = keyboard.hook(on_key_event)
+    mouse_hook = mouse.hook(on_mouse_event)
+    is_listening = True
+    print("Started listening to device inputs")
+
+def stop_listening():
+    """Stop listening to keyboard and mouse events"""
+    global is_listening, keyboard_hook, mouse_hook
+    
+    if not is_listening:
+        print("Not currently listening to events")
+        return
+        
+    # Удаляем хуки
+    keyboard.unhook(keyboard_hook)
+    mouse.unhook(mouse_hook)
+    is_listening = False
+    print("Stopped listening to device inputs")
+
 def signal_handler(sig, frame):
+    stop_listening()
     print("Прерывание процесса. Сохранение данных и выход.")
     sys.exit(0)
 
@@ -87,9 +124,10 @@ if __name__ == "__main__":
         is_working_mode = sys.argv[1].lower() in ['true', '1', 'yes']
 
     signal.signal(signal.SIGINT, signal_handler)
-    init_log_file()  # Инициализируем файл логов при старте
-
-    keyboard.hook(on_key_event)  # Слушаем события клавиатуры
-    mouse.hook(on_mouse_event)  # Слушаем события мыши
-    keyboard.wait()  # Ожидаем завершения
-    mouse.wait()  # Ожидаем завершения
+    start_listening(is_working_mode)
+    
+    try:
+        keyboard.wait()  # Ожидаем завершения
+    except KeyboardInterrupt:
+        stop_listening()
+        print("Прерывание процесса. Сохранение данных и выход.")

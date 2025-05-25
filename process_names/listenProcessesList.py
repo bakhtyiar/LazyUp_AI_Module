@@ -77,6 +77,13 @@ def signal_handler(sig, frame):
     print("Прерывание процесса. Сохранение данных и выход.")
     sys.exit(0)
 
+def init_process_logging(is_working_mode, logs_dir, time_interval):
+    # Process the parsed arguments
+    logging_interval = set_interval(lambda: save_processes_to_file(logs_dir, is_working_mode), time_interval)
+    signal.signal(signal.SIGINT, signal_handler)
+    
+    return logging_interval
+
 if __name__ == "__main__":
     # Создаем парсер аргументов командной строки
     parser = argparse.ArgumentParser(description='Записывает названия запущенных процессов в файлы JSON.')
@@ -91,8 +98,5 @@ if __name__ == "__main__":
     # Parse the arguments
     args = parser.parse_args()
     is_working_mode = args.working_mode.lower() in ['true', '1', 'yes']
-    logs_folder_name = args.dir_to_log
     time_interval = int(args.log_interval_sec)
-    loggingInterval = set_interval(lambda: save_processes_to_file(logs_folder_name, is_working_mode), time_interval)
-    signal.signal(signal.SIGINT, signal_handler)
-
+    loggingInterval = init_process_logging(is_working_mode, args.dir_to_log, time_interval)
