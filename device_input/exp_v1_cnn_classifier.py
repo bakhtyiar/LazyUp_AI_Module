@@ -294,6 +294,6 @@ if __name__ == "__main__":
     y_pred = [round(num) for sublist in y_pred for num in sublist]
     print(classification_report(y_test, y_pred))
     print(f"Лучшее значение AUC: {study.best_value:.4f}")
-    print(f"Время обучения: {training_time:.2f} с")
+    print(f"Training time: {training_time:.2f} с")
     print(f"Max RAM Usage: {max_ram_usage:.2f} MB")
     print(f"Inference time: {inference_time:.4f} s")
