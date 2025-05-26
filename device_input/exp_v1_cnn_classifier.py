@@ -235,12 +235,16 @@ if __name__ == "__main__":
     sample_data = load_device_logs(1000)
     X, y = preprocess_data(sample_data, max_sequence_length=50)
     
-    # Разделение данных на обучающую и тестовую выборки
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42
-    )
+    # Разделение данных с использованием временного разделения (TimeSeriesSplit)
+    tscv = TimeSeriesSplit(n_splits=3)
+    
+    # Получаем последний сплит для финального разделения (имитация реальных условий)
+    train_index, test_index = list(tscv.split(X))[-1]
+    X_train, X_test = X[train_index], X[test_index]
+    y_train, y_test = y[train_index], y[test_index]
     
     # Дополнительное разделение обучающей выборки на обучающую и валидационную
+    # также с учетом временной структуры
     X_train, X_val, y_train, y_val = train_test_split(
         X_train, y_train, test_size=0.2, random_state=42
     )
