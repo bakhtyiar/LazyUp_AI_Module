@@ -94,7 +94,8 @@ def load_device_logs(max_files: int | None = None, max_units: int | None = None)
             for entry in data.get("deviceLogs", []):
                 timestamp_str = entry.get("timestamp")
                 button_key = entry.get("buttonKey")
-                mode = int(entry.get("isWorkingMode", False))
+                x = entry.get("isWorkingMode")
+                mode = int(x) if x is not None else 0
 
                 if max_units is not None and total_units >= max_units:
                     break
