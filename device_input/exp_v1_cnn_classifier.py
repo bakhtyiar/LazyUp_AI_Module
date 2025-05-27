@@ -229,66 +229,65 @@ def train_optimized_model(X_train, y_train, X_val, y_val, best_trial):
     return model, history
 
 
-# Пример использования
-if __name__ == "__main__":
+def train_cnn_model():
     # Загрузка и предобработка данных
     sample_data = load_device_logs(1000)
     X, y = preprocess_data(sample_data, max_sequence_length=50)
-    
+
     # Разделение данных с использованием временного разделения (TimeSeriesSplit)
     tscv = TimeSeriesSplit(n_splits=3)
-    
+
     # Получаем последний сплит для финального разделения (имитация реальных условий)
     train_index, test_index = list(tscv.split(X))[-1]
     X_train, X_test = X[train_index], X[test_index]
     y_train, y_test = y[train_index], y[test_index]
-    
+
     # Дополнительное разделение обучающей выборки на обучающую и валидационную
     # также с учетом временной структуры
     X_train, X_val, y_train, y_val = train_test_split(
         X_train, y_train, test_size=0.2, random_state=42
     )
-    
+
     # Нормализация данных
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train.reshape(-1, X_train.shape[-1])).reshape(X_train.shape)
     X_val = scaler.transform(X_val.reshape(-1, X_val.shape[-1])).reshape(X_val.shape)
     X_test = scaler.transform(X_test.reshape(-1, X_test.shape[-1])).reshape(X_test.shape)
-    
+
     # Создание и запуск исследования Optuna
     print("Начало оптимизации гиперпараметров с Optuna...")
     study = optuna.create_study(direction='maximize', study_name='cnn_optimization')
-    
+
     # Функция-обертка для целевой функции, возвращающей только значение AUC
     def objective_wrapper(trial):
         val_auc, _ = objective(trial, X_train, y_train, X_val, y_val)
         return val_auc
-    
+
     study.optimize(objective_wrapper, n_trials=20)
-    
+
     # Вывод лучших гиперпараметров
     print("Лучшие гиперпараметры:")
     for key, value in study.best_trial.params.items():
         print(f"    {key}: {value}")
-    
+
     # Измерение использования памяти до обучения
     tracemalloc.start()
     start_train = time.time()
-    
+
     # Обучение модели с оптимальными гиперпараметрами
     print("\nОбучение модели с оптимальными гиперпараметрами...")
     model, history = train_optimized_model(X_train, y_train, X_val, y_val, study.best_trial)
-    
+
     end_train = time.time()
     training_time = end_train - start_train
     # Измерение памяти после обучения
     current, peak = tracemalloc.get_traced_memory()
     max_ram_usage = peak / (1024 ** 2)  # в MB
     tracemalloc.stop()
-    
+
     # Сохранение модели
     model.save("exp_v1_cnn_classifier.h5")
-    
+
     # Оценка качества на тестовых данных
     print("\nОценка качества на тестовых данных:")
     start_inf = time.time()
@@ -301,3 +300,8 @@ if __name__ == "__main__":
     print(f"Training time: {training_time:.2f} с")
     print(f"Max RAM Usage: {max_ram_usage:.2f} MB")
     print(f"Inference time: {inference_time:.4f} s")
+    return model
+
+# Пример использования
+if __name__ == "__main__":
+    train_cnn_model()
