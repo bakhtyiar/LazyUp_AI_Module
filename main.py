@@ -103,7 +103,7 @@ def main():
 
                 print(f"Monitoring started with {interval} minute interval.")
                 print("Press Enter to stop monitoring and return to main menu...")
-                input()
+                input_val = input()
 
                 # Stop all monitoring
                 stop_event.set()
@@ -111,6 +111,8 @@ def main():
                 process_logging_timer.cancel()
 
                 print("Monitoring stopped.")
+                if input_val == "b":
+                    continue
 
             elif choice == "3":
                 print("Exiting...")
