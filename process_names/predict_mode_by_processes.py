@@ -1,78 +1,103 @@
 import os
-import datetime
-import json
-
-import joblib
-import numpy as np
-import pandas as pd
+from datetime import datetime
 from pathlib import Path
 
+import joblib
+import pandas as pd
+
+from process_names.exp_v1_logistric_regression_classifier import train_logistic_regression_model
 from process_names.processes_log_loader import load_processes_logs
 
 module_dir = Path(__file__).resolve().parent
-
-directory_path = os.path.join(module_dir, 'processes_logs')  # Путь к директории с JSON-файлами
-prediction_logs_path = os.path.join(module_dir, 'prediction_logs')  # Путь к директории с JSON-файлами
-model_path = os.path.join(module_dir, 'predict_processes.joblib')  # Путь к модели
-
-model = joblib.load(model_path)
+model_path = os.path.join(module_dir, 'predict_processes.joblib')
+model_params_path = os.path.join(module_dir, 'predict_processes_params.joblib')
 
 
-def save_predictions_to_json(filename: str, predictions: np.ndarray, timestamps):
-    """Save predictions and timestamps to JSON file"""
-    data = {
-        "predictions": [
-            {"pred": float(pred), "timestamp": ts.isoformat()} 
-            for pred, ts in zip(predictions, timestamps)
-        ]
-    }
-    with open(filename, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2)
-
-
-def predict_by_processes(sample_data: list = None):
+def train_model():
     """
+        Обучает модель CNN на входных данных.
+
         Args:
-            список словарей с данными из каждого файла:
-            [
-                {
-                    "mode": 0 | 1,
-                    "list": [
-                        {"buttonKey": int, "dateTime": int (timestamp в мс)},
-                        ...
-                    ]
-                },
-                ...
-            ]
+            input_data: Данные в формате, возвращаемом load_device_logs
+            model_path: Путь для сохранения модели
 
         Returns:
-            ndarray с предсказаниями
-            Array<0|1>
+            Обученная модель Keras
         """
-    if sample_data is None:
-        sample_data = load_processes_logs(10000)
+    return train_logistic_regression_model()
 
-    df = pd.DataFrame(sample_data)
-    # Преобразуем процессы в строку (для CountVectorizer)
-    df["processes_str"] = df["processes"].apply(lambda x: " ".join(x))
-    # Разделяем на признаки (X) и целевую переменную (y)
-    X = df[["timestamp", "processes_str"]]
-    y_pred = model.predict(X)
+
+def load_model(model_path=model_path):
+    """
+    Загружает обученную модель CNN из файла.
+
+    Args:
+        model_path: Путь к файлу модели
+
+    Returns:
+        Загруженная модель Keras
+    """
+    model = joblib.load(model_path)
+    print(f"Модель успешно загружена из {model_path}")
+    return model
+
+
+def predict_by_processes(processes=load_processes_logs(), timestamp=datetime.now().isoformat(), model=load_model()):
+    """
+    Predict mode using trained model.
     
-    # Create prediction_logs directory if it doesn't exist
-    os.makedirs(prediction_logs_path, exist_ok=True)
-    
-    # Get timestamps for predictions
-    timestamps = [datetime.datetime.fromtimestamp(ts / 1000) for ts in df["timestamp"]]
-    
-    # Save predictions if we have sample data
-    if sample_data and len(sample_data) > 0:
-        first_datetime = timestamps[0]
-        filename = os.path.join(prediction_logs_path, f'predictions_{first_datetime.strftime("%Y%m%d_%H%M%S")}.json')
-        save_predictions_to_json(filename, y_pred, timestamps)
-    
-    return y_pred
+    Args:
+        processes (list): List of process names
+        timestamp (int): Timestamp value
+        model: Загруженная модель
+        max_sequence_length: Максимальная длина последовательности
+    Returns:
+        str: Predicted mode
+    """
+    # Load the model
+    if not os.path.exists(model):
+        raise FileNotFoundError(f"Model file not found at {model}. Train the model first.")
+
+    # Use joblib.load instead of pickle.load
+    model = load_model()
+
+    # Prepare input data
+    processes_str = ' '.join(processes)
+    data = pd.DataFrame({
+        'timestamp': [timestamp],
+        'processes_str': [processes_str]
+    })
+
+    # Make prediction
+    prediction = model.predict(data)
+    return prediction[0]
+
+
+def main():
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Predict mode based on running processes')
+    parser.add_argument('--train', action='store_true', help='Train the model')
+    parser.add_argument('--model_path', type=str, default='model.pkl', help='Path to model file')
+    parser.add_argument('--processes', type=str, nargs='+', help='List of process names')
+    parser.add_argument('--timestamp', type=int, help='Timestamp value')
+    parser.add_argument('--sample_size', type=int, default=1000, help='Sample size for training')
+    parser.add_argument('--n_trials', type=int, default=50, help='Number of Optuna trials')
+
+    args = parser.parse_args()
+
+    if args.train:
+        print(f"Training model with {args.sample_size} samples and {args.n_trials} trials...")
+        train_model(sample_size=args.sample_size, n_trials=args.n_trials, model_path=args.model_path)
+    elif args.processes and args.timestamp is not None:
+        try:
+            mode = predict_by_processes(args.processes, args.timestamp, model=args.model_path)
+            print(f"Predicted mode: {mode}")
+        except Exception as e:
+            print(f"Error during prediction: {str(e)}")
+    else:
+        parser.print_help()
 
 
 if __name__ == "__main__":
-    ret = predict_by_processes(sample_data=load_processes_logs(1000))
+    main()
